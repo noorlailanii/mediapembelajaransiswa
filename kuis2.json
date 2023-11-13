@@ -1,0 +1,82 @@
+
+[{
+    "no": "1",
+    "soal":	"Di bawah ini yang <i>bukan</i> merupakan jaring-jaring kubus adalah....",
+    "a": "a. <img src='assets/img/kuis2s1a.png' style='width:70%'>",
+    "b": "b. <img src='assets/img/kuis2s1b.png' style='width:70%'>",
+    "c": "c. <img src='assets/img/kuis2s1c.png' style='width:70%'>",
+    "d": "d. <img src='assets/img/kuis2s1d.png' style='width:70%'>",
+    "benar": "d"
+},{
+    "no": "2",
+    "soal":	"Di bawah ini yang merupakan jaring-jaring balok adalah....",
+    "a": "a. <img src='assets/img/kuis2s2a.png' style='width:40%'>",
+    "b": "b. <img src='assets/img/kuis2s2b.png' style='width:40%'>",
+    "c": "c. <img src='assets/img/kuis2s2c.png' style='width:40%'>",
+    "d": "d. <img src='assets/img/kuis2s2d.png' style='width:30%'>",
+    "benar": "a"
+},{
+    "no": "3",
+    "soal":	"Perhatikan jaring-jaring berikut:<br><img src='assets/img/kuis2s3kubus.png' style='width:25%'><img src='assets/img/kuis2s3balok.png' style='width:25%'><br>Jika alas kubus adalah <img src='assets/img/alaskubus.png' style='width:3%'> dan alas balok <img src='assets/img/alasbalok.png' style='width:3%'><br>Maka atap atas sisi atas kubus dan balok  tersebut adalah....",
+    "a": "a. <img src='assets/img/atapkubusbenar.png' style='width:15%'> dan <img src='assets/img/atapbaloksalah2.png' style='width:15%'>",
+    "b": "b. <img src='assets/img/atapkubusbenar.png' style='width:15%'> dan <img src='assets/img/atapbalokbenar.png' style='width:15%'>",
+    "c": "c. <img src='assets/img/atapkubussalah1.png' style='width:15%'> dan <img src='assets/img/atapbaloksalah3.png' style='width:15%'>",
+    "d": "d. <img src='assets/img/atapkubussalah2.png' style='width:15%'> dan <img src='assets/img/atapbalokbenar.png' style='width:15%'>",
+    "benar": "b"
+},{
+    "no": "4",
+    "soal":	"Apabila jaring-jaring kubus di bawah ini dilipat atau dipasang hingga membentuk balok, sisi dilabel nomor ... yang berhadapan dengan sisi yang berwarna jingga.<br> <img src='assets/img/kuis2s4.png' style='width:25%'>",
+    "a": "a. 1",
+    "b": "b. 2",
+    "c": "c. 3",
+    "d": "d. 4",
+    "benar": "c"
+},{
+    "no": "5",
+    "soal":	"Perhatikan jaring-jaring di bawah ini. Jaring-jaring yang dapat membentuk balok adalah.... <br><img src='assets/img/kuis2s51.png' style='width:15%'>&nbsp;&nbsp;&nbsp;<img src='assets/img/kuis2s52.png' style='width:20%'><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp(b)",
+    "a": "a saja",
+    "b": "b saja",
+    "c": "Keduanya",
+    "d": "Tidak Keduanya",
+    "benar": "a"
+},{
+    "no" : "6",
+    "soal":	"Agar menjadi jaring-jaring kubus, bangun persegi yang harus dihilangkan adalah nomor....<br><img src='assets/img/kuis2no6.png' style='width:25%'>",
+    "a": "a. 1 atau 2",
+    "b": "b. 3 atau 4",
+    "c": "c. 2 atau 3",
+    "d": "d. 4 atau 1",
+    "benar": "a"
+},{
+    "no" : "7",
+    "soal":	"Jika d sebagai alas, maka bagian atapnya adalah....<br><img src='assets/img/kuis2no7.png' style='width:25%'>",
+    "a": "a. a",
+    "b": "b. b",
+    "c": "c. c",
+    "d": "d. e",
+    "benar": "a"
+},{
+    "no" : "8",
+    "soal":	"Gambar di bawah ini merupakan jaring-jaring....<br><img src='assets/img/kuis2no8.png' style='width:25%'>",
+    "a": "a. Kubus",
+    "b": "b. Balok",
+    "c": "c. Prisma",
+    "d": "d. Limas",
+    "benar": "b"
+},{
+    "no" : "9",
+    "soal":	"Jika d sebagai alas, maka bagian atapnya adalah....<br><img src='assets/img/kuis2no9.png' style='width:25%'>",
+    "a": "a. a",
+    "b": "b. c",
+    "c": "c. b",
+    "d": "d. d",
+    "benar": "c"
+},{
+    "no" : "10",
+    "soal":	"Pasangan alas dan tutup kubus tepat berdasarkan gambar adalah.... <br><img src='assets/img/kuis2no10.png' style='width:25%'>",
+    "a": "a. A-D",
+    "b": "b. C-D",
+    "c": "c. B-C",
+    "d": "d. D-C",
+    "benar": "b"
+}]

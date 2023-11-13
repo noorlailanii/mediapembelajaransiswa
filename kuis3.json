@@ -1,0 +1,82 @@
+[{
+    "no" : "1",
+    "soal":	"Berapakah volume kubus dan balok di bawah ini dalam kubus satuan....<br><img src='assets/img/kuis3_1.png' style='width:30%'> dan <img src='assets/img/kuis3_2.png' style='width:40%'> secara berurutan",
+    "a": "a. 60 kubus satuan dan 64 kubus satuan",
+    "b": "b. 50 kubus satuan dan 54 kubus satuan",
+    "c": "c. 64 kubus satuan dan 60 kubus satuan",
+    "d": "d. 54 kubus satuan dan 50 kubus satuan",
+    "benar": "c"
+},{
+    "no" : "2",
+    "soal":	"Berapakah volume kubus dan balok di bawah ini....<br><img src='assets/img/kuis3_3.png' style='width:18%'> dan <img src='assets/img/kuis3_4.png' style='width:20%'> secara berurutan",
+    "a": "a. 1.728 cm<sup>3</sup> dan 480 cm<sup>3</sup>",
+    "b": "b. 1.331 cm<sup>3</sup> dan 640 cm<sup>3</sup>",
+    "c": "c. 729 cm<sup>3</sup> dan 960 cm<sup>3</sup>",
+    "d": "d. 1.000 cm<sup>3</sup> dan 960 cm<sup>3</sup>",
+    "benar": "d"
+}
+,{
+    "no" : "3",
+    "soal":	"Panjang rusuk kubus yang memiliki volume kubus 343 cm<sup>3</sup> adalah....",
+    "a": "a. 6",
+    "b": "b. 7",
+    "c": "c. 8",
+    "d": "d. 9",
+    "benar": "b"
+},{
+    "no" : "4",
+    "soal":	"Volume sebuah balok adalah 3.960 cm<sup>3</sup>. Jika lebar balok 12 cm dan tinggi balok 22 cm, maka panjang balok tersebut adalah....",
+    "a": "a. 13",
+    "b": "b. 14",
+    "c": "c. 15",
+    "d": "d. 16",
+    "benar": "c"
+},{
+    "no" : "5",
+    "soal":	"Volume sebuah balok 9.000 cm<sup>3</sup> dengan panjang balok 30 cm dan lebar balok 20 cm, maka panjang balok tersebut adalah....",
+    "a": "a. 15",
+    "b": "b. 20",
+    "c": "c. 25",
+    "d": "d. 30",
+    "benar": "a"
+},{
+    "no" : "6",
+    "soal":	"Sebuah balok mempunyai rusuk masing-masing 3 cm, 5 cm, dan 7 cm. Berapakah volume balok tersebut adalah....",
+    "a": "a. 130",
+    "b": "b. 105",
+    "c": "c. 220",
+    "d": "d. 125",
+    "benar": "b"
+},{
+    "no" : "7",
+    "soal":	"Sebuah kubus memiliki volume 9.621 cm<sup>3</sup>. Panjang rusuknya adalah....",
+    "a": "a. 11",
+    "b": "b. 31",
+    "c": "c. 21",
+    "d": "d. 41",
+    "benar": "c"
+},{
+    "no" : "8",
+    "soal":	"Sebuah balok memiliki panjang 28 cm, lebar 14 cm, dan tinggi 12 cm. Volume balok tersebut adalah... cm<sup>3</sup>.",
+    "a": "a. 4.700",
+    "b": "b. 4.702",
+    "c": "c. 4.704",
+    "d": "d. 4.706",
+    "benar": "c"
+},{
+    "no" : "9",
+    "soal":	"Jika panjang sebuah balok 12 cm, lebar 14 cm, dan tinggi 12 cm. Volume  balok tersebut adalah... cm<sup>3</sup>.",
+    "a": "a. 60",
+    "b": "b. 50",
+    "c": "c. 40",
+    "d": "d. 30",
+    "benar": "b"
+},{
+    "no" : "10",
+    "soal":	"Sebuah kubus dengan ukuran panjang rusuknya 20cm. Volume kubus tersebut adalah... cm<sup>3</sup>.",
+    "a": "a. 16.000",
+    "b": "b. 8.000",
+    "c": "c. 24.000",
+    "d": "d. 10.000",
+    "benar": "b"
+}]

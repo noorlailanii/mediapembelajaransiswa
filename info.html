@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/png" href="assets/img/logo.png">
+        <title>Bangun Ruang</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <body class="sb-nav-fixed">
+            <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+                <!-- Navbar Brand-->
+                <a class="navbar-brand ps-3" href="index.html">
+                    <img src="assets/img/bangunruang.png" class="logobangunruang">
+                    <label class="tulisannya">Bangun Ruang</label>
+                </a>
+            </nav>
+        <div id="layoutSidenav">
+                <main>
+                    <div style="background-image: url(assets/img/bgguru.png);">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-2 mt-5">
+                                <a href="index.html" class="btn btn-primary" style="margin-top:15%;  width: 100%;"><img src='assets/img/back.png' style="width:16%;"> Kembali</a>
+                                    <button class="btn btn-primary active" style="margin-top:10%;  width: 100%;" onclick="infoapk()" id="infoaplikasi">Informasi Aplikasi</button>
+                                    <button  class="btn btn-primary tdkactive"  style="margin-top:10%;  width: 100%;" onclick="dapus()" id="daftarpustaka">Daftar Pustaka</button>
+                                    <button  class="btn btn-primary tdkactive" style="margin-top:10%;  width: 100%;" onclick="petunjuk()" id="petunjukaplikasi">Petunjuk Aplikasi</button>
+                            </div>
+                                <div class="col-lg-9" style="margin-top: 6%;" id="infoapk">
+                                        <div class="card-header mt-4 text-sm-center d-block"><strong>Informasi Aplikasi</strong></div>
+                                        <div class="card card-body mb-2 p-4 text-sm-justify">
+                                            <center><h3 style="color:black; margin-top: -2%;">Perihal</h3></center>
+                                            <p>Media pembelajaran ini dibuat untuk memenuhi persyaratan dalam menyelesaikan Program Strata-1 Pendidikan Komputer dengan judul tugar akhir :
+                                            "Pengembangan Media Pembelajaran Interaktif Berbasis Web pada Materi Bangun Ruang untuk Siswa Kelas V SD dengan Metode Drill and Practice".</p>
+                                        
+                                        <span class="garisvertikal mb-3"></span>
+
+                                        <center><h3 style="color:black;">Tentang Author</h3></center>
+                                        <table class="table-responsive p-3 mt-2">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Nama</td>
+                                                    <td class="pl-2 pr-2">:</td>
+                                                    <td>Noor Lailani</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="pl-2 pr-2">:</td>
+                                                    <td>1710131320032@mhs.ulm.ac.id</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dosen Pembimbing 1</td>
+                                                    <td class="pl-2 pr-2">:</td>
+                                                    <td>Dr. R. Ati Sukmawati, M.Kom.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dosen Pembimbing 2</td>
+                                                    <td class="pl-2 pr-2">:</td>
+                                                    <td>Yuni Suryaningsih, M.Pd.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Program Studi</td>
+                                                    <td class="pl-2 pr-2">:</td>
+                                                    <td>Pendidikan Komputer</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fakultas</td>
+                                                    <td class="pl-2 pr-2">:</td>
+                                                    <td>Fakultas Keguruan dan Ilmu Pendidikan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Universitas</td>
+                                                    <td class="pl-2 pr-2">:</td>
+                                                    <td>Universitas Lambung Mangkurat</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                </div>
+
+                                <div class="col-lg-9" style="margin-top: 6%;" id="dapus" hidden>
+                                    <div class="card-header mt-4 text-sm-center d-block"><strong>Daftar Pustaka</strong></div>
+                                    <div class="card card-body mb-2 p-4 text-sm-justify">
+                                        <p>Damayanti, D. (2017). Buku Siswa Matematika Untuk Siswa SD/MI Kelas V. Depok: CV BINA PUSTAKA.<br><br>
+                                            Gunanto, & Adhalia, D. (2016). ESPS (Erlangga Straight Point Series) Untuk SD/MI Kelas V. Erlangga.<br><br>
+                                            Purnomosadi, W. S., & Giyanti, I. (2018). Senang Belajar Matematika SD/MI Kelas V.
+                                            </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-9" style="margin-top: 6%;" id="petunjuk" hidden>
+                                    <div class="card-header mt-4 text-sm-center d-block"><strong>Daftar Pustaka</strong></div>
+                                    <div class="card card-body mb-2 p-4 text-sm-justify">
+                                        <img src="assets/img/infoapp.png" style="width: 100%; height: 100%;"><br>
+                                        <img src="assets/img/infoapp2.png" style="width: 100%; height: 100%;"><br>
+                                        <h5 style="color: black;">Keterangan:</h5>
+                                        <ul>
+                                            <li>Nomor 1 adalah sidebar. Sidebar adalah salah satu bentuk navigasi yang terdapat pada media pembelajaran ini. Sidebar memiliki fungsi 
+                                                yang sama seperti daftar isi pada sebuah buku. Dengan sidebar, pengguna dapat melakukan perpindahan antar sub bab.</li>
+                                            <li>Nomor 2 adalah konten. Konten di sebelah kiri memuat materi bangun ruang, sedangkan konten di sebelah kanan adalah konten pendukung yang memuat contoh soal serta pertanyaan.</li>
+                                            <li>Nomor 3 adalah deretan tombol navigasi yang bersifat linear. Tombol navigasi ini berfungsi untuk berpindah ke halaman sebelum atau sesudah, serta berfungsi untuk melakukan perpindahan halaman pada sub bab yang sama.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div> 
+                </main>     
+        </div>
+                
+
+    </body>
+    <script>
+        let infoapl = document.getElementById("infoaplikasi");
+        let dafpus = document.getElementById("daftarpustaka");
+        let ptnjk = document.getElementById("petunjukaplikasi");
+
+        function infoapk(){
+            document.getElementById("infoapk").hidden = false;
+            document.getElementById("dapus").hidden = true;
+            document.getElementById("petunjuk").hidden = true;
+            infoapl.className = infoapl.className.replace(" tdkactive"," active");
+            dafpus.className = dafpus.className.replace(" active"," tdkactive");
+            ptnjk.className = ptnjk.className.replace(" active"," tdkactive");
+            // infoapl.className.add("active");
+            // dafpus.className.remove("active");
+            // ptnjk.className.remove("active");
+        }
+
+        function dapus(){
+            document.getElementById("infoapk").hidden = true;
+            document.getElementById("dapus").hidden = false;
+            document.getElementById("petunjuk").hidden = true;
+            infoapl.className = infoapl.className.replace(" active"," tdkactive");
+            dafpus.className = dafpus.className.replace(" tdkactive"," active");
+            ptnjk.className = ptnjk.className.replace(" active"," tdkactive");
+            // document.getElementById("infoaplikasi").className.remove(" active");
+            // document.getElementById("daftarpustaka").className.add("active");
+            // document.getElementById("petunjuk").className.remove("active");
+        }
+
+        function petunjuk(){
+            document.getElementById("infoapk").hidden = true;
+            document.getElementById("dapus").hidden = true;
+            document.getElementById("petunjuk").hidden = false;
+            infoapl.className = infoapl.className.replace(" active"," tdkactive");
+            dafpus.className = dafpus.className.replace(" active"," tdkactive");
+            ptnjk.className = ptnjk.className.replace(" tdkactive"," active");
+        }
+    </script>
+        <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+        </script>
+        <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
+
+        <script id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

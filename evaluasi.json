@@ -1,0 +1,162 @@
+[{
+    "no" : "1",
+    "soal":	"Hasil dari $\\sqrt[3]{4.913}$....",
+    "a": "a. 15",
+    "b": "b. 17",
+    "c": "c. 19",
+    "d": "d. 21",
+    "benar": "b"
+},{
+    "no" : "2",
+    "soal":	"$\\sqrt[3]{a}$ = 13. Nilai $a$ yang tepat adalah....",
+    "a": "a. 2.197",
+    "b": "b. 2.279",
+    "c": "c. 2.297",
+    "d": "d. 2.729",
+    "benar": "a"
+}
+,{
+    "no" : "3",
+    "soal":	"Hasil dari $7^3 - 2^3 + \\sqrt[3]{216} $....",
+    "a": "a. 298",
+    "b": "b. 316",
+    "c": "c. 320",
+    "d": "d. 349",
+    "benar": "d"
+},{
+    "no" : "4",
+    "soal":	"Hasil dari $\\sqrt[3]{8.000} : \\sqrt[3]{64}$....",
+    "a": "a. 4",
+    "b": "b. 5",
+    "c": "c. 6",
+    "d": "d. 7",
+    "benar": "b"
+},{
+    "no" : "5",
+    "soal":	"Kubus berikut yang memiliki volume 343 kubus satuan adalah....",
+    "a": "a. <img src='assets/img/eval5a.png' style='width:90%'>",
+    "b": "b. <img src='assets/img/eval5b.png' style='width:100%'>",
+    "c": "c. <img src='assets/img/eval5c.png' style='width:120%'>",
+    "d": "d. <img src='assets/img/eval5d.png' style='width:100%'>",
+    "benar": "d"
+},{
+    "no" : "6",
+    "soal":	"Volume balok berikut adalah....<br><img src='assets/img/eval6.png' style='width:20%'>",
+    "a": "a. 32 kubus satuan",
+    "b": "b. 52 kubus satuan",
+    "c": "c. 72 kubus satuan",
+    "d": "d. 92 kubus satuan",
+    "benar": "c"
+},{
+    "no" : "7",
+    "soal":	"Aura mempunyai kardus berbentuk kubus yang memiliki ukuran panjang 15 cm. Volume kardus yang dimiliki Aura tersebut adalah....",
+    "a": "a. 2.375 cm<sup>3</sup>",
+    "b": "b. 3.275 cm<sup>3</sup>",
+    "c": "c. 3.375 cm<sup>3</sup>",
+    "d": "d. 4.275 cm<sup>3</sup>",
+    "benar": "c"
+},{
+    "no" : "8",
+    "soal":	"Lida mempunyai kotak jam tangan yang luas nya 441 cm<sup>2</sup>. Volume kotak jam tangan tersebut adalah....",
+    "a": "a. 8.375 cm<sup>3</sup>",
+    "b": "b. 7.275 cm<sup>3</sup>",
+    "c": "c. 8.271 cm<sup>3</sup>",
+    "d": "d. 9.271 cm<sup>3</sup>",
+    "benar": "d"
+},{
+    "no" : "9",
+    "soal":	"Rana mempunyai loker berbentuk kubus. Loker yang Rana miliki berukuran sama dengan ukuran sebuah kardus barang. Panjang, lebar, dan tinggi kardus barang tersebut berturut-turut adalah 12 cm, 8 cm, dan 18 cm. Panjang rusuk loker itu adalah....",
+    "a": "a. 11 cm",
+    "b": "b. 12 cm",
+    "c": "c. 13 cm",
+    "d": "d. 14 cm",
+    "benar": "b"
+},{
+    "no" : "10",
+    "soal":	"Volume kardus mie berbentuk balok berikut ini adalah....<br><img src='assets/img/eval10.png' style='width:20%'>",
+    "a": "a. 6.275 cm<sup>3</sup>",
+    "b": "b. 6.750 cm<sup>3</sup>",
+    "c": "c. 5.910 cm<sup>3</sup>",
+    "d": "d. 5.481 cm<sup>3</sup>",
+    "benar": "b"
+},{
+    "no" : "11",
+    "soal":	"Volume sebuah bak mandi anak berbentuk balok 5 kali dari volume koper yang berbentuk kubus. Panjang sisi koper adalah 10 cm. Volume bak mandi tersebut adalah....",
+    "a": "a. 5.000 cm<sup>3</sup>",
+    "b": "b. 10.000 cm<sup>3</sup>", 
+    "c": "c. 15.000 cm<sup>3</sup>",
+    "d": "d. 20.000 cm<sup>3</sup>",
+    "benar": "c"
+},{
+    "no" : "12",
+    "soal":	"Alas sebuah akuarium berbentuk persegi dengan panjang sisi 9 cm. Jika tinggi akuarium 12 cm, volume akuarium tersebut adalah....",
+    "a": "a. 756 cm<sup>3</sup>",
+    "b": "b. 972 cm<sup>3</sup>",
+    "c": "c. 985 cm<sup>3</sup>",
+    "d": "d. 1.275 cm<sup>3</sup>",
+    "benar": "b"
+},{
+    "no" : "13",
+    "soal":	"Volume sebuah kotak kado yang besar berbentuk balok 15 kali volume kotak kado yang kecil berbentuk kubus. Jika ukuran panjang kotak kado yang kecil 15 cm maka volume kotak kado yang besar tersebut adalah....",
+    "a": "a. 3.375 cm<sup>3</sup>",
+    "b": "b. 225 cm<sup>3</sup>",
+    "c": "c. 50.625 cm<sup>3</sup>",
+    "d": "d. 60.678 cm<sup>3</sup>",
+    "benar": "c"
+},{
+    "no" : "14",
+    "soal":	"Berikut yang merupakan jaring-jaring kubus adalah....",
+    "a": "a. <img src='assets/img/eval14a.png' style='width:90%'>",
+    "b": "b. <img src='assets/img/eval14b.png' style='width:90%'>",
+    "c": "c. <img src='assets/img/eval14c.png' style='width:90%'>",
+    "d": "d. <img src='assets/img/eval14d.png' style='width:90%'>",
+    "benar": "a"
+},{
+    "no" : "15",
+    "soal":	"Perhatikan gambar berikut!<br><img src='assets/img/eval15.png' style='width:15%'><br>Agar menjadi jaring-jaring kubus, bangun persegi yang harus dihilangkan adalah nomor....",
+    "a": "a. 1",
+    "b": "b. 3",
+    "c": "c. 4",
+    "d": "d. 7",
+    "benar": "b"
+},{
+    "no" : "16",
+    "soal":	"Gambar berikut yang <i>bukan</i> jaring-jaring balok adalah ....",
+    "a": "a. <img src='assets/img/eval16a.png' style='width:35%'>",
+    "b": "b. <img src='assets/img/eval16b.png' style='width:35%'>",
+    "c": "c. <img src='assets/img/eval16c.png' style='width:35%'>",
+    "d": "d. <img src='assets/img/eval16d.png' style='width:35%'>",
+    "benar": "a"
+},{
+    "no" : "17",
+    "soal":	"Ana mempunyai sebuah kardus makanan berbentuk balok disusun oleh dua mainan rubik berbentuk kubus berukuran sama. Panjang, lebar dan tinggi kardus makanan berturut-turut adalah 8 cm, 4 cm, dan 4 cm. Volume setiap mainan rubik yang menyusun di kardus makanan tersebut adalah....",
+    "a": "a. 46 cm<sup>3</sup>",
+    "b": "b. 56 cm<sup>3</sup>",
+    "c": "c. 64 cm<sup>3</sup>",
+    "d": "d. 128 cm<sup>3</sup>",
+    "benar": "c"
+},{
+    "no" : "18",
+    "soal":	"Lima buah kotak biskuit berbentuk kubus berukuran sama disusun ke atas sehingga terlihat seperti balok. Panjang sisi setiap kotak biskuit adalah 6 cm. Volume balok tersebut adalah....",
+    "a": "a. 1.080 cm<sup>3</sup>",
+    "b": "b. 864 cm<sup>3</sup>",
+    "c": "c. 664 cm<sup>3</sup>",
+    "d": "d. 216 cm<sup>3</sup>",
+    "benar": "a"
+},{
+    "no" : "19",
+    "soal":	"Sebuah kulkas kecil memiliki ukuran panjang 32 cm dan tinggi 16 cm. jika volume kulkas sama dengan volume kardus berbentuk kubus yang memiliki panjang rusuk 24 cm, lebar kulkas tersebut adalah....",
+    "a": "a. 25 cm",
+    "b": "b. 26 cm",
+    "c": "c. 27 cm",
+    "d": "d. 28 cm",
+    "benar": "c"
+},{
+    "no" : "20",
+    "soal":	"Perhatikan jaring-jaring bangun ruang berikut!<br> <img src='assets/img/eval20.png' style='width:20%'><br>Jika nomor 3 adalah sisi alasnya, maka sisi atas nya berada pada nomor....",
+    "a": "a. 2",
+    "b": "b. 6",
+    "c": "c. 5",
+    "d": "d. 3",
+    "benar": "b"
+}]

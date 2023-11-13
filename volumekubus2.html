@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/png" href="assets/img/logo.png">
+        <title>Bangun Ruang | Volume Kubus</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">
+                <img src="assets/img/bangunruang.png" class="logobangunruang">
+                <label class="tulisannya">Bangun Ruang</label>
+            </a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-sm-0 me-3 ms-5-5 me-sm-0" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="color:white;"></i></button>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">
+                                <h5>Daftar Materi</h5>
+                            </div>
+                                <a class="nav-link" href="pengantar.html">
+                                <div class="sb-nav-link-icon" aria-expanded="true"><i class="fas fa-book"></i></div>
+                                Pengantar Bangun Ruang
+                            </a>
+                            
+                            <a class="nav-link collapsed" href="pangkattiga.html" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Pangkat Tiga & Akar Pangkat Tiga
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="pangkattiga.html">Pangkat Tiga</a>
+                                    <a class="nav-link" href="akarpangkattiga.html">Akar Pangkat Tiga</a>
+                                    <a class="nav-link" href="kuis1.html">Kuis 1</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="jaringkubus.html" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-cube"></i></div>
+                                Jaring-Jaring
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>                            
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="jaringkubus.html">Jaring-Jaring Kubus</a>
+                                    <a class="nav-link" href="jaringbalok.html">Jaring-Jaring Balok</a>
+                                    <a class="nav-link" href="kuis2.html">Kuis 2</a>
+                                </nav>
+                            </div>
+                            <a class="show nav-link collapsed active" href="volumekubus.html" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
+                                Volume
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="show collapse" id="pagesCollapseError" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link active" href="volumekubus.html">Volume Kubus</a>
+                                    <a class="nav-link" href="volumebalok.html">Volume Balok</a>
+                                    <a class="nav-link" href="kuis3.html">Kuis 3</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link" href="masalah.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
+                                Menyelesaikan masalah tentang Volume Kubus dan Balok
+                            </a>
+                            <a class="nav-link" href="evaluasi.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-pencil-square"></i></div>
+                                Evaluasi
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid py-4 px-5">
+                        <h2 style="color: black;">
+                            <div class="judulgarisbesar">
+                                &nbsp;C. Volume Kubus dan Balok
+                            </div>
+                        </h2>
+                        <hr>
+                        <h4 class="mt-4" style="color: black;">
+                            <div class="judulgariskecil">
+                                &nbsp;1. Volume Kubus
+                            </div>
+                            
+                        </h4>
+                        <div class="card p-4 text-sm-justify">                     
+                            <p>Nah, kemudian kita akan memasuki pembahasan untuk menentukan 
+                                volume kubus. Apakah benda tersebut berbentuk kubus?</p>
+                                <center>
+                                    <div class="row">
+                                        <div class="col-xl-7"><img src="assets/img/dadu.png" style="width: 8rem;"></div>
+                                        <div class="col-xl-1"><img src="assets/img/rubik.png" style="width: 8rem;"></div>
+                                        <p><b>Gambar 6. Dadu  
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gambar 7. Kubik</b></p>
+                                    </div>
+                                </center>
+                                <script>
+                                    function btnPilihYa(){
+                                        document.getElementById("tampilPil").innerHTML = "<div class='card card-body m-1' style='border: 2px dashed green;'> <p>Ya, benar. Benda-benda di atas berbentuk kubus.</p></div>";
+
+                                    }
+
+                                    function btnPilihTidak(){
+                                        document.getElementById("tampilPil").innerHTML = "<div class='card card-body m-1' style='border: 2px dashed red;'> <p>Yah salah. Jawabannya adalah benda-benda di atas berbentuk kubus.</p></div>";
+                                    }
+                                </script>
+                                <div class="container-fluid pe-4 p-3 mb-4">
+                                    <button type="button" class="btn btn-primary" onclick="btnPilihYa()" id="tmblPilYa" value="ya" style="width: 5rem;">Ya</button>
+                                    <button type="button" class="btn btn-primary" onclick="btnPilihTidak()" id="tmblPilTdk" value="tidak" style="width: 5rem;">Tidak</button>
+                                    <span id="tampilPil"></span>
+                                </div>
+                                
+                                <p>Kubus merupakan bangun ruang yang memiliki 6 sisi berbentuk persegi yang sama luas. 
+                                    Volume kubus dapat ditentukan dengan cara menghitung jumlah kubus satuan yang menyusunnya. 
+                                    Kubus satuan adalah kubus yang panjang rusuknya 1 satuan.</p>
+                                <h5  style="color: black;">Kubus Satuan</h5>
+                                <p>
+                                    Kubus satuan dapat digunakan untuk mengukur isi dari bangun kubus. 
+                                    Volume kubus dapat ditentukan dengan cara menghitung banyaknya kubus satuan yang dapat 
+                                    di isikan ke kubus. Perhatikan video 2 berikut, silahkan klik play<img src='assets/img/play.png' style="width:2%;"> 
+                                    untuk memulai. Klik icon <img src='assets/img/perbesar.png' style="width:2%;"> untuk memperbesar video.
+                                </p>
+                                <center>
+                                    <video controls width="70%">
+                                        <source src="assets/vid/kubussatuanrusuk.mp4" type="video/mp4"/>
+                                    </video>
+                                    <p><b>Video 2. Kubus Satuan</b></p>
+                                </center>
+                                
+                                <div class="card card-body-petunjuk mt-3 mb-3">
+                                    <h6 style="color:black"><img src="assets/img/contohsoal.png" style="width: 2%;"><b>&nbsp;Petunjuk pengerjaan:</b></h6>
+                                    <ul class="ms-3">
+                                        <li> Isilah kotak kosong yang berwarna biru yang tersedia 
+                                            dengan mendrag atau menyeret jawaban yang ada pada kolom pilihan jawaban (paling kanan bagian atas) untuk kolom sisi.  </li>
+                                            <li> Isilah kotak kosong berwarna hijau yang tersedia 
+                                                dengan mendrag atau menyeret jawaban yang ada pada kolom pilihan jawaban (paling kanan bagian bawah sesudah sisi) untuk kolom keterangan.</li>
+                                        <li>Jika sudah mengisikan jawaban silahkan kamu klik button cek jawaban pada bawah tabel.</li>
+                                        <li>Jika jawaban kamu benar maka akan muncul icon benar <img src='assets/img/benar.png' style="width:2%;"></li> 
+                                        <li>Jika jawaban kamu salah maka akan muncul icon salah <img src='assets/img/salah.png' style="width:2%;"></li> 
+                                    </ul>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr style="background-color: #badce3;">
+                                            <th>No.</th>
+                                            <th class="text-center" style="width: 30%;">Bangun</th>
+                                            <th class="text-center" style="width: 7%;">r<sub>1</sub></th>
+                                            <th class="text-center" style="width: 7%;">r<sub>2</sub></th>
+                                            <th class="text-center" style="width: 7%;">r<sub>3</sub></th>
+                                            <th class="text-center" style="width: 10%;">Volume</th>
+                                            <th class="text-center" style="width: 18%;">Keterangan</th>
+                                            <th class="text-center" >Pilihan Jawaban</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1.</td>
+                                            <td><img src="assets/img/kssatu.png" style="width: 25%;" ></td>
+                                            <td>1</sub></td>
+                                            <td>1</sub></td>
+                                            <td>1</sub></td>
+                                            <td>1</td>
+                                            <td>$1\times1\times1 = 1$</td>
+                                            <td rowspan="5" class="text-start">
+                                                <p><u><b>Kolom Sisi :</b></u></p>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag3" width="88" height="31">1</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag4" width="88" height="31">1</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="salahni" width="88" height="31">1</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">2</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">2</p>
+                                                </div><br><br>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag5" width="88" height="31">2</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="33" width="88" height="31">3</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="333" width="88" height="31">3</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="3333" width="88" height="31">3</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag6" width="88" height="31">4</p>
+                                                </div><br><br>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag7" width="88" height="31">4</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag8" width="88" height="31">4</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="33" width="88" height="31">5</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="333" width="88" height="31">5</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="3333" width="88" height="31">5</p>
+                                                </div><br><br>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag9" width="88" height="31">6</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag10" width="88" height="31">6</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag11" width="88" height="31">6</p>
+                                                </div>
+                                                
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag12" width="88" height="31">7</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag13" width="88" height="31">7</p>
+                                                </div><br><br>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag14" width="88" height="31">7</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag15" width="88" height="31">8</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag15" width="88" height="31">8</p>
+                                                </div>
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag15" width="88" height="31">8</p>
+                                                </div>
+
+                                                <br><br>
+                                                <b><u>Kolom Volume:</u></b>
+                                                <br><br>
+                                                
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag16" width="88" height="31">1</p>
+                                                </div> 
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag17" width="88" height="31">8</p>
+                                                </div> 
+                                                <div id="divvol" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag18" width="88" height="31">27</p>
+                                                </div> 
+                                                <div id="divvol" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag19" width="200" height="31">64</p>
+                                                </div> <br><br>
+                                                <div id="divvol1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag20" width="88" height="31">125</p>
+                                                </div> 
+                                                <div id="divvol1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag21" width="88" height="31">216</p>
+                                                </div> 
+                                                <div id="divvol1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                    <p draggable="true" ondragstart="drag(event)" id="drag22" width="88" height="31">343</p>
+                                                </div> 
+                                                <br><br><br>
+                                                    <p><u><b>Kolom Keterangan:</b></u></p>
+                                                    <div id="divket3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                        <p draggable="true" ondragstart="drag(event)" id="dragket1">2&#215;2&#215;2 = 8</p>
+                                                    </div><br><br>
+                                                    <div id="divket4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                        <p draggable="true" ondragstart="drag(event)" id="dragket2">3&#215;3&#215;3 = 27</p>
+                                                    </div><br><br>
+                                                    <div id="divket5" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                        <p draggable="true" ondragstart="drag(event)" id="dragket3">4&#215;4&#215;4 = 64</p>
+                                                    </div><br><br>
+                                                    <div id="divket6" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                        <p draggable="true" ondragstart="drag(event)" id="dragket4">5&#215;5&#215;5 = 125</p>
+                                                    </div><br><br>
+                                                    <div id="divket7" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                        <p draggable="true" ondragstart="drag(event)" id="dragket5">6&#215;6&#215;6 = 216</p>
+                                                    </div><br><br>
+                                                    <div id="divket8" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                        <p draggable="true" ondragstart="drag(event)" id="dragket6">7&#215;7&#215;7 = 343</p>
+                                                    </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2.</td>
+                                            <td><img src="assets/img/ksdua.png" style="width: 35%;" ></td>
+                                            <td>2</sub></td>
+                                            <td>
+                                                <div id="div21" ondrop="drop(event)" ondragover="allowDrop(event)" class="warnadiv"></div>
+                                                <span id="jwbn1"></span>
+                                            </td>
+                                            <td>
+                                                <div id="div22" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbn2"></span>
+                                            </td>
+                                            <td>
+                                                <div id="divv1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbnv1"></span>
+                                            </td>
+                                            <td>
+                                                <div id="divket11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbnket1"></span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>3.</td>
+                                            <td><img src="assets/img/kstiga.png" style="width: 45%;" ></td>
+                                            <td>
+                                                <div id="div23" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbn4"></span>
+                                            </td>
+                                            <td>
+                                                <div id="div24" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbn5"></span>
+                                            </td>
+                                            <td>
+                                                <div id="div25" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbn6"></span>
+                                            </td>
+                                            <td>
+                                                <div id="divv2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbnv2"></span>
+                                            </td>
+                                            <td>
+                                                <div id="divket22" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbnket2"></span>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>4.</td>
+                                            <td><img src="assets/img/ksempat.png" style="width: 50%;" ></td>
+                                            <td>
+                                                <div id="div26" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbn7"></span>
+                                            </td>
+                                            <td>
+                                                <div id="div27" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbn8"></span>
+                                            </td>
+                                            <td>
+                                                <div id="div28" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbn9"></span>
+                                            </td>
+                                            <td>
+                                                <div id="divv3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbnv3"></span>
+                                            </td>
+                                            <td>
+                                                <div id="divket33" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbnket3"></span>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>5.</td>
+                                            <td><img src="assets/img/kslima.png" style="width: 55%;" ></td>
+                                            <td>
+                                                <div id="div29" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbn10"></span>
+                                            </td>
+                                            <td>
+                                                <div id="div210" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbn11"></span>
+                                            </td>
+                                            <td>
+                                                <div id="div211" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbn12"></span>
+                                            </td>
+                                            <td>
+                                                <div id="divv4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbnv4"></span>
+                                            </td>
+                                            <td>
+                                                <div id="divket44" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                                <span id="jwbnket4"></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                                
+                                <center>
+                                    <a onclick="cekjwbn()" class="btn btn-primary" style="width: 20rem">Cek Jawaban</a>
+                                </center>
+                            </div>
+                                <br>
+                                
+                                <script>
+                                    var benar = 0;
+                                    var salah = 0;
+                                    var drag1 = document.getElementById("drag1").innerText;
+                                    var drag2 = document.getElementById("drag2").innerText;
+                                    var drag5 = document.getElementById("drag5").innerText;
+                                    var drag6 = document.getElementById("drag6").innerText;
+                                    var drag7 = document.getElementById("drag7").innerText;
+                                    var drag8 = document.getElementById("drag8").innerText;
+                                    var drag9 = document.getElementById("drag9").innerText;
+                                    var drag10 = document.getElementById("drag10").innerText;
+                                    var drag11 = document.getElementById("drag11").innerText;
+                                    var drag12 = document.getElementById("drag12").innerText;
+                                    var drag13 = document.getElementById("drag13").innerText;
+                                    var drag14 = document.getElementById("drag14").innerText;
+                                    var drag15 = document.getElementById("drag15").innerText;
+                                    var drag16 = document.getElementById("drag16").innerText;
+                                    var drag17 = document.getElementById("drag17").innerText;
+                                    var drag18 = document.getElementById("drag18").innerText;
+                                    var drag19 = document.getElementById("drag19").innerText;
+                                    var drag20 = document.getElementById("drag20").innerText;
+                                    var drag21 = document.getElementById("drag21").innerText;
+                                    var drag22 = document.getElementById("drag22").innerText;
+                                    var dragket1 = document.getElementById("dragket1").innerText;
+                                    var dragket3 = document.getElementById("dragket3").innerText;
+                                    var dragket5 = document.getElementById("dragket5").innerText;
+                                    var dragket6 = document.getElementById("dragket6").innerText;
+                                    console.log(dragket1);
+                                    var soaln21 = document.getElementById("div21");
+                                    var soaln22 = document.getElementById("div22");
+                                    var soaln31 = document.getElementById("div23");
+                                    var soaln32 = document.getElementById("div24");
+                                    var soaln33 = document.getElementById("div25");
+                                    var soaln41 = document.getElementById("div26");
+                                    var soaln42 = document.getElementById("div27");
+                                    var soaln43 = document.getElementById("div28");
+                                    var soaln51 = document.getElementById("div29");
+                                    var soaln52 = document.getElementById("div210");
+                                    var soaln53 = document.getElementById("div211");
+                                    var soalv1 = document.getElementById("divv1");
+                                    var soalv2 = document.getElementById("divv2");
+                                    var soalv3 = document.getElementById("divv3");
+                                    var soalv4 = document.getElementById("divv4");
+                                    var soalket1 = document.getElementById("divket11");
+                                    var soalket2 = document.getElementById("divket22");
+                                    var soalket3 = document.getElementById("divket33");
+                                    var soalket4 = document.getElementById("divket44");
+                                    var tampillogo1 = document.getElementById("jwbn1");
+                                    var tampillogo2 = document.getElementById("jwbn2");
+                                    var tampillogo3 = document.getElementById("jwbn4");
+                                    var tampillogo4 = document.getElementById("jwbn5");
+                                    var tampillogo5 = document.getElementById("jwbn6");
+                                    var tampillogo6 = document.getElementById("jwbn7");
+                                    var tampillogo7 = document.getElementById("jwbn8");
+                                    var tampillogo8 = document.getElementById("jwbn9");
+                                    var tampillogo9 = document.getElementById("jwbn10");
+                                    var tampillogo10 = document.getElementById("jwbn11");
+                                    var tampillogo11 = document.getElementById("jwbn12");
+                                    var tampillogov1 = document.getElementById("jwbnv1");
+                                    var tampillogov2 = document.getElementById("jwbnv2");
+                                    var tampillogov3 = document.getElementById("jwbnv3");
+                                    var tampillogov4 = document.getElementById("jwbnv4");
+                                    var tampillogoket1 = document.getElementById("jwbnket1");
+                                    var tampillogoket2 = document.getElementById("jwbnket2");
+                                    var tampillogoket3 = document.getElementById("jwbnket3");
+                                    var tampillogoket4 = document.getElementById("jwbnket4");
+
+                                    function allowDrop(ev) {
+                                        ev.preventDefault();
+                                    }
+                                    
+                                    function drag(ev) {
+                                        ev.dataTransfer.setData("Text", ev.target.id);
+                                    }
+                                    
+                                    function drop(ev) {
+                                        ev.preventDefault();
+                                        var data = ev.dataTransfer.getData("text");
+                                        ev.target.appendChild(document.getElementById(data));
+                                    }
+
+                                    function cekjwbn(){
+                                        if(soaln21.innerText == drag1 || soaln21.innerText == drag2 || soaln21.innerText == drag5){
+                                            tampillogo1.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogo1.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+                                        
+                                        if(soaln22.innerText == drag1 || soaln22.innerText == drag2 || soaln22.innerText == drag5){
+                                            tampillogo2.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogo2.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soaln31.innerText == drag6 || soaln31.innerText == drag7 || soaln31.innerText == drag8){
+                                            tampillogo3.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogo3.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soaln32.innerText == drag6 || soaln32.innerText == drag7 || soaln32.innerText == drag8){
+                                            tampillogo4.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogo4.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soaln33.innerText == drag6 || soaln33.innerText == drag7 || soaln33.innerText == drag8){
+                                            tampillogo5.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogo5.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soaln41.innerText == drag9 || soaln41.innerText == drag10 || soaln41.innerText == drag11){
+                                            tampillogo6.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogo6.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soaln42.innerText == drag9 || soaln42.innerText == drag10 || soaln42.innerText == drag11){
+                                            tampillogo7.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogo7.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soaln43.innerText == drag9 || soaln43.innerText == drag10 || soaln43.innerText == drag11){
+                                            tampillogo8.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogo8.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soaln51.innerText == drag12 || soaln51.innerText == drag13 || soaln51.innerText == drag14){
+                                            tampillogo9.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogo9.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soaln52.innerText == drag12 || soaln52.innerText == drag13 || soaln52.innerText == drag14){
+                                            tampillogo10.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogo10.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soaln53.innerText == drag12 || soaln53.innerText == drag13 || soaln53.innerText == drag14){
+                                            tampillogo11.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogo11.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soalv1.innerText == drag17){
+                                            tampillogov1.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogov1.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soalv2.innerText == drag19){
+                                            tampillogov2.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogov2.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soalv3.innerText == drag21){
+                                            tampillogov3.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogov3.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soalv4.innerText == drag22){
+                                            tampillogov4.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogov4.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+                                        if(soalket1.innerText == dragket1){
+                                            tampillogoket1.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                            console.log(soalket1.innerText);
+                                        } else {
+                                            tampillogoket1.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soalket2.innerText == dragket3){
+                                            tampillogoket2.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogoket2.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soalket3.innerText == dragket5){
+                                            tampillogoket3.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogoket3.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+
+                                        if(soalket4.innerText == dragket6){
+                                            tampillogoket4.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalah'>";
+                                        } else {
+                                            tampillogoket4.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalah'>";
+                                        }
+                                    }
+
+                                </script>
+                                <p>Berdasarkan tabel di atas, banyaknya kubus satuan dari 
+                                    kubus adalah hasil perkalian dari $rusuk1\times rusuk2\times rusuk3.$</p>
+                                <p>Volume dapat dicari dengan menghitung banyaknya kubus satuan terlebih dahulu. 
+                                    Jika masing-masing kubus satuan memiliki volume 1 cm<sup>3</sup> (1 centimeter kubik), 
+                                    maka volume kubus diperoleh 
+                                    banyaknya kubus satuan dikali dengan 1 centimeter kubik.</p>
+                                <p> Berdasarkan uraian di atas, volume kubus dapat dihitung dengan cara berikut.</p>
+                                <div class="row">
+                                    <div class="col-xl-3">
+                                        <img src="assets/img/kubuskusa.png" style="width: 10rem;">
+                                    </div>
+                                    <div class="card card-body col-lg-2" style="height: fit-content;">
+                                        <p>Volume Kubus = rusuk&nbsp;&#215;&nbsp;rusuk&nbsp;&#215;&nbsp;rusuk = r<sup>3</sup></p>
+                                        <p>dengan r = panjang rusuk kubus.</p>
+                                    </div>
+                                </div>
+                                <p>
+                                    Jika kubus berikut dihitung menggunakan rumus Volume Kubus di atas, maka,
+                                </p>
+                                <div class="row">
+                                    <div class="col-xl-3">
+                                        <img src="assets/img/kubusvolume.png" style="width: 10rem;">
+                                    </div>
+                                    <div class="card card-body col-lg-2" style="height: fit-content;">
+                                        <p>Volume Kubus = r&nbsp;&#215;&nbsp;r&nbsp;&#215;&nbsp;r
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;
+                                            = 3cm&nbsp;&#215;&nbsp;3cm&nbsp;&#215;&nbsp;3cm
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp; 
+                                            = 27cm<sup>3</sup></p>
+                                        <p>dengan r = panjang rusuk kubus.</p>
+                                    </div>
+                                </div>
+
+                                    <script>
+                                        function soal1mm8(){
+                                            document.getElementById("soal1mm8").classList.remove("hilang");
+                                            document.getElementById("soal2mm8").classList.add("hilang");
+                                            document.getElementById("soal3mm8").classList.add("hilang");
+                                            document.getElementById("soal4mm8").classList.add("hilang");
+                                        }
+                                        function soal2mm8(){
+                                            document.getElementById("soal1mm8").classList.add("hilang");
+                                            document.getElementById("soal2mm8").classList.remove("hilang");
+                                            document.getElementById("soal3mm8").classList.add("hilang");
+                                            document.getElementById("soal4mm8").classList.add("hilang");
+                                        }
+                                        function soal3mm8(){
+                                            document.getElementById("soal1mm8").classList.add("hilang");
+                                            document.getElementById("soal2mm8").classList.add("hilang");
+                                            document.getElementById("soal3mm8").classList.remove("hilang");
+                                            document.getElementById("soal4mm8").classList.add("hilang");
+                                        }
+                                        function soal4mm8(){
+                                            document.getElementById("soal1mm8").classList.add("hilang");
+                                            document.getElementById("soal2mm8").classList.add("hilang");
+                                            document.getElementById("soal3mm8").classList.add("hilang");
+                                            document.getElementById("soal4mm8").classList.remove("hilang");
+                                        }
+
+                                        var benar  = 0;
+
+                                        function s21(){
+                                            var s21 = document.getElementById("s21");
+
+                                            if(s21.value == "5"){
+                                                document.getElementById("s21").style="border:3px solid green; width:2rem;height: 2rem; text-align:center";
+                                                benar = 1;
+                                            }else{
+                                                document.getElementById("s21").style="border:3px solid red; width:2rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+
+                                        function s31(){
+                                            var s31 = document.getElementById("s31");
+
+                                            if(s31.value == "5"){
+                                                document.getElementById("s31").style="border:3px solid green; width:2rem;height: 2rem; text-align:center";
+                                                benar = 2;
+                                            }else{
+                                                document.getElementById("s31").style="border:3px solid red; width:2rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+                                        function hapusdisabled1(){
+                                            if(benar = 2){
+                                                document.getElementById("h1").classList.remove('inputdisabled');
+                                            } else {
+                                            }
+                                        }
+                                        function h1(){
+                                            var h1 = document.getElementById("h1");                                          
+                                            if(h1.value == "125"){
+                                                var benar = 2;
+                                                document.getElementById("h1").style="border:3px solid green; width:4rem;height: 2rem; text-align:center";
+                                                var hasil1= document.getElementById("h1").value ;
+                                                document.getElementById("tmplh1").innerHTML = "<b>" + hasil1 +"</b>";
+                                                document.getElementById("selamat").innerHTML = 
+                                                "Bagus! Selamat ya kamu berhasil menjawab soal ini, silahkan ke soal berikutnya!";
+                                            }else{
+                                                document.getElementById("h1").style="border:3px solid red; width:4rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+
+                                        function s12(){
+                                            var s12 = document.getElementById("s12");
+
+                                            if(s12.value == "7"){
+                                                document.getElementById("s12").style="border:3px solid green; width:2rem;height: 2rem; text-align:center";
+                                            }else{
+                                                document.getElementById("s12").style="border:3px solid red; width:2rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+
+                                        function s22(){
+                                            var s22 = document.getElementById("s22");
+
+                                            if(s22.value == "7"){
+                                                document.getElementById("s22").style="border:3px solid green; width:2rem;height: 2rem; text-align:center";
+                                            }else{
+                                                document.getElementById("s22").style="border:3px solid red; width:2rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+
+                                        function s32(){
+                                            var s32 = document.getElementById("s32");
+
+                                            if(s32.value == "7"){
+                                                document.getElementById("s32").style="border:3px solid green; width:2rem;height: 2rem; text-align:center";
+                                                benar = 3;
+                                            }else{
+                                                document.getElementById("s32").style="border:3px solid red; width:2rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+
+                                        function hapusdisabled2(){
+                                            if(benar = 3){
+                                                document.getElementById("h2").classList.remove('inputdisabled');
+                                            } else {
+
+                                            }
+                                        }
+
+                                        function h2(){
+                                            var h2 = document.getElementById("h2");
+                                            
+                                            if(h2.value == "343"){
+                                                document.getElementById("h2").style="border:3px solid green; width:4rem;height: 2rem; text-align:center";
+                                                var hasil2= document.getElementById("h2").value ;
+                                                document.getElementById("tmplh2").innerHTML = "<b>" + hasil2 +"</b>";
+                                                document.getElementById("selamat2").innerHTML = 
+                                                "Bagus! Selamat ya kamu berhasil menjawab soal ini, silahkan ke soal berikutnya!";
+                                            }else{
+                                                document.getElementById("h2").style="border:3px solid red; width:4rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+
+                                        function mm8s31(){
+                                            var mm8s31 = document.getElementById("mm8s31");
+
+                                            if(mm8s31.value == "8"){
+                                                document.getElementById("mm8s31").style="border:3px solid green; width:2rem;height: 2rem; text-align:center";
+                                            }else{
+                                                document.getElementById("mm8s31").style="border:3px solid red; width:2rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+                                        function mm8s32(){
+                                            var mm8s32 = document.getElementById("mm8s32");
+
+                                            if(mm8s32.value == "7"){
+                                                document.getElementById("mm8s32").style="border:3px solid green; width:2rem;height: 2rem; text-align:center";
+                                            }else{
+                                                document.getElementById("mm8s32").style="border:3px solid red; width:2rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+                                        function mm8s32(){
+                                            var h3 = document.getElementById("mm8s32");
+                                            
+                                            if(h3.value == "512"){
+                                                document.getElementById("mm8s32").style="border:3px solid green; width:5rem;height: 2rem; text-align:center";
+                                                var hasil3= document.getElementById("mm8s32").value ;
+                                                document.getElementById("tmplh3").innerHTML = "<b>" + hasil3 +"</b>";
+                                                document.getElementById("selamat3").innerHTML = 
+                                                "Bagus! Selamat ya kamu berhasil menjawab soal ini, silahkan ke soal berikutnya!";
+                                            }else{
+                                                document.getElementById("mm8s32").style="border:3px solid red; width:5rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+
+                                        function mm8s41(){
+                                            var h4 = document.getElementById("mm8s41");
+                                            
+                                            if(h4.value == "15"){
+                                                document.getElementById("mm8s41").style="border:3px solid green; width:3rem;height: 2rem; text-align:center";
+                                                var hasil4 = document.getElementById("mm8s41").value ;
+                                                document.getElementById("tmplh4").innerHTML = "<b>" + hasil4 +"</b>";
+                                                document.getElementById("selamat4").innerHTML = 
+                                                "Bagus! Selamat ya kamu berhasil menjawab soal ini, silahkan kepembahasan selanjutnya!";
+                                            }else{
+                                                document.getElementById("mm8s41").style="border:3px solid red; width:3rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+
+
+                                    </script>
+                                    <div class="card card-body-simak  mt-4">
+                                        <div class="card-a card-body p-3" style="height: 70px;">
+                                            <h4 style="font-weight: 700; color: black;">
+                                                <center>
+                                                    <img src="assets/img/panahkanan.png" class="marimencoba">
+                                                    Mari Mencoba 8
+                                                    <img src="assets/img/panahkiri.png" class="marimencoba">
+                                                </center>
+                                            </h4>
+                                        </div>
+    
+                                            <div class="card card-body-petunjuk mt-3 mb-3">
+                                                <h6 style="color:black"><img src="assets/img/contohsoal.png" style="width: 1.5rem;"><b>&nbsp;Petunjuk pengerjaan:</b></h6>
+                                                <ul class="ms-3">
+                                                    <li> Isikan jawaban kamu pada kolom yang kosong secara berurutan dari kiri ke kanan. </li>
+                                                    <li> Jika jawaban kamu benar maka kolom tersebut akan berubah menjadi warna hijau. </li>
+                                                    <li> Jika jawaban kamu salah maka kolom tersebut akan berubah menjadi warna merah. </li>
+                                                    <li> Setelah kolom berwarna hijau, jika kolom berikutnya tidak bisa kamu isi jawaban maka klik 2 kali pada kolom tersebut. </li>
+                                                    <li> Untuk beralih ke soal lainnya klik tombol 1 sampai 4 yang terletak pada bawah soal.</li>
+                                                </ul>
+                                            </div>
+                                            <div id="soal1mm8">
+                                                <h6 class="soalmm">
+                                                    <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                                    Soal 1:
+                                                </h6>
+                                                <p style="color:black">
+                                                    Tentukan volume kubus di bawah ini dalam kubus satuan!
+                                                    <br><img src="assets/img/mm8satu.png" style="width: 10rem;">
+                                                </p>
+                                                <h6 class="soalmm">Jawab:</h6>
+                                                <p>Volume Kubus $=r \times r \times r $<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;
+                                                    <label for="s21" class="mb-2">$= 5 \times $ </label>
+                                                    <input type="text" class="form-control-sm" id="s21" name="s21" onkeyup="s21()" placeholder="..." style="width: 2rem;height: 2rem; text-align: center;">
+                                                    $\times$
+                                                    <input type="text" class="form-control-sm" id="s31" name="s31" onkeyup="s31()" placeholder="..." onclick="hapusdisabled1()" style="width: 2rem; height: 2rem;text-align: center;">
+                                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;$=$ 
+                                                    <input type="text" class="form-control-sm inputdisabled" id="h1" name="h1" onkeyup="h1()" class="mt-2" placeholder="..." style="width: 4rem;height: 2rem; text-align: center;">
+                                                    Kubus Satuan
+                                                    <br>
+                                                    <p>Jadi, hasil volume kubus tersebut adalah <button id="tmplh1" class="form-control text-sm-center"  placeholder="..." style=" width:4rem; height: 2rem;text-align: center; " readonly></button> kubus satuan.</p>
+                                                    <p id="selamat"></p>
+                                                </p>
+                                                <div class="button-group text-center">
+                                                    <button type="button" class="btn btn-outline-primary active">1</button>
+                                                    <button type="button" class="btn btn-outline-primary" onclick="soal2mm8()">2</button>
+                                                    <button type="button" class="btn btn-outline-primary" onclick="soal3mm8()">3</button>
+                                                    <button type="button" class="btn btn-outline-primary" onclick="soal4mm8()">4</button>
+                                                </div>
+                                            </div>
+                                            <div id="soal2mm8" class="hilang">
+                                                <h6 class="soalmm">
+                                                    <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                                    Soal 2:
+                                                </h6>
+                                                <p style="color:black">
+                                                    Tentukan volume wadah berbentuk kubus yang memiliki panjang rusuk 7 cm!
+                                                </p>
+                                                <h6 class="soalmm">Jawab:</h6>
+                                                    <p>Volume Kubus $=r \times r \times r $<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;$=$ 
+                                                        <input type="text" class="form-control-sm" id="s12" name="s12" onkeyup="s12()" placeholder="..." style="width: 2rem; height: 2rem;text-align: center;">
+                                                        $\times$
+                                                        <input type="text" class="form-control-sm" id="s22" name="s22" onkeyup="s22()" placeholder="..." style="width: 2rem; height: 2rem;text-align: center;">
+                                                        $\times$
+                                                        <input type="text" class="form-control-sm" id="s32" name="s32" onkeyup="s32()" onclick="hapusdisabled2()" placeholder="..." style="width: 2rem; height: 2rem;text-align: center;">
+                                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;$=$ 
+                                                        <input class="form-control-sm inputdisabled mt-1" type="text" id="h2" name="h2" onkeyup="h2()" placeholder="..." style="width: 4rem;height: 2rem; text-align: center;">
+                                                        $cm$<sup>$3$</sup>
+                                                        <br>
+                                                        <p>Jadi, hasil volume wadah tersebut adalah <button id="tmplh2" class="form-control text-sm-center"  placeholder="..." style=" width:4rem; height: 2rem;text-align: center; " readonly></button> cm<sup>3</sup></p>
+                                                        <p id="selamat2"></p>
+                                                    </p>
+                                                <div class="button-group text-center">
+                                                    <button type="button" class="btn btn-outline-primary" onclick="soal1mm8()">1</button>
+                                                    <button type="button" class="btn btn-outline-primary active">2</button>
+                                                    <button type="button" class="btn btn-outline-primary" onclick="soal3mm8()">3</button>
+                                                    <button type="button" class="btn btn-outline-primary" onclick="soal4mm8()">4</button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div id="soal3mm8" class="hilang">
+                                                <h6 class="soalmm">
+                                                    <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                                    Soal 3:
+                                                </h6>
+                                                <p style="color:black">
+                                                    Luas rusuk atas kubus berikut adalah 64 cm<sup>2</sup>.
+                                                    Tentukan panjang rusuk
+                                                    dan volume kubus tersebut!<br>
+                                                    <img src="assets/img/soalmm8_3.png" style="width: 10rem;">
+                                                </p>
+                                                <h6 class="soalmm">Jawab:</h6>
+                                                    <p>Yang diketahui adalah luas rusuk atas kubus yaitu 64 cm<sup>2</sup>, untuk
+                                                        mencari panjang rusuk nya menggunakan rumus:
+                                                        <br>
+                                                        Panjang rusuk = $\sqrt[]{L}$<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        = $\sqrt[]{64}$<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        =  <b>8 cm</b>
+                                                        <br>
+                                                        Setelah panjang rusuk sudah ditentukan, 
+                                                        kita akan mencari volume kubusnya dengan rumus:
+                                                        <br>
+                                                        Volume kubus = r<sup>3</sup><br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                &nbsp;&nbsp;&nbsp;=
+                                                                <input type="text" id="mm8s31" onkeyup="mm8s31()" placeholder="..." style="width: 2rem; height: 2rem;text-align: center;">
+                                                                <sup>3</sup><br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                &nbsp;&nbsp;&nbsp;=
+                                                                <input type="text" class="mt-1" id="mm8s32" onkeyup="mm8s32()" placeholder="..." style="width: 5rem;height: 2rem; text-align: center;">
+                                                                cm<sup>3</sup>
+                                                                <br>
+                                                                <p>Jadi, volume kubus tersebut adalah <button id="tmplh3" class="form-control text-sm-center"  placeholder="..." style=" width:5rem; height: 2rem;text-align: center; " readonly></button> cm<sup>3</sup></p>
+                                                                <p id="selamat3"></p>
+                                                    </p>
+                                                    <div class="button-group text-center">
+                                                        <button type="button" class="btn btn-outline-primary" onclick="soal1mm8()">1</button>
+                                                        <button type="button" class="btn btn-outline-primary" onclick="soal2mm8()">2</button>
+                                                        <button type="button" class="btn btn-outline-primary active">3</button>
+                                                        <button type="button" class="btn btn-outline-primary" onclick="soal4mm8()">4</button>
+                                                    </div>
+                                            </div>
+                                            <div id="soal4mm8" class=" hilang">
+                                                <h6 class="soalmm">
+                                                    <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                                    Soal 4:
+                                                </h6>
+                                                <p style="color:black">
+                                                    Diketahui volume kubus adalah 3.375 cm<sup>3</sup>. Tentukan panjang rusuk kubus tersebut.<br>
+                                                </p>
+                                                <h6 class="soalmm">Jawab:</h6>
+                                                    <p>Karena yang diketahui adalah volume kubus nya. Jadi,
+                                                        <br>
+                                                        Volume Kubus = r<sup>3</sup><br>
+                                                        3.375
+                                                        &nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        = r<sup>3</sup><br>
+                                                        <br>Kemudian, kita akan mencari panjang rusuknya. Jadi,<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        r
+                                                        &nbsp;
+                                                        = $\sqrt[3]{3.375}$
+                                                        <br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        r
+                                                        &nbsp;
+                                                        =
+                                                        <input type="text" id="mm8s41" name="mm8s41" placeholder="..." onkeyup="mm8s41()" style="width: 3rem;height: 2rem; text-align: center;">
+                                                        <p>Jadi, panjang rusuk kubus tersebut adalah <button id="tmplh4" class="form-control text-sm-center"  placeholder="..." style=" width:3rem; height: 2rem;text-align: center; " readonly></button> cm<sup>3</sup></p>
+                                                        <p id="selamat4"></p>
+                                                        <div class="button-group text-center">
+                                                            <button type="button" class="btn btn-outline-primary" onclick="soal1mm8()">1</button>
+                                                            <button type="button" class="btn btn-outline-primary" onclick="soal2mm8()">2</button>
+                                                            <button type="button" class="btn btn-outline-primary" onclick="soal3mm8()">3</button>
+                                                            <button type="button" class="btn btn-outline-primary active">4</button>
+                                                        </div>
+                                                    </p>
+                                            </div>
+                                            
+                                            
+                                        <script>
+                                            function cek11(){
+                                                var satu = document.getElementById("satu11");
+        
+                                                if(satu.value == "1"){
+                                                    document.getElementById("satu11").style="border:3px solid green; width:3rem; text-align:center";    
+                                                }
+                                                else{
+                                                    document.getElementById("satu11").style="border:3px solid red; width:3rem; text-align:center";
+                                                }
+                                            }
+                                            function cek22(){
+                                                var dua = document.getElementById("dua22");
+        
+                                                if(dua.value == "8"){
+                                                    document.getElementById("dua22").style="border:3px solid green; width:3rem; text-align:center";    
+                                                }
+                                                else{
+                                                    document.getElementById("dua22").style="border:3px solid red; width:3rem; text-align:center";
+                                                }
+                                            }
+                                            function cek33(){
+                                                var tiga = document.getElementById("tiga33");
+        
+                                                if(tiga.value == "27"){
+                                                    document.getElementById("tiga33").style="border:3px solid green; width:3rem; text-align:center";    
+                                                }
+                                                else{
+                                                    document.getElementById("tiga33").style="border:3px solid red; width:3rem; text-align:center";
+                                                }
+                                            }
+                                            function cek44(){
+                                                var empat = document.getElementById("empat44");
+        
+                                                if(empat.value == "64"){
+                                                    document.getElementById("empat44").style="border:3px solid green; width:3rem; text-align:center";    
+                                                }
+                                                else{
+                                                    document.getElementById("empat44").style="border:3px solid red; width:3rem; text-align:center";
+                                                }
+                                            }
+                                            function cek55(){
+                                                var lima = document.getElementById("lima55");
+        
+                                                if(lima.value == "125"){
+                                                    document.getElementById("lima55").style="border:3px solid green; width:3rem; text-align:center";    
+                                                }
+                                                else{
+                                                    document.getElementById("lima55").style="border:3px solid red; width:3rem; text-align:center";
+                                                }
+                                            }
+                                            function cek6(){
+                                                var enam = document.getElementById("enam6");
+        
+                                                if(enam.value == "216"){
+                                                    document.getElementById("enam6").style="border:3px solid green; width:3rem; text-align:center";    
+                                                }
+                                                else{
+                                                    document.getElementById("enam6").style="border:3px solid red; width:3rem; text-align:center";
+                                                }
+                                            }
+                                            function cek7(){
+                                                var tujuh = document.getElementById("tujuh7");
+        
+                                                if(tujuh.value == "343"){
+                                                    document.getElementById("tujuh7").style="border:3px solid green; width:3rem; text-align:center";    
+                                                }
+                                                else{
+                                                    document.getElementById("tujuh7").style="border:3px solid red; width:3rem; text-align:center";
+                                                }
+                                            }
+                                            function cek8(){
+                                                var delapan = document.getElementById("lapan8");
+        
+                                                if(delapan.value == "512"){
+                                                    document.getElementById("lapan8").style="border:3px solid green; width:3rem; text-align:center";    
+                                                }
+                                                else{
+                                                    document.getElementById("lapan8").style="border:3px solid red; width:3rem; text-align:center";
+                                                }
+                                            }
+                                        </script>
+                                    </div> 
+                                    <br>
+
+                        </div>
+                    </div>
+                    <div class="container-fluid px-4 p-3 mb-4 text-center">
+                        <a href="volumekubus.html" type="button" class="btn btn-danger" id="btnnextprev"><img src="assets/img/prev.png" class="logonextprev"> Sebelumnya</a>
+                        <a href="volumebalok.html" type="button" class="btn btn-success" id="btnnextprev">Materi Selanjutnya <img src="assets/img/next.png" class="logonextprev"></a>                          
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+
+            
+
+        </script>
+        <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
+
+        <script id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/png" href="assets/img/logo.png">
+        <title>Bangun Ruang | Akar Pangkat Tiga</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">
+                <img src="assets/img/bangunruang.png" class="logobangunruang">
+                <label class="tulisannya">Bangun Ruang</label>
+            </a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-sm-0 me-3 ms-5-5 me-sm-0" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="color:white;"></i></button>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">
+                                <h5>Daftar Materi</h5>
+                            </div>
+                                <a class="nav-link" href="pengantar.html">
+                                <div class="sb-nav-link-icon" aria-expanded="true"><i class="fas fa-book"></i></div>
+                                Pengantar Bangun Ruang
+                            </a>
+                           
+                            <a class="nav-link collapsed active" href="pangkattiga.html" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Pangkat Tiga & Akar Pangkat Tiga
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="show collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="pangkattiga.html">Pangkat Tiga</a>
+                                    <a class="nav-link active" href="akarpangkattiga.html">Akar Pangkat Tiga</a>
+                                    <a class="nav-link" href="kuis1.html">Kuis 1</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="jaringkubus.html" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-cube"></i></div>
+                                Jaring-Jaring
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>                            
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="jaringkubus.html">Jaring-Jaring Kubus</a>
+                                    <a class="nav-link" href="jaringbalok.html">Jaring-Jaring Balok</a>
+                                    <a class="nav-link" href="kuis2.html">Kuis 2</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="volumekubus.html" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
+                                Volume
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="pagesCollapseError" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="volumekubus.html">Volume Kubus</a>
+                                    <a class="nav-link" href="volumebalok.html">Volume Balok</a>
+                                    <a class="nav-link" href="kuis3.html">Kuis 3</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link" href="masalah.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
+                                Menyelesaikan masalah tentang Volume Kubus dan Balok
+                            </a>
+                            <a class="nav-link" href="evaluasi.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-pencil-square"></i></div>
+                                Evaluasi
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container px-5 py-4">
+                        <h2 style="color: black;">
+                            <div class="judulgarisbesar">
+                                &nbsp;A. Pangkat Tiga dan Akar Pangkat Tiga
+                            </div>
+                        </h2>
+                        <hr>
+                        <h4 class="mt-4" style="color: black;">
+                            <div class="judulgariskecil">
+                                &nbsp;2. Akar Pangkat Tiga
+                            </div>
+                        </h4>
+                        <div class="card p-4 text-sm-justify">  
+                            Cara mengerjakan operasi hitung akar pangkat tiga sama dengan operasi 
+                            hitung pada bilangan cacah. Jika terdapat lebih dari satu operasi hitung, 
+                            urutan pengerjaannya juga mengikuti 
+                            aturan pengerjaan operasi hitung campuran yang telah kamu pelajari sebelumnya.                    
+                            <br><br>
+                            <div class="card card-body-simak">
+                                <img src="assets/img/simak.png" class="simak">
+                                <hr style="height: 0.5rem;">
+                                <h6 class="soalmm">Perhatikan soal berikut:</h6>
+                                <span style="color:black">Tentukan hasil dari operasi hitung bilangan 
+                                    pangkat tiga dan akar pangkat tiga berikut.<br>
+                                $5^3\;-\;\sqrt[3]{3.375}\;=\;...$</span>
+                                <br><h6 class="soalmm">Penyelesaian:</h6>
+                                <span>$5^3\;-\;\sqrt[3]{3.375}\;=\;125\;-\;15$<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                $=\;110$</span><br>
+                            </div>
+                            <p>Kemudian coba jawab soal di bawah ini.</p>
+                            <div class="card card-body-simak">
+                                <div class="card-a card-body p-3" style="height: 70px;">
+                                    <h4 style="font-weight: 700; color: black;">
+                                        <center>
+                                            <img src="assets/img/panahkanan.png" class="marimencoba">
+                                            Mari Mencoba 5
+                                            <img src="assets/img/panahkiri.png" class="marimencoba">
+                                        </center>
+                                    </h4>
+                                </div>
+
+                                    <div class="card card-body-petunjuk mt-3 mb-3">
+                                        <h6 style="color:black"><img src="assets/img/contohsoal.png" style="width: 1.5rem;"><b>&nbsp;Petunjuk pengerjaan:</b></h6>
+                                        <ul class="ms-3">
+                                            <li> Isikan jawaban kamu pada kolom yang kosong secara berurutan dari kiri ke kanan. </li>
+                                            <li> Jika jawaban kamu benar maka kolom tersebut akan berubah menjadi warna hijau. </li>
+                                            <li> Jika jawaban kamu salah maka kolom tersebut akan berubah menjadi warna merah. </li>
+                                            <li> Setelah kolom berwarna hijau, jika kolom berikutnya tidak bisa kamu isi jawaban maka klik 2 kali pada kolom tersebut. </li>
+                                            <li> Gunakan simbol + - : x yang ada pada keyboard untuk mengisi jawabannya. Misalnya, 4 x 5 : 2.</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div id="soal1mm1">
+                                        <h6 class="soalmm">
+                                            <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                            Soal 1:
+                                        </h6>
+                                        <p style="color:black">Berapakah hasil dari $\sqrt[3]{9.261}\;:\;\sqrt[3]{343}$?</p>
+                                        <h6 class="soalmm">Jawab:</h6>
+                                        <p>$\sqrt[3]{9.261}\;:\;\sqrt[3]{343}\;=\;\sqrt[3]{9.261\;:\;343}\;=\;$
+                                            $\sqrt[3]{}$<input type="text" name="akar1" id="akar1" onkeyup="cekakar1()" placeholder="..." 
+                                            style=" width:5%; text-align: center;">
+                                            $=\;$<input type="text" name="akar2" id="akar2" onkeyup="cekakar2()" placeholder="..." 
+                                            style=" width:5%; text-align: center;">
+                                        </p>
+                                        <p id="selamat"></p>    
+                                        <div class="card card-body mb-4" style="border-color:#7C9ED9;">
+                                            Pada soal di atas kita dapat mengoperasikan perkalian dan pembagian pangkat atau akar pangkat 3 
+                                            terlebih dahulu setelah itu baru dipangkatkan atau diakarkan.
+                                        </div>
+
+                                        <div class="button-group text-center">
+                                            <button type="button" class="btn btn-outline-primary active">1</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal2mm1()">2</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal3mm1()">3</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal4mm1()">4</button>
+                                        </div>
+    
+                                        <script>
+                                            function cekakar1(){
+                                                var akar1nih = document.getElementById("akar1");
+    
+                                                if(akar1nih.value == "27"){
+                                                    document.getElementById("akar1").style="width:5%; border:3px solid green; text-align:center";
+                                                }
+                                                else{
+                                                    document.getElementById("akar1").style="width:5%; border:3px solid red; text-align:center";
+                                                }
+                                            }
+    
+                                            function cekakar2(){
+                                                var akar2nih = document.getElementById("akar2");
+    
+                                                if(akar2nih.value == "3"){
+                                                    document.getElementById("akar2").style="width:5%; border:3px solid green; text-align:center";
+                                                    document.getElementById("selamat").innerHTML = "Bagus! Selamat ya kamu berhasil menjawab soal ini, silahkan ke soal berikutnya!";
+                                                }
+                                                else{
+                                                    document.getElementById("akar2").style="width:5%; border:3px solid red; text-align:center";
+                                                }
+                                            }
+    
+                                            
+                                        </script>
+                                    </div>
+
+                                    <div id="soal2mm1" hidden>
+                                        <h6 class="soalmm">
+                                            <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                            Soal 2:
+                                        </h6>
+                                        <p style="color:black">Berapakah hasil dari $\sqrt[3]{10.648}\;+\;13^3\;-\;10^3\;$?</p>
+                                        <h6 class="soalmm">Jawab:</h6>
+                                        <p>$\sqrt[3]{10.648}\;+\;13^3\;-\;10^3\;=\;$
+                                            <input type="text" class="form-control" id="soal21amm5" onkeyup="ceksoal21amm5()" placeholder="..." 
+                                            style=" width:20%; text-align: center;">
+                                            $=\;$<input type="text" class="form-control" id="soal21bmm5" onkeyup="ceksoal21bmm5()" placeholder="..." 
+                                            style=" width:15%; text-align: center;">
+                                        </p>
+                                        <p id="selamat1"></p>  
+                                        
+
+                                        <div class="button-group text-center">
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal1mm1()">1</button>
+                                            <button type="button" class="btn btn-outline-primary active" >2</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal3mm1()">3</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal4mm1()">4</button>
+                                        </div>
+    
+                                        <script>
+                                            function ceksoal21amm5(){
+                                                var soal21amm5 = document.getElementById("soal21amm5");
+    
+                                                if(soal21amm5.value == "22+2197-1000" || soal21amm5.value == "22 + 2197 - 1000" || soal21amm5.value == "22+2.197-1.000" ||soal21amm5.value == "22 + 2.197 - 1.000"){
+                                                    document.getElementById("soal21amm5").style="width:20%; border:3px solid green; text-align:center";
+                                                }
+                                                else{
+                                                    document.getElementById("soal21amm5").style="width:20%; border:3px solid red; text-align:center";
+                                                }
+                                            }
+    
+                                            function ceksoal21bmm5(){
+                                                var soal21bmm5 = document.getElementById("soal21bmm5");
+    
+                                                if(soal21bmm5.value == "1219" || soal21bmm5.value == "1.219"){
+                                                    document.getElementById("soal21bmm5").style="width:15%; border:3px solid green; text-align:center";
+                                                    document.getElementById("selamat1").innerHTML = "Bagus! Selamat ya kamu berhasil menjawab soal ini, silahkan ke soal berikutnya!";
+                                                }
+                                                else{
+                                                    document.getElementById("soal21bmm5").style="width:15%; border:3px solid red; text-align:center";
+                                                }
+                                            }
+    
+                                            
+                                        </script>
+                                    </div>
+
+                                    <div id="soal3mm1" hidden>
+                                        <h6 class="soalmm">
+                                            <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                            Soal 3:
+                                        </h6>
+                                        <p style="color:black">Berapakah hasil dari $\sqrt[3]{17.576}\;+\;(5^3\;\times\;2^3)$?</p>
+                                        <h6 class="soalmm">Jawab:</h6>
+                                        <p>$\sqrt[3]{17.576}\;+\;(5^3\;\times\;2^3)\;=\;$
+                                            <input type="text" id="soal3amm5" class="form-control" onkeyup="ceksoal3amm5()" placeholder="..." 
+                                            style=" width:7%; text-align: center;"> $\;+\;($
+                                            <input type="text" id="soal3bmm5" class="form-control mb-2" onkeyup="ceksoal3bmm5()" placeholder="..." 
+                                            style=" width:12%; text-align: center;">$\;)$
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;
+                                            $=\;$&nbsp;<input type="text" id="soal3cmm5" class="form-control mb-2" onkeyup="ceksoal3cmm5()" placeholder="..." 
+                                            style=" width:20%; text-align: center;">
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;
+                                            $=\;$&nbsp;<input type="text" id="soal3dmm5" class="form-control" onkeyup="ceksoal3cmm5()" placeholder="..." 
+                                            style=" width:10%; text-align: center;">
+                                        </p>
+                                        <p id="selamat2"></p>  
+                                        <div class="button-group text-center">
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal1mm1()">1</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal2mm1()">2</button>
+                                            <button type="button" class="btn btn-outline-primary active">3</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal4mm1()">4</button>
+                                        </div>
+    
+                                        <script>
+                                            function ceksoal3amm5(){
+                                                var soal3amm5 = document.getElementById("soal3amm5");
+    
+                                                if(soal3amm5.value == "26"){
+                                                    document.getElementById("soal3amm5").style="width:7%; border:3px solid green; text-align:center";
+                                                }
+                                                else{
+                                                    document.getElementById("soal3amm5").style="width:7%; border:3px solid red; text-align:center";
+                                                }
+                                            }
+    
+                                            function ceksoal3bmm5(){
+                                                var soal3bmm5 = document.getElementById("soal3bmm5");
+    
+                                                if(soal3bmm5.value == "125x8" || soal3bmm5.value == "125 x 8"){
+                                                    document.getElementById("soal3bmm5").style="width:12%; border:3px solid green; text-align:center";
+                                                }
+                                                else{
+                                                    document.getElementById("soal3bmm5").style="width:12%; border:3px solid red; text-align:center";
+                                                }
+                                            }
+
+                                            function ceksoal3cmm5(){
+                                                var soal3cmm5 = document.getElementById("soal3cmm5");
+    
+                                                if(soal3cmm5.value == "26+1000" || soal3cmm5.value == "26 + 1000" || soal3cmm5.value == "26 + 1.000" || soal3cmm5.value == "26+1.000"){
+                                                    document.getElementById("soal3cmm5").style="width:20%; border:3px solid green; text-align:center";
+                                                }
+                                                else{
+                                                    document.getElementById("soal3cmm5").style="width:20%; border:3px solid red; text-align:center";
+                                                }
+                                            }
+
+                                            function ceksoal3dmm5(){
+                                                var soal3dmm5 = document.getElementById("soal3dmm5");
+    
+                                                if(soal3dmm5.value == "1026"|| soal3dmm5.value == "1.026"){
+                                                    document.getElementById("soal3dmm5").style="width:10%; border:3px solid green; text-align:center";
+                                                    document.getElementById("selamat2").innerHTML = "Bagus! Selamat ya kamu berhasil menjawab soal ini, silahkan ke soal berikutnya!";
+                                                }
+                                                else{
+                                                    document.getElementById("soal3dmm5").style="width:10%; border:3px solid red; text-align:center";
+                                                }
+                                            }
+    
+                                            
+                                        </script>
+                                    </div>
+
+                                    <div id="soal4mm1" hidden>
+                                        <h6 class="soalmm">
+                                            <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                            Soal 4:
+                                        </h6>
+                                        <p style="color:black">Berapakah hasil dari $\sqrt[3]{15.625}\;\times\;\sqrt[3]{9.261}\;:\;\sqrt[3]{3.375}$?</p>
+                                        <h6 class="soalmm">Jawab:</h6>
+                                        <p>$\sqrt[3]{15.625}\;\times\;\sqrt[3]{9.261}\;:\;\sqrt[3]{3.375}\;=\;$
+                                            $\sqrt[3]{}$<input type="text" class="form-control mb-2" id="soal4amm5" onkeyup="ceksoal4amm5()" placeholder="..." 
+                                            style=" width:25%; text-align: center;">
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;$=\;\sqrt[3]{}$<input type="text"  class="form-control mb-2" id="soal4bmm5" onkeyup="ceksoal4bmm5()" placeholder="..." 
+                                            style=" width:10%; text-align: center;">
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;$=\;$<input type="text"  class="form-control mb-2" id="soal4cmm5" onkeyup="ceksoal4cmm5()" placeholder="..." 
+                                            style=" width:7%; text-align: center;">
+                                        </p>
+                                        <p id="selamat3"></p>  
+                                        <div class="button-group text-center">
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal1mm1()">1</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal2mm1()" >2</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal3mm1()">3</button>
+                                            <button type="button" class="btn btn-outline-primary active">4</button>
+                                        </div>
+    
+                                        <script>
+                                            function ceksoal4amm5(){
+                                                var soal4amm5 = document.getElementById("soal4amm5");
+    
+                                                if(soal4amm5.value == "15.625x9.261:3.375" || soal4amm5.value == "15.625 x 9.261 : 3.375" || soal4amm5.value == "15625x9261:3375" || soal4amm5.value == "15625 x 9261 : 3375"){
+                                                    document.getElementById("soal4amm5").style="width:25%; border:3px solid green; text-align:center";
+                                                }
+                                                else{
+                                                    document.getElementById("soal4amm5").style="width:25%; border:3px solid red; text-align:center";
+                                                }
+                                            }
+    
+                                            function ceksoal4bmm5(){
+                                                var soal4bmm5 = document.getElementById("soal4bmm5");
+    
+                                                if(soal4bmm5.value == "42875" || soal4bmm5.value == "42.875"){
+                                                    document.getElementById("soal4bmm5").style="width:20%; border:3px solid green; text-align:center";
+                                                }
+                                                else{
+                                                    document.getElementById("soal4bmm5").style="width:10%; border:3px solid red; text-align:center";
+                                                }
+                                            }
+                                            
+                                            function ceksoal4cmm5(){
+                                                var soal4cmm5 = document.getElementById("soal4cmm5");
+    
+                                                if(soal4cmm5.value == "35"){
+                                                    document.getElementById("soal4cmm5").style="width:7%; border:3px solid green; text-align:center";
+                                                    document.getElementById("selamat3").innerHTML = "Bagus! Selamat ya kamu berhasil menjawab soal ini, silahkan ke halaman berikutnya!";
+                                                }
+                                                else{
+                                                    document.getElementById("soal4cmm5").style="width:5%; border:3px solid red; text-align:center";
+                                                }
+                                            }
+    
+                                        </script>
+                                    </div>
+
+                                    <script>
+                                            function soal1mm1(){
+                                                document.getElementById("soal1mm1").hidden = false;
+                                                document.getElementById("soal2mm1").hidden = true;
+                                                document.getElementById("soal3mm1").hidden = true;
+                                                document.getElementById("soal4mm1").hidden = true;
+                                            }
+                                            function soal2mm1(){
+                                                document.getElementById("soal1mm1").hidden = true;
+                                                document.getElementById("soal2mm1").hidden = false;
+                                                document.getElementById("soal3mm1").hidden = true;
+                                                document.getElementById("soal4mm1").hidden = true;
+                                            }
+                                            function soal3mm1(){
+                                                document.getElementById("soal1mm1").hidden = true;
+                                                document.getElementById("soal2mm1").hidden = true;
+                                                document.getElementById("soal3mm1").hidden = false;
+                                                document.getElementById("soal4mm1").hidden = true;
+                                            }
+                                            function soal4mm1(){
+                                                document.getElementById("soal1mm1").hidden = true;
+                                                document.getElementById("soal2mm1").hidden = true;
+                                                document.getElementById("soal3mm1").hidden = true;
+                                                document.getElementById("soal4mm1").hidden = false;
+                                            }
+                                    </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid px-4 p-3 mb-4 text-center">
+
+                        <a href="akarpangkattiga3.html" type="button" class="btn btn-danger" id="btnnextprev"><img src="assets/img/prev.png" class="logonextprev"> Sebelumnya</a>
+                        <a href="kuis1.html" type="button" class="btn btn-success" id="btnnextprev">Kuis 1 <img src="assets/img/next.png" class="logonextprev"></a>                          
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+        </script>
+        <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
+
+        <script id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

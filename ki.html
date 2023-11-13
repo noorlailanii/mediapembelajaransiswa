@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/png" href="assets/img/logo.png">
+        <title>Bangun Ruang</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <body class="sb-nav-fixed">
+            <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+                <!-- Navbar Brand-->
+                <a class="navbar-brand ps-3" href="index.html">
+                    <img src="assets/img/bangunruang.png" class="logobangunruang">
+                    <label class="tulisannya">Bangun Ruang</label>
+                </a>
+            </nav>
+        <div id="layoutSidenav">
+                <main>
+                    <div style="background-image: url(assets/img/bgguru.png);">
+                        <div class="container-fluid p-3  mt-5">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <a href="index.html" class="btn btn-primary" style="margin-top:15%;  width: 100%;"><img src='assets/img/back.png' style="width:16%;"> Kembali</a>
+                                    <a class="btn btn-primary active" style="margin-top:10%;  width: 100%;" onclick="ki()" id="kompin">Kompetensi Inti</a>
+                                    <a  class="btn btn-primary tdkactive"  style="margin-top:10%;  width: 100%;" onclick="kd()" id="kompdas">Kompetensi Dasar</a>
+                                    <!-- <a  class="btn btn-primary" style="margin-top:10%;  width: 100%;" onclick="petakonsep()">Peta Konsep</a> -->
+                                </div>
+                                <div class="col-lg-9">
+                                    <div id="ki">
+                                        <div class="card-header mt-4 text-sm-center mx-auto d-block"><strong>Kompetensi Inti</strong></div>
+                                        <div class="card card-body mb-4 p-3 ps-4 text-sm-justify pe-5">
+                                            <ol>
+                                                <li>Menerima dan menjalankan ajaran agama yang dianutnya.</li>
+                                                <li>Menunjukkan perilaku jujur, disiplin, 
+                                                    tanggung jawab, santun, peduli, dan percaya diri dalam 
+                                                    berinteraksi dengan keluarga, teman, guru dan tetangga.</li>
+                                                <li>Memahami pengetahuan faktual dengan cara mengamati 
+                                                (mendengar, melihat, membaca) dan menanya berdasarkan rasa ingin 
+                                                tahu tentang dirinya, makhluk ciptaan Tuhan dan kegiatannya, 
+                                                dan benda-benda yang dijumpainya di rumah dan di sekolah.</li>
+                                                <li>Menyajikan pengetahuan faktual dalam bahasa yang 
+                                                jelas, sistematis dan logis, dalam karya yang estetis, dalam 
+                                                gerakan yang mencerminkan anak sehat, dan dalam tindakan yang 
+                                                mencerminkan perilaku anak beriman dan berakhlak mulia.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="kd" hidden>
+                                        <div class="card-header mt-4 mx-auto d-block"><strong>Kompetensi Dasar</strong></div>
+                                        <div class="card card-body mb-4 pe-5">
+                                        <ul type="none">
+                                            <li> 3.5 &nbsp;Menjelaskan, dan menentukan volume bangun ruang dengan menggunakan 
+                                                satuan volume (seperti kubus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;satuan) serta hubungan pangkat tiga dengan 
+                                                akar pangkat tiga</li>
+                                                <li>4.5 &nbsp;Menyelesaikan masalah yang berkaitan dengan volume bangun ruang dengan 
+                                                    menggunakan satuan volume &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                (seperti kubus satuan) melibatkan pangkat tiga dan 
+                                               akar pangkat tiga</li>
+                                                <li>3.6 &nbsp;&nbsp;&nbsp;Menjelaskan dan menemukan jaring-jaring bangun ruang sederhana (kubus dan balok)</li>
+                                                <li>4.6	&nbsp;&nbsp;&nbsp;Membuat jaring-jaring bangun ruang sederhana (kubus dan balok)</li>
+                                        </ul>
+                                        </div>
+                                    </div>
+
+                                    <div id="petakonsep" hidden>
+                                            <div id="petkon">
+                                                <div class="card-header mt-4 text-sm-center mx-auto d-block"><strong>Peta Konsep</strong></div>
+                                                    <div class="card card-body mb-4 px-5">
+                                                    <center>
+                                                        <img src="assets/img/petakonsep.png" style="width: 100%; height: 100%;">
+                                                    </center>
+                                                    </div>
+                                            </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        </div> 
+                    </div>
+                </main>
+        </div>
+
+    </body>
+    <script>
+        let kikd1 = document.getElementById("kompin");
+        let kikd2 = document.getElementById("kompdas");
+        function ki(){
+            document.getElementById("ki").hidden = false;
+            document.getElementById("kd").hidden = true;
+            // document.getElementById("petakonsep").hidden = true;
+            kikd1.className = kikd1.className.replace(" tdkactive"," active");
+            kikd2.className = kikd2.className.replace(" active"," tdkactive");
+        }
+
+        function kd(){
+            document.getElementById("ki").hidden = true;
+            document.getElementById("kd").hidden = false;
+            // document.getElementById("petakonsep").hidden = true;
+            kikd1.className = kikd1.className.replace(" active"," tdkactive");
+            kikd2.className = kikd2.className.replace(" tdkactive"," active");
+        }
+
+        // function petakonsep(){
+        //     document.getElementById("ki").hidden = true;
+        //     document.getElementById("kd").hidden = true;
+        //     document.getElementById("petakonsep").hidden = false;
+        // }
+    </script>
+        <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+        </script>
+        <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
+
+        <script id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

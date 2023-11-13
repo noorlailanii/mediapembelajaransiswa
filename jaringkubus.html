@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/png" href="assets/img/logo.png">
+        <title>Bangun Ruang | Jaring-Jaring Kubus</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">
+                <img src="assets/img/bangunruang.png" class="logobangunruang">
+                <label class="tulisannya">Bangun Ruang</label>
+            </a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-sm-0 me-3 ms-5-5 me-sm-0" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="color:white;"></i></button>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">
+                                <h5>Daftar Materi</h5>
+                            </div>
+                                <a class="nav-link" href="pengantar.html">
+                                <div class="sb-nav-link-icon" aria-expanded="true"><i class="fas fa-book"></i></div>
+                                Pengantar Bangun Ruang
+                            </a>
+                            
+                            <a class="nav-link collapsed" href="pangkattiga.html" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Pangkat Tiga & Akar Pangkat Tiga
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="pangkattiga.html">Pangkat Tiga</a>
+                                    <a class="nav-link" href="akarpangkattiga.html">Akar Pangkat Tiga</a>
+                                    <a class="nav-link" href="kuis1.html">Kuis 1</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed active" href="jaringkubus.html" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-cube"></i></div>
+                                Jaring-Jaring
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>                            
+                            <div class="show collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link active" href="jaringkubus.html">Jaring-Jaring Kubus</a>
+                                    <a class="nav-link" href="jaringbalok.html">Jaring-Jaring Balok</a>
+                                    <a class="nav-link" href="kuis2.html">Kuis 2</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="volumekubus.html" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
+                                Volume
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="pagesCollapseError" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="volumekubus.html">Volume Kubus</a>
+                                    <a class="nav-link" href="volumebalok.html">Volume Balok</a>
+                                    <a class="nav-link" href="kuis3.html">Kuis 3</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link" href="masalah.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
+                                Menyelesaikan masalah tentang Volume Kubus dan Balok
+                            </a>
+                            <a class="nav-link" href="evaluasi.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-pencil-square"></i></div>
+                                Evaluasi
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-5 py-4">
+                        <h2 style="color: black;">
+                            <div class="judulgarisbesar">
+                                &nbsp;B. Jaring-Jaring Kubus dan Balok
+                            </div>
+                        </h2>
+                        <div class="card card-body-tujuan mt-4">
+                            <p><b>Tujuan Pembelajaran:</b></p>
+                            <ol>
+                                <li>
+                                    Setelah belajar mengenai jaring-jaring kubus siswa dapat 
+                                    menemukan jaring-jaring kubus dengan benar.
+                                </li>
+                                </li>
+                            </ol>
+                            
+                        </div>
+                        <hr>
+                        
+                        <h4 class="mt-4" style="color: black;">
+                            <div class="judulgariskecil">
+                                &nbsp;1. Jaring-Jaring Kubus
+                            </div>
+                            
+                        </h4>
+                        <div class="card mb-2 p-4 text-sm-justify"> 
+                            <p>Sebuah bangun ruang jika dipotong pada beberapa rusuknya kemudian direbahkan, 
+                                akan terbentuk suatu gabungan dari beberapa bangun datar. Bentuk gabungan bangun 
+                                datar tersebut dinamakan jaring-jaring dari bangun ruang. 
+                                Sebuah bangun ruang dapat memiliki satu atau lebih jaring-jaring.</p>
+                                <p>Kubus memiliki 6 sisi yang berbentuk persegi. Cara membuat jaring-jaring kubus, 
+                                    yaitu dengan membuka kubus pada rusuk-rusuknya.
+                                Silahkan klik tombol <b>mulai</b> di bawah ini untuk melihat animasi nya.
+                                Klik tombol <b>berhenti</b> untuk menghentikan animasinya.
+                                Klik tombol <b>reset</b> untuk mengembalikan ke bentuk kubus yang utuh. </p>
+                                    <center>
+                                        <iframe scrolling="no" title="Kubus" 
+                                        src="https://www.geogebra.org/material/iframe/id/bsyq97km/width/1366/height/705/
+                                        border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/
+                                        false/ld/false/sdz/false/ctl/false" 
+                                        width="850px" height="450px" style="border:0px;"> </iframe>
+                                    </center>
+                                    <center><b>Animasi 1. Jaring-Jaring Kubus</b></center><br>
+
+                                <p>Berdasarkan cara memotong bagian rusuknya, kubus mempunyai beberapa bentuk jaring-jaring. 
+                                    </p>
+                                    <div class="card card-body-simak">
+                                        <img src="assets/img/simak.png" class="simak">
+                                        <hr style="height: 0.5rem;">
+                                        <h6 class="soalmm">Perhatikan jaring-jaring berikut:</h6>
+                                        <div class="row">
+                                            <div class="col-lg-5">
+                                                <img src="assets/img/jaring1.png" style="width:13rem; height:10rem">
+                                            </div>
+                                            <div class="col-lg-7">
+                                                Keterangan:
+                                                <ul>
+                                                   <li>
+                                                    Untuk warna ungu tua <span style="color:#a349a4; background-color: #a349a4; border-radius:120rem;">hh</span>
+                                                adalah alas atau sisi bawah kubus.
+                                                   </li>
+                                                   <li>
+                                                    Untuk warna merah muda atau pink <span style="color:#ffaec9; background-color: #ffaec9; border-radius:120rem;">hh</span>
+                                                adalah atap atau sisi atas kubus.
+                                                   </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                            
+                                            
+                                            <h6 class="soalmm">Pertanyaan:</h6>
+                                            <span class="judulgariskecil">
+                                            &nbsp;Apakah jaring-jaring diatas adalah jaring yang dapat membentuk kubus?
+                                        </span>
+                                        <br><h6 class="soalmm">Penyelesaian:</h6>
+                                        <p>
+                                            <strong>Iya</strong>, jaring-jaring di atas dapat membentuk kubus. Karena tidak ada
+                                            persegi yang bertabrakan jika jaring-jaring tersebut sudah menjadi bentuk kubus.
+                                        </p>
+                                    </div>
+                                    <div class="card card-body-simak mt-4">
+                                        <div class="card-a card-body p-3" style="height: 70px;">
+                                            <h4 style="font-weight: 700; color: black;">
+                                                <center>
+                                                    <img src="assets/img/panahkanan.png" class="marimencoba">
+                                                    Mari Mencoba 6
+                                                    <img src="assets/img/panahkiri.png" class="marimencoba">
+                                                </center>
+                                            </h4>
+                                        </div>
+    
+                                            <div class="card card-body-petunjuk mt-3 mb-3">
+                                                <h6 style="color:black"><img src="assets/img/contohsoal.png" style="width: 1.5rem;"><b>&nbsp;Petunjuk pengerjaan:</b></h6>
+                                                <ul class="ms-3">
+                                                    <li> Pilihlah jawaban yang tepat untuk menentukan jaring-jaring kubus.</li>
+                                                    <li> Jika jawaban kamu benar maka akan muncul icon benar <img src='assets/img/benar.png' style="width:2%;">. </li>
+                                                    <li> Jika jawaban kamu salah maka akan muncul icon salah <img src='assets/img/salah.png' style="width:2%;">. </li>
+                                                </ul>
+                                            </div>
+
+                                            <h6 class="soalmm">
+                                                <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                                Soal 1:
+                                            </h6>
+                                            <p style="color:black">Perhatikan jaring-jaring pada bagian kiri tabel. Pilihlah jawaban <strong>Ya</strong> jika jaring-jaring tersebut dapat membentuk
+                                                kubus. Pilihlah jawaban <strong>Tidak </strong>jika jaring-jaring tersebut tidak dapat membentuk kubus</span><br>
+                                                    <center>
+                                                        <table class="table table-bordered">
+                                                            <thead>
+                                                                <tr style="text-align: center;">
+                                                                    <td>Jaring-Jaring</td>
+                                                                    <td>Jawaban</td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="text-align: center;"><img src="assets/img/mm61.png" style="width: 30%; height: 30%;"></td>
+                                                                    <td colspan="2">
+                                                                        <button type="button" class="btn btn-primary" onclick="btnPilihYa1()" id="tmblPilYa1" value="ya" style="width: 5rem;">Ya</button>
+                                                                        <button type="button" class="btn btn-primary" onclick="btnPilihTidak1()" id="tmblPilTdk1" value="tidak" style="width: 5rem;">Tidak</button>
+                                                                        <button type="button" class="btn btn-primary" onclick="btnUlang1()" id="tmblUlang1" value="ulang" style="width: 5rem;" hidden>Ulang</button>
+                                                                        <span id="jwbn1bnrslh"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr id="ygkedua" hidden>
+                                                                    <td style="text-align: center;"><img src="assets/img/mm62.png" style="width: 30%;"></td>
+                                                                    <td>
+                                                                        <button type="button" class="btn btn-primary" onclick="btnPilihYa2()" id="tmblPilYa2" value="ya" style="width: 5rem;">Ya</button>
+                                                                        <button type="button" class="btn btn-primary" onclick="btnPilihTidak2()" id="tmblPilTdk2" value="tidak" style="width: 5rem;">Tidak</button>
+                                                                        <button type="button" class="btn btn-primary" onclick="btnUlang2()" id="tmblUlang2" value="ulang" style="width: 5rem;" hidden>Ulang</button>
+                                                                        <span id="jwbn2bnrslh"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr id="ygketiga" hidden>
+                                                                    <td style="text-align: center;"><img src="assets/img/mm63.png" style="width: 30%;"></td>
+                                                                    <td>
+                                                                        <button type="button" class="btn btn-primary" onclick="btnPilihYa3()" id="tmblPilYa3" value="ya" style="width: 5rem;">Ya</button>
+                                                                        <button type="button" class="btn btn-primary" onclick="btnPilihTidak3()" id="tmblPilTdk3" value="tidak" style="width: 5rem;">Tidak</button>
+                                                                        <button type="button" class="btn btn-primary " onclick="btnUlang3()" id="tmblUlang3" value="ulang" style="width: 5rem;" hidden>Ulang</button>
+                                                                        <span id="jwbn3bnrslh"></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </center>
+                                                    <script>
+                                                        var logo1 =  document.getElementById("jwbn1bnrslh");
+                                                        var ya1 = document.getElementById("tmblPilYa1");
+                                                        var tdk1 =  document.getElementById("tmblPilTdk1");
+                                                        var ulang1 = document.getElementById("tmblUlang1");
+
+                                                        function btnUlang1(){
+                                                            logo1.innerHTML = "";
+                                                            ya1.disabled = false;
+                                                            tdk1.disabled = false;
+                                                            ulang1.hidden = true;
+                                                        }
+
+                                                        function btnPilihYa1(){
+                                                            logo1.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalahjaring'>";
+                                                            tdk1.disabled = true;
+                                                            
+                                                            var ygkedua = document.getElementById("ygkedua");
+                                                            ygkedua.hidden = false;
+                                                        }
+
+                                                        function btnPilihTidak1(){
+                                                            logo1.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalahjaring'>";
+                                                            ya1.disabled = true;
+                                                            tdk1.disabled = true;
+                                                            ulang1.hidden = false;
+                                                        }
+
+                                                        var logo2 =  document.getElementById("jwbn2bnrslh");
+                                                        var ya2 = document.getElementById("tmblPilYa2");
+                                                        var tdk2 =  document.getElementById("tmblPilTdk2");
+                                                        var ulang2 = document.getElementById("tmblUlang2");
+
+                                                        function btnUlang2(){
+                                                            logo2.innerHTML = "";
+                                                            ya2.disabled = false;
+                                                            tdk2.disabled = false;
+                                                            ulang2.hidden = true;
+                                                        }
+
+                                                        function btnPilihYa2(){
+                                                            logo2.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalahjaring'>";
+                                                            //ya1.className = ya1.className.replace("","hilang");
+                                                            ya2.disabled = true;
+                                                            tdk2.disabled = true;
+                                                            ulang2.hidden = false;
+                                                        }
+
+                                                        function btnPilihTidak2(){
+                                                            logo2.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalahjaring'>";
+                                                            ya2.disabled = true;
+                                                            
+                                                            var ygketiga = document.getElementById("ygketiga");
+                                                            ygketiga.hidden = false;
+                                                        }
+
+                                                        var logo3 =  document.getElementById("jwbn3bnrslh");
+                                                        var ya3 = document.getElementById("tmblPilYa3");
+                                                        var tdk3 =  document.getElementById("tmblPilTdk3");
+                                                        var ulang3 = document.getElementById("tmblUlang3");
+
+                                                        function btnUlang3(){
+                                                            logo3.innerHTML = "";
+                                                            ya3.disabled = false;
+                                                            tdk3.disabled = false;
+                                                            ulang3.hidden = true;
+                                                        }
+
+                                                        function btnPilihYa3(){
+                                                            logo3.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalahjaring'>";
+                                                            tdk3.disabled = true;
+                                                        }
+
+                                                        function btnPilihTidak3(){
+                                                            logo3.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalahjaring'>";
+                                                            //ya1.className = ya1.className.replace("","hilang");
+                                                            ya3.disabled = true;
+                                                            tdk3.disabled = true;
+                                                            ulang3.hidden = false;
+                                                        }
+                                                    </script>
+                                            
+                                            <h6 class="soalmm">
+                                                <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                                Soal 2:
+                                            </h6>
+                                            <p style="color:black">Perhatikan jaring-jaring kubus (a), (b), (c), (d) di bawah ini, 
+                                                jaring-jaring mana yang dapat membentuk kubus berikut?</span><br>
+                                                <center><img src="assets/img/kubuss2.png" style="width: 10rem;"></center></p>
+                                        <div id="row">
+                                            <div id="col">
+                                                <center>
+                                                <img src="assets/img/kubuss2a.png" style="width: 20%;">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <img src="assets/img/kubuss2b.png" style="width: 20%;">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <img src="assets/img/kubuss2c.png" style="width: 20%;">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <img src="assets/img/kubuss2d.png" style="width: 20%;">
+                                                </center>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="row">
+                                            <div id="col">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                (a)
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                (b)
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                (c)
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                (d)
+                                            </div>
+                                        </div>
+                                        <h6 class="soalmm">Jawab:</h6>
+                                        <p class="d-sm-inline-flex">Jawaban kamu adalah = 
+                                            &nbsp;<input type="text" class="form-control" name="mm6s22" id="mm6s22" onkeyup="cekmm6s22()" placeholder="..."style=" width:3rem; height: 2rem;text-align: center;" > 
+                                            <span id="logo42"></span>
+                                        </p>
+                                        <script>
+                                            function cekmm6s22(){
+                                                var mm6s22 = document.getElementById("mm6s22");
+                                                var logo42 = document.getElementById("logo42");
+                                                if(mm6s22.value == "a" || mm6s22.value == "A"){
+                                                    logo42.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalahjaring2'>";
+                                                } else {
+                                                    logo42.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalahjaring2'>";
+                                                }
+                                            }
+                                        </script>
+
+                                            <h6 class="soalmm">
+                                                <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                                Soal 3:
+                                            </h6>
+                                            <p style="color:black">Perhatikan bangun-bangun kubus (a), (b), (c), (d) di bawah ini, 
+                                                bangunan kubus mana yang dapat menggunakan jaring-jaring berikut?</span><br>
+                                                <center><img src="assets/img/puzzlekubus.png" style="width: 15rem;"></center></p>
+                                        <div id="row">
+                                            <div id="col">
+                                                <center>
+                                                <img src="assets/img/puzzlekubusa.png" style="width: 11%;">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <img src="assets/img/puzzlekubusb.png" style="width: 11%;">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <img src="assets/img/puzzlekubusc.png" style="width: 11%;">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <img src="assets/img/puzzlekubusd.png" style="width: 11%;">
+                                                </center>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="row">
+                                            <div id="col">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                (a)
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                (b)
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                (c)
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                (d)
+                                            </div>
+                                        </div>
+                                        <h6 class="soalmm">Jawab:</h6>
+                                        <p class="d-sm-inline-flex">Jawaban kamu adalah = 
+                                            &nbsp;<input type="text" class="form-control" name="mm6s2" id="mm6s2" onkeyup="cekmm6s2()" placeholder="..."style=" width:3rem; height: 2rem;text-align: center;" > 
+                                            <span id="logo4"></span>
+                                        </p>
+                                        <script>
+                                            function cekmm6s2(){
+                                                var mm6s2 = document.getElementById("mm6s2");
+                                                var logo4 = document.getElementById("logo4");
+                                                if(mm6s2.value == "d" || mm6s2.value == "D"){
+                                                    logo4.innerHTML = "<img src='assets/img/benar.png' class='logobenarsalahjaring2'>";
+                                                } else {
+                                                    logo4.innerHTML = "<img src='assets/img/salah.png' class='logobenarsalahjaring2'>";
+                                                }
+                                            }
+                                        </script>
+                                    </div>
+                    </div>
+                    <div class="container-fluid px-4 p-3 mb-4 text-center">
+                        <a href="pangkattiga.html" type="button" class="btn btn-danger" id="btnnextprev"><img src="assets/img/prev.png" class="logonextprev"> Sebelumnya</a>
+                        <a href="jaringbalok.html" type="button" class="btn btn-success" id="btnnextprev">Selanjutnya <img src="assets/img/next.png" class="logonextprev"></a>                          
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+        </script>
+        <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
+
+        <script id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

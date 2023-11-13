@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <title>Kuis 1 | Pangkat Tiga dan Akar Pangkat Tiga</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+        apiKey: "AIzaSyBF_KGd5CBew2HCO-ZFs3LIte7JE5xuWxw",
+        authDomain: "bangunruang-270999.firebaseapp.com",
+        databaseURL: "https://bangunruang-270999-default-rtdb.firebaseio.com",
+        projectId: "bangunruang-270999",
+        storageBucket: "bangunruang-270999.appspot.com",
+        messagingSenderId: "733243158000",
+        appId: "1:733243158000:web:86a26bd3e3ca74b5b34135",
+        measurementId: "G-B725RS3VHF"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        let database = firebase.database();
+
+        var kkm;
+  
+        const db = firebase.database();
+        const dbkkm = db.ref('kkm/').on('value', kkmSuccess, handleError)
+        
+        let loop1;
+        let kkm1 = 0;
+        
+        function kkmSuccess(items1) {
+            kkm1 = items1.val()[0]['kkm'];
+            console.log(kkm1);
+            var kkm1html = document.querySelector('.kkm1');
+            kkm1html.innerHTML = kkm1;
+            
+        }
+        
+        function handleError(error) {
+            console.log(error);
+        }
+        
+
+        function lanjutsoal(){
+        
+            let cek = 0;
+
+            let isi_nama = document.getElementById('nama');
+            let isi_kelas = document.getElementById('kelas');
+            let isi_sekolah = document.getElementById('sekolah');
+
+            if(isi_nama.value != ""){
+                //alert("Lengkapi dulu identitas kamu");
+                isi_nama.classList.remove("belumterisi");
+                isi_nama = isi_nama.value;
+                cek = cek + 1;
+            } else {
+                isi_nama.classList.add("belumterisi");
+            }
+            
+            let kelasinput = "";
+            if(isi_kelas.value == "0"){
+                //alert("Lengkapi dulu identitas kamu");
+                isi_kelas.classList.add("belumterisi");
+            } else {
+                if(isi_kelas.value == "VA"){
+                    kelasinput = "V A";
+                    cek = cek + 1;
+                }if(isi_kelas.value == "VB"){
+                    kelasinput = "V B";
+                    cek = cek + 1;
+                }
+                isi_kelas.classList.remove("belumterisi");
+            }
+
+            let sekolahinput = "";
+            if(isi_sekolah.value == "0"){
+                //alert("Lengkapi dulu identitas kamu");
+                isi_sekolah.classList.add("belumterisi");
+            } else {
+                if(isi_sekolah.value == "1"){
+                    sekolahinput = "SD Muhammadiyah 8";
+                    cek = cek + 1;
+                }
+                isi_sekolah.classList.remove("belumterisi");
+            }
+
+            if (cek == 3){
+                localStorage.setItem("nama", isi_nama);
+                localStorage.setItem("kelas", kelasinput);
+                localStorage.setItem("sekolah", sekolahinput);
+
+                var element = document.getElementById('soaltampiltampil');
+                element.className = element.className.replace(" hilang","")
+                document.getElementById('awalan').className += " hilang";
+            } else {
+                alert("Lengkapi dulu identitas kamu")
+            }
+
+                countDownDate = new Date().getTime();
+               //waktu 30 menit
+               // countDownDate += 1801000;
+               //waktu 45 menit
+               // countDownDate += 2700000;
+               //waktu 20 menit
+               countDownDate += 1201000;
+               // countDownDate += 12000;
+               //15 detik
+               //countDownDate += 17000;
+               var x = setInterval(function() {
+                    var now = new Date().getTime();
+                    var distance = countDownDate - now;
+                        
+                    // Perhitungan waktu untuk menit dan detik
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    if(minutes < 10){
+                            minutes = "0"+minutes;
+                    }
+                    if(seconds < 10){
+                            seconds = "0"+seconds;
+                    }
+                    document.getElementById("gwaktu").innerHTML ="<img src='assets/img/timer.png' style='width:10%'>";
+                    document.getElementById("waktutampil").innerHTML = minutes + " : " + seconds;
+                    
+                    if (distance < 0) {
+                        clearInterval(x);
+                        waktuhabis = 1;
+                        document.getElementById("waktutampil").innerHTML = "Waktu Selesai";
+                    }
+                }, 1000);
+
+            //     let tampilnama = document.getElementById('namatampil');
+            // tampilnama.innerHTML = isi_nama;
+   
+        }
+
+
+        let kunci = [];
+        
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                    var data=JSON.parse(xhttp.responseText); 
+                    
+                    for (let i=0; i<data.length; i++) {
+                        let soalNomorr = data[i].no;
+                        let soalIsi = data[i].soal;
+                        let opsiA = data[i].a;
+                        let opsiB = data[i].b;
+                        let opsiC = data[i].c;
+                        let opsiD = data[i].d;
+                        let jwbanbenar = data[i].benar;
+
+                        // console.log(jwbanbenar);
+                        let nomorsoaltampil = document.querySelectorAll("#nomornyanih");
+                        nomorsoaltampil[i].innerHTML = soalNomorr;
+
+                        let soalTampil = document.querySelectorAll("#soal");
+                        soalTampil[i].innerHTML = soalIsi;
+
+                        let a = document.querySelectorAll('#a');
+                        a[i].innerHTML = opsiA;
+                        
+                        let b = document.querySelectorAll('#b');
+                        b[i].innerHTML = opsiB;
+                        
+                        let c = document.querySelectorAll('#c');
+                        c[i].innerHTML = opsiC;
+                        
+                        let d = document.querySelectorAll('#d');
+                        d[i].innerHTML = opsiD;
+
+
+                        let benarni = data[i].benar;
+                        kunci.push(benarni);
+
+                        // const kunci = [jwbanbenar];
+                        // console.log(kunci);
+                    };
+                    //console.log(kunci);
+                    
+                    MathJax.typeset();
+            }   
+
+            
+        };
+        xhttp.open("GET", "kuis1.json", true);
+        xhttp.send();
+        
+        function set1(){
+            let n1 = document.getElementById("nomor1");
+            n1.className = n1.className.replace(" belum"," sudah");
+        }
+
+        function set2(){
+            let n2 = document.getElementById("nomor2");
+            n2.className = n2.className.replace(" belum"," sudah");
+        }
+
+        function set3(){
+            let n3 = document.getElementById("nomor3");
+            n3.className = n3.className.replace(" belum"," sudah");
+        }
+
+        function set4(){
+            let n4 = document.getElementById("nomor4");
+            n4.className = n4.className.replace(" belum"," sudah");
+        }
+
+        function set5(){
+            let n5 = document.getElementById("nomor5");
+            n5.className = n5.className.replace(" belum"," sudah");
+        }
+
+        function set6(){
+            let n6 = document.getElementById("nomor6");
+            n6.className = n6.className.replace(" belum"," sudah");
+        }
+
+        function set7(){
+            let n7 = document.getElementById("nomor7");
+            n7.className = n7.className.replace(" belum"," sudah");
+        }
+
+        function set8(){
+            let n8 = document.getElementById("nomor8");
+            n8.className = n8.className.replace(" belum"," sudah");
+        }
+
+        function set9(){
+            let n9 = document.getElementById("nomor9");
+            n9.className = n9.className.replace(" belum"," sudah");
+        }
+
+        function set10(){
+            let n10 = document.getElementById("nomor10");
+            n10.className = n10.className.replace(" belum"," sudah");
+        }
+
+        function nomor1(){
+            document.getElementById("soal-1").hidden = false;
+            document.getElementById("soal-2").hidden = true;
+            document.getElementById("soal-3").hidden = true;
+            document.getElementById("soal-4").hidden = true;
+            document.getElementById("soal-5").hidden = true;
+            document.getElementById("soal-6").hidden = true;
+            document.getElementById("soal-7").hidden = true;
+            document.getElementById("soal-8").hidden = true;
+            document.getElementById("soal-9").hidden = true;
+            document.getElementById("soal-10").hidden = true;
+        }
+        function nomor2() {
+            document.getElementById("soal-1").hidden = true;
+            document.getElementById("soal-2").hidden = false;
+            document.getElementById("soal-3").hidden = true;
+            document.getElementById("soal-4").hidden = true;
+            document.getElementById("soal-5").hidden = true;
+            document.getElementById("soal-6").hidden = true;
+            document.getElementById("soal-7").hidden = true;
+            document.getElementById("soal-8").hidden = true;
+            document.getElementById("soal-9").hidden = true;
+            document.getElementById("soal-10").hidden = true;
+        }
+        function nomor3(){
+            document.getElementById("soal-1").hidden = true;
+            document.getElementById("soal-2").hidden = true;
+            document.getElementById("soal-3").hidden = false;
+            document.getElementById("soal-4").hidden = true;
+            document.getElementById("soal-5").hidden = true;
+            document.getElementById("soal-6").hidden = true;
+            document.getElementById("soal-7").hidden = true;
+            document.getElementById("soal-8").hidden = true;
+            document.getElementById("soal-9").hidden = true;
+            document.getElementById("soal-10").hidden = true;
+        }
+        function nomor4(){
+            document.getElementById("soal-1").hidden = true;
+            document.getElementById("soal-2").hidden = true;
+            document.getElementById("soal-3").hidden = true;
+            document.getElementById("soal-4").hidden = false;
+            document.getElementById("soal-5").hidden = true;
+            document.getElementById("soal-6").hidden = true;
+            document.getElementById("soal-7").hidden = true;
+            document.getElementById("soal-8").hidden = true;
+            document.getElementById("soal-9").hidden = true;
+            document.getElementById("soal-10").hidden = true;
+        }
+       function nomor5(){
+            document.getElementById("soal-1").hidden = true;
+            document.getElementById("soal-2").hidden = true;
+            document.getElementById("soal-3").hidden = true;
+            document.getElementById("soal-4").hidden = true;
+            document.getElementById("soal-5").hidden = false;
+            document.getElementById("soal-6").hidden = true;
+            document.getElementById("soal-7").hidden = true;
+            document.getElementById("soal-8").hidden = true;
+            document.getElementById("soal-9").hidden = true;
+            document.getElementById("soal-10").hidden = true;
+        }
+        function nomor6(){
+            document.getElementById("soal-1").hidden = true;
+            document.getElementById("soal-2").hidden = true;
+            document.getElementById("soal-3").hidden = true;
+            document.getElementById("soal-4").hidden = true;
+            document.getElementById("soal-5").hidden = true;
+            document.getElementById("soal-6").hidden = false;
+            document.getElementById("soal-7").hidden = true;
+            document.getElementById("soal-8").hidden = true;
+            document.getElementById("soal-9").hidden = true;
+            document.getElementById("soal-10").hidden = true;
+        }
+        function nomor7(){
+            document.getElementById("soal-1").hidden = true;
+            document.getElementById("soal-2").hidden = true;
+            document.getElementById("soal-3").hidden = true;
+            document.getElementById("soal-4").hidden = true;
+            document.getElementById("soal-5").hidden = true;
+            document.getElementById("soal-6").hidden = true;
+            document.getElementById("soal-7").hidden = false;
+            document.getElementById("soal-8").hidden = true;
+            document.getElementById("soal-9").hidden = true;
+            document.getElementById("soal-10").hidden = true;
+        }
+        function nomor8(){
+            document.getElementById("soal-1").hidden = true;
+            document.getElementById("soal-2").hidden = true;
+            document.getElementById("soal-3").hidden = true;
+            document.getElementById("soal-4").hidden = true;
+            document.getElementById("soal-5").hidden = true;
+            document.getElementById("soal-6").hidden = true;
+            document.getElementById("soal-7").hidden = true;
+            document.getElementById("soal-8").hidden = false;
+            document.getElementById("soal-9").hidden = true;
+            document.getElementById("soal-10").hidden = true;
+        }
+        function nomor9(){
+            document.getElementById("soal-1").hidden = true;
+            document.getElementById("soal-2").hidden = true;
+            document.getElementById("soal-3").hidden = true;
+            document.getElementById("soal-4").hidden = true;
+            document.getElementById("soal-5").hidden = true;
+            document.getElementById("soal-6").hidden = true;
+            document.getElementById("soal-7").hidden = true;
+            document.getElementById("soal-8").hidden = true;
+            document.getElementById("soal-9").hidden = false;
+            document.getElementById("soal-10").hidden = true;
+        }
+        function nomor10(){
+            document.getElementById("soal-1").hidden = true;
+            document.getElementById("soal-2").hidden = true;
+            document.getElementById("soal-3").hidden = true;
+            document.getElementById("soal-4").hidden = true;
+            document.getElementById("soal-5").hidden = true;
+            document.getElementById("soal-6").hidden = true;
+            document.getElementById("soal-7").hidden = true;
+            document.getElementById("soal-8").hidden = true;
+            document.getElementById("soal-9").hidden = true;
+            document.getElementById("soal-10").hidden = false;
+        }
+    </script>
+
+</head>
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html">
+            <img src="assets/img/bangunruang.png" class="logobangunruang">
+            <label class="tulisannya">Bangun Ruang</label>
+        </a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-sm-0 me-3 ms-5-5 me-sm-0" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="color:white;"></i></button>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">
+                            <h5>Daftar Materi</h5>
+                        </div>
+                            <a class="nav-link" href="pengantar.html">
+                            <div class="sb-nav-link-icon" aria-expanded="true"><i class="fas fa-book"></i></div>
+                            Pengantar Bangun Ruang
+                        </a>
+                        
+                        <a class="nav-link collapsed active" href="pangkattiga.html" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            Pangkat Tiga & Akar Pangkat Tiga
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="show collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="pangkattiga.html">Pangkat Tiga</a>
+                                <a class="nav-link" href="akarpangkattiga.html">Akar Pangkat Tiga</a>
+                                <a class="nav-link active" href="kuis1.html">Kuis 1</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="jaringkubus.html" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-cube"></i></div>
+                            Jaring-Jaring
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>                            
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="jaringkubus.html">Jaring-Jaring Kubus</a>
+                                <a class="nav-link" href="jaringbalok.html">Jaring-Jaring Balok</a>
+                                <a class="nav-link" href="kuis2.html">Kuis 2</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="volumekubus.html" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                            <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
+                            Volume
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="volumekubus.html">Volume Kubus</a>
+                                <a class="nav-link" href="volumebalok.html">Volume Balok</a>
+                                <a class="nav-link" href="kuis3.html">Kuis 3</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link" href="masalah.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
+                            Menyelesaikan masalah tentang Volume Kubus dan Balok
+                        </a>
+                        <a class="nav-link" href="evaluasi.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-pencil-square"></i></div>
+                            Evaluasi
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid p-3" id="awalan">
+                    <div class="col-xl-12 text-sm-justify p-2 atas-kuis">
+                        <h3 class="m-1 text-sm-center" style="color: white; font-size: 40px;">
+                            KUIS 1<br>
+                            Bangun Ruang
+                        </h3>
+                    </div>
+                    <div class="row mx-4 mt-3">
+                        <div class="col-lg-6">
+                            <div class="card card-body text-sm-justify"
+                            style="border: 2px double #007099; border-radius: 20px; height: 24rem;">
+                            <div class="col-lg-12 text-center" style="border: 2px solid blue; background-color: rgb(172, 208, 255);">
+                                <h3 class="m-2 text-sm-center" style=" flex-direction: column;">Petunjuk Kuis</h3>
+                            </div>
+                                <br>
+                                <ol>
+                                    <li>Kuis ini terdiri dari 10 soal berupa pilihan ganda.</li>
+                                    <li>Setiap soal memiliki bobot poin sebanyak 10 poin.</li>
+                                    <li>Kuis ini berlangsung selama 20 menit, waktunya berada di  bagian kanan soal.</li>
+                                    <li>Silahkan lengkapi data diri Anda pada form disamping.</li>
+                                    <li>Tekan "Mulai Kuis" jika Anda sudah melengkapi identitas.</li>
+                                    <li>Tekan salah satu pilihan jawaban yang dianggap benar.</li>
+                                    <li>Setelah semua pertanyaan selesai dijawab, 
+                                        tekan tombol "Selesai" dan halaman hasil akan muncul.</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card card-body text-sm-justify"
+                            style="border: 2px double #007099; border-radius: 20px; height: 24rem;">
+                            <div class="col-lg-12 text-center" style="border: 2px solid blue; background-color: rgb(172, 208, 255);">
+                                <h3 class="m-2 text-sm-center" style=" flex-direction: column;">Identitas</h3>
+                            </div>
+                                <form class="mt-2">
+                                    <label for="nama" class=" mt-1">Nama:</label>
+                                    <input type="text" class="form-control mt-1 mb-1" name="nama" id="nama" placeholder="Masukkan Nama Lengkap"> 
+                                    <label for="kelas" class=" mt-1">Kelas:</label>
+                                    <select class="form-select mt-1 mb-1" name="kelas" id="kelas">
+                                        <option value="0">Pilih Kelas</option>
+                                        <option value="VA">V A</option>
+                                        <option value="VB">V B</option>
+                                    </select> 
+                                    <label for="sekolah" class=" mt-1">Sekolah:</label>
+                                    <select class="form-select mt-1 mb-1" name="sekolah" id="sekolah">
+                                        <option value="0">Pilih Sekolah</option>
+                                        <option value="1">SD Muhammadiyah 8</option>
+                                    </select> 
+                                    <div class="btn-group float-end mt-3">
+                                        <button type="button" class="btn btn-outline-primary" button onclick="location.href='pangkattiga.html'">Kembali ke Materi</button>
+                                        <button type="button" class="btn btn-primary " onclick="lanjutsoal()">Mulai Kuis</button>
+                                    </div>
+                                    </form>
+                                    <br>    
+                                    
+                                    </div>  
+                                </form>
+                            </div>
+                        </div>
+                </div>
+                <div class="container-fluid p-2 mt-2 hilang" id="soaltampiltampil">
+                    <!-- <div class="col-xl-12 text-sm-justify p-2" 
+                    style="background:url(assets/img/wallkuis.png) no-repeat ; 
+                    background-size: cover; height: 15%;">
+                        <h3 class="m-1 text-sm-center" style="color: white;">
+                            KUIS 1<br>
+                            Bangun Ruang
+                        </h3>
+                    </div> -->
+
+                    <div class="row mx-3">
+                        <div class="col-lg-8 p-4 me-sm-2 bag-kuis" style="height:500px"> 
+                            <div class="titlekuis">
+                                    <img src="assets/img/quest.png" style="width:6%;">
+                                    <b>Kuis 1</b>
+                                    <hr style="color: blue;">
+                                    <!-- <p>HAI,<span id="namatampil"></span></p> -->
+                            </div>
+                                    <div class="bag-kuis" style="border:none;" id="soal-1">
+                                        <div class="nomornih mt-3">
+                                            <p>Nomor <span id="nomornyanih"></span>
+                                            </p>
+                                        </div>
+                                        <div class="soallll scrollkonten">
+                                            <p class="judulgariskecil">
+                                                <span id="soal" class="ms-2 ">
+                                            </p>
+                                            <div class="soalsoal" style="margin-left:2%">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabansatua" name="jawaban1" value="a" onclick="set1()">
+                                                    <label class="form-check-label cursor" for="jawabansatua">
+                                                        <p id="a"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabansatub" name="jawaban1" value="b" onclick="set1()">
+                                                    <label class="form-check-label cursor" for="jawabansatub">
+                                                        <p id="b"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabansatuc" name="jawaban1" value="c" onclick="set1()">
+                                                    <label class="form-check-label cursor" for="jawabansatuc" >
+                                                        <p id="c"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabansatud" name="jawaban1" value="d" onclick="set1()">
+                                                    <label class="form-check-label cursor" for="jawabansatud">
+                                                        <p id="d"></p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="button-group text-end m-3">
+                                            <a class="btn btn-danger disabled">Sebelumnya</a>
+                                            <a class="btn btn-success" id="lanjut2" onclick="nomor2()">Selanjutnya</a>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div class="bag-kuis" style="border:none;" id="soal-2" hidden>
+                                        <div class="nomornih mt-3">
+                                            <p>Nomor <span id="nomornyanih"></span>
+                                            </p>
+                                        </div>
+                                        <div class="soallll scrollkonten">
+                                            <p class="judulgariskecil">
+                                                <span id="soal" class="ms-2 ">
+                                            </p>
+                                            <div class="soalsoal" style="margin-left:2%">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanduaa" name="jawaban2" value="a" onclick="set2()">
+                                                    <label class="form-check-label cursor" for="jawabanduaa">
+                                                        <p id="a"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanduab" name="jawaban2" value="b" onclick="set2()">
+                                                    <label class="form-check-label cursor" for="jawabanduab">
+                                                        <p id="b"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanduac" name="jawaban2" value="c" onclick="set2()">
+                                                    <label class="form-check-label cursor" for="jawabanduac" >
+                                                        <p id="c"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanduad" name="jawaban2" value="d" onclick="set2()">
+                                                    <label class="form-check-label cursor" for="jawabanduad">
+                                                        <p id="d"></p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="button-group text-end m-3">
+                                            <a class="btn btn-danger" onclick="nomor1()">Sebelumnya</a>
+                                            <a class="btn btn-success" onclick="nomor3()">Selanjutnya</a>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="bag-kuis" style="border:none;" id="soal-3" hidden>
+                                        <div class="nomornih mt-3">
+                                            <p>Nomor <span id="nomornyanih"></span>
+                                            </p>
+                                        </div>
+                                        <div class="soallll scrollkonten">
+                                            <p class="judulgariskecil mb-5">
+                                                <span id="soal" class="ms-2">
+                                            </p>
+                                            <div class="soalsoal" style="margin-left:2%">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabantigaa" name="jawaban3" value="a" onclick="set3()">
+                                                    <label class="form-check-label cursor" for="jawabantigaa">
+                                                        <p id="a"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabantigab" name="jawaban3" value="b" onclick="set3()">
+                                                    <label class="form-check-label cursor" for="jawabantigab">
+                                                        <p id="b"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabantigac" name="jawaban3" value="c" onclick="set3()">
+                                                    <label class="form-check-label cursor" for="jawabantigac" >
+                                                        <p id="c"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabantigad" name="jawaban3" value="d" onclick="set3()">
+                                                    <label class="form-check-label cursor" for="jawabantigad">
+                                                        <p id="d"></p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="button-group text-end m-3">
+                                            <a class="btn btn-danger" onclick="nomor2()">Sebelumnya</a>
+                                            <a class="btn btn-success" onclick="nomor4()">Selanjutnya</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bag-kuis" style="border:none;" id="soal-4" hidden>
+                                        <div class="nomornih mt-3">
+                                            <p>Nomor <span id="nomornyanih"></span>
+                                            </p>
+                                        </div>
+                                        <div class="soallll scrollkonten">
+                                            <p class="judulgariskecil">
+                                                <span id="soal" class="ms-2">
+                                            </p>
+                                            <div class="soalsoal" style="margin-left:2%">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanempata" name="jawaban4" value="a" onclick="set4()">
+                                                    <label class="form-check-label cursor" for="jawabanempata">
+                                                        <p id="a"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanempatb" name="jawaban4" value="b" onclick="set4()">
+                                                    <label class="form-check-label cursor" for="jawabanempatb">
+                                                        <p id="b"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanempatc" name="jawaban4" value="c" onclick="set4()">
+                                                    <label class="form-check-label cursor" for="jawabanempatc" >
+                                                        <p id="c"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanempatd" name="jawaban4" value="d" onclick="set4()">
+                                                    <label class="form-check-label cursor" for="jawabanempatd">
+                                                        <p id="d"></p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="button-group text-end m-3">
+                                            <a class="btn btn-danger" onclick="nomor3()">Sebelumnya</a>
+                                            <a class="btn btn-success" onclick="nomor5()">Selanjutnya</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bag-kuis" style="border:none;" id="soal-5" hidden>
+                                        <div class="nomornih mt-3">
+                                            <p>Nomor <span id="nomornyanih"></span>
+                                            </p>
+                                        </div>
+                                        <div class="soallll scrollkonten">
+                                            <p class="judulgariskecil mb-5">
+                                                <span id="soal" class="ms-2">
+                                            </p>
+                                            <div class="soalsoal" style="margin-left:2%">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanlimaa" name="jawaban5" value="a" onclick="set5()">
+                                                    <label class="form-check-label cursor" for="jawabanlimaa">
+                                                        <p id="a"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanlimab" name="jawaban5" value="b" onclick="set5()">
+                                                    <label class="form-check-label cursor" for="jawabanlimab">
+                                                        <p id="b"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanlimac" name="jawaban5" value="c" onclick="set5()">
+                                                    <label class="form-check-label cursor" for="jawabanlimac" >
+                                                        <p id="c"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanlimad" name="jawaban5" value="d" onclick="set5()">
+                                                    <label class="form-check-label cursor" for="jawabanlimad">
+                                                        <p id="d"></p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="button-group text-end m-3">
+                                            <a class="btn btn-danger" onclick="nomor4()">Sebelumnya</a>
+                                            <a class="btn btn-success" onclick="nomor6()">Selanjutnya</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="bag-kuis" style="border:none;" id="soal-6" hidden>
+                                        <div class="nomornih mt-3">
+                                            <p>Nomor <span id="nomornyanih"></span>
+                                            </p>
+                                        </div>
+                                        <div class="soallll scrollkonten">
+                                            <p class="judulgariskecil">
+                                                <span id="soal" class="ms-2">
+                                            </p>
+                                            <div class="soalsoal" style="margin-left:2%">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanenama" name="jawaban6" value="a" onclick="set6()">
+                                                    <label class="form-check-label cursor" for="jawabanenama">
+                                                        <p id="a"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanenamb" name="jawaban6" value="b" onclick="set6()">
+                                                    <label class="form-check-label cursor" for="jawabanenamb">
+                                                        <p id="b"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanenamc" name="jawaban6" value="c" onclick="set6()">
+                                                    <label class="form-check-label cursor" for="jawabanenamc" >
+                                                        <p id="c"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanenamd" name="jawaban6" value="d" onclick="set6()">
+                                                    <label class="form-check-label cursor" for="jawabanenamd">
+                                                        <p id="d"></p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="button-group text-end m-3">
+                                            <a class="btn btn-danger" onclick="nomor5()">Sebelumnya</a>
+                                            <a class="btn btn-success" onclick="nomor7()">Selanjutnya</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="bag-kuis" style="border:none;" id="soal-7" hidden>
+                                        <div class="nomornih mt-3">
+                                            <p>Nomor <span id="nomornyanih"></span>
+                                            </p>
+                                        </div>
+                                        <div class="soallll scrollkonten">
+                                            <p class="judulgariskecil">
+                                                <span id="soal" class="ms-2">
+                                            </p>
+                                            <div class="soalsoal" style="margin-left:2%">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabantujuha" name="jawaban7" value="a" onclick="set7()">
+                                                    <label class="form-check-label cursor" for="jawabantujuha">
+                                                        <p id="a"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabantujuhb" name="jawaban7" value="b" onclick="set7()">
+                                                    <label class="form-check-label cursor" for="jawabantujuhb">
+                                                        <p id="b"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabantujuhc" name="jawaban7" value="c" onclick="set7()">
+                                                    <label class="form-check-label cursor" for="jawabantujuhc" >
+                                                        <p id="c"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabantujuhd" name="jawaban7" value="d" onclick="set7()">
+                                                    <label class="form-check-label cursor" for="jawabantujuhd">
+                                                        <p id="d"></p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="button-group text-end m-3">
+                                            <a class="btn btn-danger" onclick="nomor6()">Sebelumnya</a>
+                                            <a class="btn btn-success" onclick="nomor8()">Selanjutnya</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="bag-kuis" style="border:none;" id="soal-8" hidden>
+                                        <div class="nomornih mt-3">
+                                            <p>Nomor <span id="nomornyanih"></span>
+                                            </p>
+                                        </div>
+                                        <div class="soallll scrollkonten">
+                                            <p class="judulgariskecil ">
+                                                <span id="soal" class="ms-2">
+                                            </p>
+                                            <div class="soalsoal" style="margin-left:2%">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanlapana" name="jawaban8" value="a" onclick="set8()">
+                                                    <label class="form-check-label cursor" for="jawabanlapana">
+                                                        <p id="a"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanlapanb" name="jawaban8" value="b" onclick="set8()">
+                                                    <label class="form-check-label cursor" for="jawabanlapanb">
+                                                        <p id="b"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanlapanc" name="jawaban8" value="c" onclick="set8()">
+                                                    <label class="form-check-label cursor" for="jawabanlapanc" >
+                                                        <p id="c"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabanlapand" name="jawaban8" value="d" onclick="set8()">
+                                                    <label class="form-check-label cursor" for="jawabanlapand">
+                                                        <p id="d"></p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="button-group text-end m-3">
+                                            <a class="btn btn-danger" onclick="nomor7()">Sebelumnya</a>
+                                            <a class="btn btn-success" onclick="nomor9()">Selanjutnya</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="bag-kuis" style="border:none;" id="soal-9" hidden>
+                                        <div class="nomornih mt-3">
+                                            <p>Nomor <span id="nomornyanih"></span>
+                                            </p>
+                                        </div>
+                                        <div class="soallll scrollkonten">
+                                            <p class="judulgariskecil">
+                                                <span id="soal" class="ms-2">
+                                            </p>
+                                            <div class="soalsoal" style="margin-left:2%">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabansembilana" name="jawaban9" value="a" onclick="set9()">
+                                                    <label class="form-check-label cursor" for="jawabansembilana">
+                                                        <p id="a"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabansembilanb" name="jawaban9" value="b" onclick="set9()">
+                                                    <label class="form-check-label cursor" for="jawabansembilanb">
+                                                        <p id="b"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabansembilanc" name="jawaban9" value="c" onclick="set9()">
+                                                    <label class="form-check-label cursor" for="jawabansembilanc">
+                                                        <p id="c"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabansembiland" name="jawaban9" value="d" onclick="set9()">
+                                                    <label class="form-check-label cursor" for="jawabansembiland">
+                                                        <p id="d"></p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="button-group text-end m-3">
+                                            <a class="btn btn-danger" onclick="nomor8()">Sebelumnya</a>
+                                            <a class="btn btn-success" onclick="nomor10()">Selanjutnya</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="bag-kuis" style="border:none;" id="soal-10" hidden>
+                                        <div class="nomornih mt-3">
+                                            <p>Nomor <span id="nomornyanih"></span>
+                                            </p>    
+                                        </div>
+                                        <div class="soallll scrollkonten">
+                                            <p class="judulgariskecil">
+                                                <span id="soal" class="ms-2">
+                                            </p>
+                                            <div class="soalsoal" style="margin-left:2%">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabasepuluha" name="jawaban10" value="a" onclick="set10()">
+                                                    <label class="form-check-label cursor" for="jawabasepuluha">
+                                                        <p id="a"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabasepuluhb" name="jawaban10" value="b" onclick="set10()">
+                                                    <label class="form-check-label cursor" for="jawabasepuluhb">
+                                                        <p id="b"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabasepuluhc" name="jawaban10" value="c" onclick="set10()">
+                                                    <label class="form-check-label cursor" for="jawabasepuluhc">
+                                                        <p id="c"></p>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="jawabasepuluhd" name="jawaban10" value="d" onclick="set10()">
+                                                    <label class="form-check-label cursor" for="jawabasepuluhd">
+                                                        <p id="d"></p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="button-group text-end m-3">
+                                            <a class="btn btn-danger" onclick="nomor9()">Sebelumnya</a>
+                                            <a class="btn btn-success disabled">Selanjutnya</a>
+                                        </div>
+                                    </div>
+                                
+                        </div>
+                        <div class="col-lg-3 mt-5">
+                            <div class="timer text-center">
+                                <h3>
+                                    <span id="gwaktu"><img src='assets/img/timer.png' style='width:10%'></span> 
+                                    <span id="waktutampil">20 : 00</span>
+                                </h3>
+                                <!-- <h3 id="waktutampil" class="text-center m-2"></h3> -->
+                            </div>
+                            
+                                <div class="nomorsoal mt-2 text-center">
+                                    <b style="font-size: larger;"><u>Nomor Soal</u></b><br>
+                                    <button type="button" class="soall btn p-1 mt-3 belum" id="nomor1" onclick="nomor1()">1</button>
+                                    <button type="button" class="soall btn p-1 mt-3 belum" id="nomor2" onclick="nomor2()">2</button>
+                                    <button type="button" class="soall btn p-1 mt-3 belum" id="nomor3" onclick="nomor3()">3</button>
+                                    <button type="button" class="soall btn p-1 mt-3 belum" id="nomor4" onclick="nomor4()">4</button>
+                                    <button type="button" class="soall btn p-1 mt-3 belum" id="nomor5" onclick="nomor5()">5</button>
+                                    <button type="button" class="soall btn p-1 mt-2 mb-3 belum" id="nomor6" onclick="nomor6()">6</button>
+                                    <button type="button" class="soall btn p-1 mt-2 mb-3 belum" id="nomor7" onclick="nomor7()">7</button>
+                                    <button type="button" class="soall btn p-1 mt-2 mb-3 belum" id="nomor8" onclick="nomor8()">8</button>
+                                    <button type="button" class="soall btn p-1 mt-2 mb-3 belum" id="nomor9" onclick="nomor9()">9</button>
+                                    <button type="button" class="soall btn p-1 mt-2 mb-3 belum" id="nomor10" onclick="nomor10()">10</button>
+                                <br>
+                                </div>
+                                <br>
+                                <p>Keterangan:</p>  
+                                <p><span class="btn p-1" style="background-color: white; width: 30%; border: 2px solid grey;">Putih </span> = Belum dijawab</p>
+                                <p><span class="btn p-1" style="color:white;background-color: rgb(101, 168, 255); width: 30%;">Biru </span> = Sudah dijawab</p>  
+                                <br><p><a class="btn btn-success p-1" style="color:white; width: 130%; border-radius: 20px;"  data-bs-toggle="modal" data-bs-target="#exampleModal"><b style="font-weight :300px;font-size: larger;">Selesai</b></a></p>  
+                        </div>
+                
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                Apakah kamu yakin ingin menyelesaikan kuis 1?
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="selesai()">Yakin</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- <div class="modal fade" id="peringatanKuis" tabindex="-1" aria-labelledby="peringatanKuisLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Peringatan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        Masih ada soal yang belum kamu jawab!
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        </div>
+                    </div>
+                    </div>
+                </div> -->
+
+                <div class="container-fluid p-2 mt-2 hilang" id="bgskor">
+                        <div class="col-xl-12 text-sm-justify p-2 atas-kuis">
+                            <h4 class="m-1 text-sm-center" style="color: white; font-size: 35px;">
+                                    HASIL KUIS 1 <br>Pangkat Tiga dan Akar Pangkat Tiga
+                            </h4>
+                        </div>
+                            <center>
+                                <div class="card-body">
+                                    <div class="col-lg-9 datakuis">
+                                        <table class="table-borderless">
+                                            <tr>
+                                                <td><p>Nama</p></td>
+                                                <td><p style="margin-left: 25px;"> : </p></td>
+                                                <td><p class="nama" style="margin-left: 15px;"></p></td>
+                                            </tr>
+                                            <tr>
+                                                <td> <p> Sekolah</p></td>
+                                                <td> <p style="margin-left: 25px;">: </p></td>
+                                                <td><p class="sekolah" style="margin-left: 15px;"></p></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Kelas</p></td>
+                                                <td><p style="margin-left: 25px;"> : </p></td>
+                                                <td><p class="kelas" style="margin-left: 15px;"></p></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Hari, Tanggal</p></td>
+                                                <td><p style="margin-left: 25px;"> : </p></td>
+                                                <td><p class="haritgl" style="margin-left: 15px;"></p></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Waktu Selesai</p></td>
+                                                <td><p style="margin-left: 25px;"> : </p></td>
+                                                <td><p class="waktu" style="margin-left: 15px;"></p></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Nilai Kuis 1</p></td>
+                                                <td><p style="margin-left: 25px;"> : </p></td>
+                                                <td><p class="hasilskor" style="margin-left: 15px;"></p></td>
+                                            </tr>
+                                        </table>
+                                        <!-- <p class="jwbsiswa"></p>    -->
+                                    </div>
+
+                                    <div id="ulang" class="ket_ulang mt-2 hilang">
+                                        <p>Nilai kamu kurang dari <span class="kkm1"></span> (KKM) belum memenuhi untuk dapat lanjut ke materi selanjutnya<img src="assets/img/sad.gif" width="3%" height="3%"></img><br>
+                                        Silahkan kamu pelajari ulang materinya atau mengerjakan kuis ulang ya!<img src="assets/img/smile.gif" width="3%" height="3%"></img></p>
+                                        <a class="btn btn-primary mt-1" button onclick="location.href='kuis2.html'">Ulang Kuis</a>
+                                        <a class="btn btn-primary mt-1" button onclick="location.href='jaringkubus.html'">Pelajari Ulang Materi</a>
+                                    </div>
+                                    <div  id="lulus" class="tmblmatlan hilang">
+                                            <h4 style="color:black;">Selamat!!<img src="assets/img/selamat.gif" width="3%" height="3%"></img></h4>
+                                            <p>Selamat kamu berhasil menuntaskan kuis 1! Hebat! <br>
+                                            Silahkan ke materi selanjutnya, ya!</p>
+                                        <a class="btn btn-primary mt-2" button onclick="location.href='jaringkubus.html'">Materi Selanjutnya</a>
+                                    </div>      
+                                    
+                                </div>
+                            </center>
+                </div>
+                <!-- <div class="modal fade" id="lulusKKM" tabindex="-1" aria-labelledby="lulusKKMLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body">
+                        <h4>Selamat!!</h4><br>Selamat kamu berhasil menuntaskan kuis 1 lebih dari atau sama dengan KKM! <br>
+                        Silahkan ke materi selanjutnya, ya!
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        </div> -->
+                    <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div>  -->
+            </main>
+        </div>
+</body>
+<script>
+    let waktuhabis = 0;
+                
+               
+    var d = new Date();
+    var t = d.getTime();
+    var id = t;
+
+    window.setTimeout("waktu()", 1000);
+    
+    function waktu() {
+        var tanggal = new Date();
+        setTimeout("waktu()", 1000);
+        return (tanggal.getHours() + ":" + tanggal.getMinutes() + ":" + tanggal.getSeconds());
+    }
+   
+    // harinya
+    function hari() {
+        tanggallengkap = new String();
+        namahari = ("Minggu Senin Selasa Rabu Kamis Jumat Sabtu");
+        namahari = namahari.split(" ");
+        namabulan = ("Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember");
+        namabulan = namabulan.split(" ");
+        tgl = new Date();
+        hari = tgl.getDay();
+        tanggal = tgl.getDate();
+        bulan = tgl.getMonth();
+        tahun = tgl.getFullYear();
+        tanggallengkap = namahari[hari] + ", " + tanggal + " " + namabulan[bulan] + " " + tahun;
+        return (tanggallengkap);
+    }
+
+    var xx = setInterval(function() {
+        if(waktuhabis==1){
+            clearInterval(xx);
+            
+        let isi = 0;
+        let pilsiswainput = [];
+        
+        let pilsiswa = document.getElementsByTagName("input");
+
+        for(let x=0; x<pilsiswa.length;x++){
+            if(pilsiswa[x].checked) {
+                pilsiswainput.push(pilsiswa[x].value);
+            } else {
+
+            }
+            localStorage.setItem("jwbn", pilsiswainput);
+        }    
+            
+            console.log("no");
+            var skorr = document.getElementById('bgskor');
+            skorr.className = skorr.className.replace(" hilang","")
+            document.getElementById('soaltampiltampil').className += " hilang";
+
+                let hasil = 0;
+                let benar = 0;
+                let salah = kunci.length;
+                for (let u = 0; u < pilsiswainput.length; u++) {
+                    if(pilsiswainput[u] == kunci[u]){
+                        hasil = hasil + 20;
+                        benar = benar + 1;
+                    } else {
+                    hasil = hasil;
+                }
+            }
+            console.log(hasil);
+            //nilai disimpan ke local storage
+            localStorage.setItem("skor",hasil);
+            
+            let waktuselesai = waktu();
+            let hariselesai = hari();
+
+            let nama = document.querySelector(".nama");
+            let namasiswa = localStorage.getItem("nama").toUpperCase();
+            nama.innerHTML = namasiswa;
+
+            let kelas = document.querySelector(".kelas");
+            let kelassiswa = localStorage.getItem("kelas");
+            kelas.innerHTML = kelassiswa;
+
+            let sekolah = document.querySelector(".sekolah");
+            let sekolahsiswa = localStorage.getItem("sekolah");
+            sekolah.innerHTML = sekolahsiswa;
+
+            let waktuu = document.querySelector('.waktu');
+            waktuu.innerHTML = waktuselesai;
+
+            let harii = document.querySelector('.haritgl');
+            harii.innerHTML = hariselesai;
+
+            let jwbansiswa = localStorage.getItem("jwbn");
+
+            let hslskor = document.querySelector('.hasilskor');
+            let skorsiswa = localStorage.getItem("skor");
+            hslskor.innerHTML = skorsiswa;
+
+            if (hasil < kkm1){
+                var ulangg = document.getElementById('ulang');
+                ulangg.className = ulangg.className.replace(" hilang","");
+                
+            } else if (hasil >= kkm1){
+                var materilanjut = document.getElementById('lulus');
+                materilanjut.className = materilanjut.className.replace(" hilang"," ");
+            }
+
+            createTask(namasiswa, kelassiswa, sekolahsiswa, hariselesai, waktuselesai, pilsiswainput, skorsiswa);
+        }
+    }, 1000);
+
+    //let selesai = document.querySelector("#selesai");
+     
+
+   function selesai(){
+        let syaratselesai = 0;
+        let isi = 0;
+        let pilsiswainput = [];
+        
+        let pilsiswa = document.getElementsByTagName("input");
+        let alertnyaa = document.querySelector(".modal");
+        let soalnomor = document.querySelectorAll('.soall');
+
+        for(let c=0; c < soalnomor.length; c++){
+            if ((soalnomor[c].className.indexOf('belum') == -1)) {
+                    syaratselesai = syaratselesai + 1;
+            }
+        }
+
+        //console.log(localStorage);
+
+            // for(let x=0; x<pilsiswa.length;x++){
+            //     if(pilsiswa[x].checked) {
+            //         pilsiswainput.push(pilsiswa[x].value);
+            //     }
+                
+            //     else {
+
+            //     }
+            //     localStorage.setItem("jwbn", pilsiswainput);
+            // }
+        // console.log(pilsiswainput);
+        // console.log(kunci);
+
+        
+        // var skorr = document.getElementById('bgskor');
+        //     skorr.className = skorr.className.replace(" hilang","")
+        //     document.getElementById('soaltampiltampil').className += " hilang";
+        if(syaratselesai != kunci.length){
+            alert("Masih ada soal yang belum kamu jawab, periksa kembali");
+        } else {
+                
+            for(let x=0; x<pilsiswa.length;x++){
+            if(pilsiswa[x].checked) {
+                pilsiswainput.push(pilsiswa[x].value);
+            } else {
+
+            }
+            localStorage.setItem("jwbn", pilsiswainput);
+            }    
+            
+            console.log("yes");
+
+                let hasil = 0;
+                let benar = 0;
+                let salah = kunci.length;
+                for (let u = 0; u < pilsiswainput.length; u++) {
+                    if(pilsiswainput[u] == kunci[u]){
+                        hasil = hasil + 10;
+                        benar = benar + 1;
+                    } else {
+                    hasil = hasil;
+                }
+            }
+            console.log(hasil);
+            //nilai disimpan ke local storage
+            localStorage.setItem("skor",hasil);
+
+            var skorr = document.getElementById("bgskor");
+            skorr.className = skorr.className.replace(" hilang"," ");
+
+            // var navnya = document.querySelector(".sb-sidenav");
+            // navnya.classList.add("hilang");
+
+            document.getElementById('soaltampiltampil').className += " hilang";
+
+            let waktuselesai = waktu();
+            let hariselesai = hari();
+
+            let nama = document.querySelector(".nama");
+            let namasiswa = localStorage.getItem("nama").toUpperCase();
+            nama.innerHTML = namasiswa;
+
+            let kelas = document.querySelector(".kelas");
+            let kelassiswa = localStorage.getItem("kelas");
+            kelas.innerHTML = kelassiswa;
+
+            let sekolah = document.querySelector(".sekolah");
+            let sekolahsiswa = localStorage.getItem("sekolah");
+            sekolah.innerHTML = sekolahsiswa;
+
+            let waktuu = document.querySelector('.waktu');
+            waktuu.innerHTML = waktuselesai;
+
+            let harii = document.querySelector('.haritgl');
+            harii.innerHTML = hariselesai;
+
+            let jwbansiswa = localStorage.getItem("jwbn");
+
+            let hslskor = document.querySelector('.hasilskor');
+            let skorsiswa = localStorage.getItem("skor");
+            hslskor.innerHTML = skorsiswa;
+
+            if (hasil < kkm1){
+                var ulangg = document.getElementById('ulang');
+                ulangg.className = ulangg.className.replace(" hilang","");
+                
+            } else if (hasil >= kkm1){
+                var materilanjut = document.getElementById('lulus');
+                materilanjut.className = materilanjut.className.replace(" hilang"," ");
+            }
+
+
+            createTask(namasiswa, kelassiswa, sekolahsiswa, hariselesai, waktuselesai, pilsiswainput, skorsiswa);
+            
+        }
+            
+            
+        // if(pilsiswainput.length == kunci.length){
+        //     let hasil = 0;
+        //     let benar = 0;
+        //     let salah = kunci.length;
+        //     for (let u = 0; u < pilsiswainput.length; u++) {
+        //         if(pilsiswainput[u] == kunci[u]){
+        //             hasil = hasil + 20;
+        //             benar = benar + 1;
+        //         } 
+                
+        //         else {
+        //             hasil = hasil;
+        //         }
+        //     }
+        //     console.log(hasil);
+        //     //nilai disimpan ke local storage
+        //     localStorage.setItem("skor",hasil);
+
+            
+        // } if (pilsiswainput.length != kunci.length) {
+        //     alert("Masih ada soal yang belum kamu jawab, periksa kembali");
+
+        // }
+        //else if(pilsiswainput.length != kunci.length){
+        //     alert("Masih ada soal yang belum kamu jawab, periksa kembalui")
+        // }
+                   
+               //console.log(localStorage); 
+        // let waktuselesai = waktu();
+        // let hariselesai = hari();
+
+        // let nama = document.querySelector(".nama");
+        // let namasiswa = localStorage.getItem("nama").toUpperCase();
+        // nama.innerHTML = namasiswa;
+
+        // let kelas = document.querySelector(".kelas");
+        // let kelassiswa = localStorage.getItem("kelas");
+        // kelas.innerHTML = kelassiswa;
+
+        // let sekolah = document.querySelector(".sekolah");
+        // let sekolahsiswa = localStorage.getItem("sekolah");
+        // sekolah.innerHTML = sekolahsiswa;
+
+        // let waktuu = document.querySelector('.waktu');
+        // waktuu.innerHTML = waktuselesai;
+
+        // let harii = document.querySelector('.haritgl');
+        // harii.innerHTML = hariselesai;
+
+        // let j = document.querySelector(".jwbsiswa");
+        // let jwbansiswa = localStorage.getItem("jwbn");
+        // j.innerHTML = jwbansiswa;
+
+        // let hslskor = document.querySelector('.hasilskor');
+        // let skorsiswa = localStorage.getItem("skor");
+        // hslskor.innerHTML = skorsiswa;
+
+        //var namaa = namasiswa;
+
+        // id += 1;
+
+        // var datakuis1 = {
+        //     id : id,
+        //     nama : namasiswa,
+        //     kelas : kelassiswa,
+        //     sekolah : sekolahsiswa,
+        //     hari : hariselesai,
+        //     jam : waktuselesai,
+        //     jawab  : jwbansiswa,
+        //     nilai : skorsiswa
+        // }
+
+        // var ref = database.ref("kuis1/" + id);
+        // ref.set(datakuis1);
+        
+
+        // let id =+ 1;
+        // createTask(namasiswa, kelassiswa, sekolahsiswa, hariselesai, waktuselesai, jwbansiswa, skorsiswa);
+        // database.ref('kuis1/'+ id).set({
+        //     id : id,
+        //     nama : namasiswa,
+        //     kelas : kelassiswa,
+        //     sekolah : sekolahsiswa,
+        //     jawab  : jwbansiswa,
+        //     nilai : skorsiswa
+        // })
+
+        }
+
+        function createTask(namasiswa, kelassiswa, sekolahsiswa, hariselesai, waktuselesai, jwbansiswa, skorsiswa){
+            id += 1;
+
+            var datakuis1 = {
+                id : id,
+                nama : namasiswa,
+                kelas : kelassiswa,
+                sekolah : sekolahsiswa,
+                hari : hariselesai,
+                jam : waktuselesai,
+                jawab  : jwbansiswa,
+                nilai : skorsiswa
+            }
+
+            var ref = database.ref("kuis1/" + id);
+            ref.set(datakuis1);
+        }
+</script>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+        };
+    </script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+    
+    <script id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/png" href="assets/img/logo.png">
+        <title>Bangun Ruang</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">
+                <img src="assets/img/bangunruang.png" class="logobangunruang">
+                <label class="tulisannya">Bangun Ruang</label>
+            </a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-sm-0 me-3 ms-5-5 me-sm-0" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="color:white;"></i></button>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">
+                                <h5>Daftar Materi</h5>
+                            </div>
+                                <a class="nav-link" href="pengantar.html">
+                                <div class="sb-nav-link-icon" aria-expanded="true"><i class="fas fa-book"></i></div>
+                                Pengantar Bangun Ruang
+                            </a>
+                            
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Pangkat Tiga & Akar Pangkat Tiga
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="pangkattiga.html">Pangkat Tiga</a>
+                                    <a class="nav-link" href="akarpangkattiga.html">Akar Pangkat Tiga</a>
+                                    <a class="nav-link" href="kuis1.html">Kuis 1</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-cube"></i></div>
+                                Jaring-jaring
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>                            
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="jaringkubus.html">Jaring-Jaring Kubus</a>
+                                    <a class="nav-link" href="jaringbalok.html">Jaring-Jaring Balok</a>
+                                    <a class="nav-link" href="kuis2.html">Kuis 2</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
+                                Volume
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="pagesCollapseError" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="volumekubus.html">Volume Kubus</a>
+                                    <a class="nav-link" href="volumebalok.html">Volume Balok</a>
+                                    <a class="nav-link" href="kuis3.html">Kuis 3</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link active" href="masalah.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
+                                Menyelesaikan masalah tentang Volume Kubus dan Balok
+                            </a>
+                            <a class="nav-link" href="evaluasi.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-pencil-square"></i></div>
+                                Evaluasi
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container px-5 py-4">
+                        <h2 style="color: black;">
+                            <div class="judulgarisbesar">
+                                &nbsp;D. Menyelesaikan masalah tentang Volume Kubus dan Balok
+                            </div>
+                        </h2>
+                        <hr>
+                        <div class="card mb-2 p-4 text-sm-justify">                    
+                            <p>
+                                Dalam kehidupan sehari-hari, kita sering menjumpai berbagai 
+                                macam masalah yang terjadi terkait volume kubus dan balok. 
+                                Misalnya permasalahan yang kita temui adalah sebagai berikut:
+                            </p>
+                            <div class="card card-body-simak">
+                                <img src="assets/img/simak.png" class="simak">
+                                <hr style="height: 0.5rem;">
+                                <h6 class="soalmm">Perhatikan soal berikut:</h6>
+                                <span style="color:black">
+                                    Sebuah bak mandi berbentuk kubus dengan panjang sisi bagian 
+                                    dalam 90 cm. jika bak terisi air 13 bagian, 
+                                    berapa liter air yang ada di dalam bak tersebut?
+                                </span>
+                                <br><h6 class="soalmm">Penyelesaian:</h6>
+                                <p>
+                                    Karena bak terisi air $\frac{1}{3}$ bagian maka volume air dalam bak adalah
+                                </p>
+                                <p>
+                                    Volume air dalam bak $= \frac{1}{3} \times$ volume bak<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;
+                                    $= \frac{1}{3} \times $729.000<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;
+                                    $=$ 243.000 cm<sup>3</sup> <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;
+                                    $=$ 
+                                    243 liter
+                                    <br>
+                                    <div class="card card-body" style="border-color:#7C9ED9;">
+                                        <p>Liter adalah dm<sup>3</sup>. Jadi, cm<sup>3</sup> ke dm<sup>3</sup> dibagi dengan 1.000</p>
+                                    </div><br>
+                                    Jadi, volume air di dalam bak tersebut adalah 243 liter.
+                                </p>
+                            </div><br>
+                        <p class="mt-2">Jika sudah paham, ayo coba jawab pertanyaan dibawah ini!</p>
+                        
+                        <div class="card card-body-simak">
+                            <div class="card-a card-body p-3" style="height: 70px;">
+                                <h4 style="font-weight: 700; color: black;">
+                                    <center>
+                                        <img src="assets/img/panahkanan.png" class="marimencoba">
+                                        Mari Mencoba 10
+                                        <img src="assets/img/panahkiri.png" class="marimencoba">
+                                    </center>
+                                </h4>
+                            </div>
+
+                                <div class="card card-body-petunjuk mt-3 mb-3">
+                                    <h6 style="color:black"><img src="assets/img/contohsoal.png" style="width: 1.5rem;"><b>&nbsp;Petunjuk pengerjaan:</b></h6>
+                                    <ul class="ms-3">
+                                        <li> Isikan jawaban kamu pada kolom yang kosong secara berurutan dari kiri ke kanan. </li>
+                                        <li> Jika jawaban kamu benar maka kolom tersebut akan berubah menjadi warna hijau. </li>
+                                        <li> Jika jawaban kamu salah maka kolom tersebut akan berubah menjadi warna merah. </li>
+                                        <li> Setelah kolom berwarna hijau, jika kolom berikutnya tidak bisa kamu isi jawaban maka klik 2 kali pada kolom tersebut. </li>
+                                        <li> Gunakan simbol + - : x yang ada pada keyboard untuk mengisi jawabannya.</li>
+                                    </ul>
+                                </div>
+                                <div id="soal1mm1">
+                                    <h6 class="soalmm">
+                                        <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                        Soal 1:
+                                    </h6>
+                                    <p style="color:black">Sebuah wadah berbentuk balok yang bagian dalamnya berukuran 
+                                        panjang 20 cm, lebar 15 cm, dan tinggi 40 cm terisi penuh oleh 
+                                        minyak goreng.
+                                        Berapa liter volume minyak goreng di dalam wadah tersebut?</p>
+                                    <h6 class="soalmm">Jawab:</h6>
+                                    <p>
+                                            Volume minyak goreng dalam wadah 
+                                            $=$
+                                            <input type="text" id="isipanjang" name="isipanjang" class="form-control" onkeyup="isipanjang()" style="height:1.8rem; width:3rem;text-align:center" placeholder="..." 
+                                            class="mt-1" style="width:2rem;text-align: center;">
+                                            $\times$
+                                            <input type="text" id="isilebar" name="isilebar" class="form-control" onkeyup="isilebar()" style="height:1.8rem; width:3rem;text-align:center" placeholder="..." 
+                                            class="mt-1" style="width:2rem;text-align: center;">
+                                            $\times$
+                                            <input type="text" id="isitinggi" name="isitinggi" class="form-control" onkeyup="isitinggi()" style="height:1.8rem; width:3rem;text-align:center" placeholder="..." 
+                                            class="mt-1" style="width:2rem;text-align: center;"><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            $=$
+                                            <input type="text" id="isihasilcm" name="isihasilcm" class="form-control mt-1" onkeyup="isihasilcm()" style="height:1.8rem; width:4rem;text-align:center" placeholder="..." 
+                                            class="mt-1" style="width:2rem;text-align: center;"> cm<sup>3</sup>
+                                            <br>Liter = dm<sup>3</sup>, jadi mengubah cm<sup>3</sup> kita perlu membagi 1.000<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;
+                                            V = 
+                                            <input type="text" id="isihasiliter" class="form-control" name="isihasiliter" onkeyup="isihasiliter()" style="height:1.8rem; width:3rem;text-align:center"" placeholder="..." 
+                                            style="width:2rem;text-align: center;">
+                                            $liter$<br>
+                                            Jadi, volume minyak goreng di dalam wadah tersebut adalah <span id="tampilhasil">...</span> liter.
+                                    </p>
+                                    <script>
+                                            function isipanjang(){
+                                                var isipanjang = document.getElementById("isipanjang");
+    
+                                                if(isipanjang.value == "20"){
+                                                    document.getElementById("isipanjang").style="border:3px solid green;height:1.8rem; width:3rem; text-align:center";
+                                                } else{
+                                                    document.getElementById("isipanjang").style="border:3px solid red;height:1.8rem; width:3rem; text-align:center";
+                                                }
+                                            }
+    
+                                            function isilebar(){
+                                                var isilebar = document.getElementById("isilebar");
+    
+                                                if(isilebar.value == "15"){
+                                                    document.getElementById("isilebar").style="border:3px solid green;height:1.8rem; width:3rem; text-align:center";
+                                                } else{
+                                                    document.getElementById("isilebar").style="border:3px solid red;height:1.8rem; width:3rem; text-align:center";
+                                                }
+                                            }
+    
+                                            function isitinggi(){
+                                                var isitinggi = document.getElementById("isitinggi");
+    
+                                                if(isitinggi.value == "40"){
+                                                    document.getElementById("isitinggi").style="border:3px solid green;height:1.8rem; width:3rem; text-align:center";
+                                                } else{
+                                                    document.getElementById("isitinggi").style="border:3px solid red;height:1.8rem; width:3rem; text-align:center";
+                                                }
+    
+                                            }
+    
+                                            function isihasilcm(){
+                                                var isihasilcm = document.getElementById("isihasilcm");
+    
+                                                if(isihasilcm.value == "12.000" || isihasilcm.value == "12000"){
+                                                    document.getElementById("isihasilcm").style="border:3px solid green;height:1.8rem; width:4rem; text-align:center";
+                                                } else{
+                                                    document.getElementById("isihasilcm").style="border:3px solid red;height:1.8rem; width:4rem; text-align:center";
+                                                }
+    
+                                            }
+    
+                                            function isihasiliter(){
+                                                var isihasiliter = document.getElementById("isihasiliter");
+    
+                                                if(isihasiliter.value == "12"){
+                                                    document.getElementById("isihasiliter").style="border:3px solid green;height:1.8rem; width:3rem; text-align:center";
+                                                    var tampilhasil = document.getElementById("tampilhasil");
+                                                    tampilhasil.innerHTML =  isihasiliter.value;
+                                                } else{
+                                                    document.getElementById("isihasiliter").style="border:3px solid red;height:1.8rem; width:3rem; text-align:center";
+                                                }
+    
+                                            }
+    
+                                            
+    
+                                    </script>
+                                </div>
+
+                                <hr style="height: 5px; color:#7c0394">
+
+                                <div id="soal2mm1">
+                                    <h6 class="soalmm">
+                                        <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                        Soal 2:
+                                    </h6>
+                                    <p style="color:black">
+                                        Sebuah akuarium mampu menampung air sebanyak 60.000 cm<sup>3</sup>. 
+                                        Jika diketahui lebar akuarium 40 cm dan tinggi akuarium 30 cm, 
+                                        tentukan panjang akuarium tersebut!<br><br>
+                                        <img src="assets/img/akuarium.png" style="width: 30%;">
+                                    </p>
+                                    <h6 class="soalmm">Jawab:</h6>
+                                    <p>
+                                        <p>Banyak air yang ditampung = Volume<br></p>
+                                        <p>Volume akuarium =
+                                            <input type="text" id="volumeno2a" class="form-control" name="dikvolume" onkeyup="volumeno2a()" style="height:1.8rem; width:5rem;text-align:center" placeholder="..." 
+                                             style="width:2rem;text-align: center;"> cm<sup>3</sup> <!--6.000-->
+                                            <br>Lebar = <input type="text" class="form-control" id="lebarno2a" name="diklebar" onkeyup="lebarno2a()" style="height:1.8rem; width:4rem;text-align:center" placeholder="..." 
+                                            style="width:2rem;text-align: center;" class="mb-1"> cm <!--40-->
+                                            <br> Tinggi = <input type="text" class="form-control" id="tinggino2a" name="diktinggi" onkeyup="tinggino2a()" style="height:1.8rem; width:4rem;text-align:center" placeholder="..." 
+                                            style="width:2rem;text-align: center;"> cm</p> <!--30-->
+                                        <p>Yang ditanya adalah panjang nya berarti kita menggunakan:</p>
+                                        <p>Panjang $=$ Volume : (lebar $\times$ tinggi)<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        $=$
+                                        <input type="text" id="volumeno2" class="form-control" name="volumeno2" placeholder="..."onkeyup="volumeno2()" style="height:1.8rem; width:5rem;text-align:center" placeholder="..." 
+                                            style="width:2rem;text-align: center;" >
+                                        $: ($
+                                        <input type="text" id="lebarno2" class="form-control" name="lebarno2"placeholder="..." onkeyup="lebarno2()" style="height:1.8rem; width:3rem;text-align:center" placeholder="..." 
+                                            style="width:2rem;text-align: center;">
+                                        $\times$
+                                        <input type="text" id="tinggino2" class="form-control" name="tinggino2" placeholder="..."onkeyup="tinggino2()" style="height:1.8rem; width:3rem;text-align:center" placeholder="..." 
+                                            style="width:2rem;text-align: center;">
+                                        $)$<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        $= \;$<input type="text" class="form-control mt-1"  id="hasilsatu" placeholder="..."name="hasilsatu" style="height:1.8rem; width:4rem;text-align:center" onkeyup="hasilsatu()" placeholder="..." 
+                                            style="width:2rem;text-align: center;">
+                                        $:$
+                                        <input type="text" class="mt-1 form-control" id="hasildua"placeholder="..." name="hasildua" style="height:1.8rem; width:3.5rem;text-align:center" onkeyup="hasildua()" placeholder="..." 
+                                            style="width:2rem;text-align: center;">
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        $= \;$<input type="text" class="form-control mt-1" id="hasilakhir" placeholder="..." name="hasilakhir" style="height:1.8rem; width:3rem;text-align:center" onkeyup="hasilakhir()" placeholder="..." 
+                                            style="width:2rem;text-align: center;"> cm
+                                        </p>
+                                        <p>Jadi, panjang akuarium tersebut adalah <span id="tampilhasil2">...</span> cm.</p>
+    
+                                        <script>
+                                            function volumeno2a(){
+                                                var volumeno2a = document.getElementById("volumeno2a");
+
+                                                if(volumeno2a.value == "60.000"||volumeno2a.value == "60000"){
+                                                    document.getElementById("volumeno2a").style="border:3px solid green;height:1.8rem; width:5rem; text-align:center";
+                                                } else{
+                                                    document.getElementById("volumeno2a").style="border:3px solid red;height:1.8rem; width:5rem; text-align:center";
+                                                }
+                                            }
+
+                                            function lebarno2a(){
+                                                var lebarno2a = document.getElementById("lebarno2a");
+
+                                                if(lebarno2a.value == "40"){
+                                                    document.getElementById("lebarno2a").style="border:3px solid green;height:1.8rem; width:3rem; text-align:center";
+                                                } else{
+                                                    document.getElementById("lebarno2a").style="border:3px solid red;height:1.8rem; width:3rem; text-align:center";
+                                                }
+                                            }
+
+                                            function tinggino2a(){
+                                                var tinggino2a = document.getElementById("tinggino2a");
+
+                                                if(tinggino2a.value == "60"){
+                                                    document.getElementById("tinggino2a").style="border:3px solid green;height:1.8rem; width:3rem; text-align:center";
+                                                } else{
+                                                    document.getElementById("tinggino2a").style="border:3px solid red;height:1.8rem; width:3rem; text-align:center";
+                                                }
+
+                                            }
+
+                                            function volumeno2(){
+                                                var volumeno2 = document.getElementById("volumeno2");
+
+                                                if(volumeno2.value == "60.000"||volumeno2.value == "60000"){
+                                                    document.getElementById("volumeno2").style="border:3px solid green;height:1.8rem; width:5rem; text-align:center";
+                                                } else{
+                                                    document.getElementById("volumeno2").style="border:3px solid red;height:1.8rem; width:5rem; text-align:center";
+                                                }
+
+                                            }
+
+                                            function lebarno2(){
+                                                var lebarno2 = document.getElementById("lebarno2");
+
+                                                if(lebarno2.value == "40"){
+                                                    document.getElementById("lebarno2").style="border:3px solid green;height:1.8rem; width:3rem; text-align:center";
+                                                } else{
+                                                    document.getElementById("lebarno2").style="border:3px solid red;height:1.8rem; width:3rem; text-align:center";
+                                                }
+
+                                            }
+
+                                            function tinggino2(){
+                                                var tinggino2 = document.getElementById("tinggino2");
+
+                                                if(tinggino2.value == "60"){
+                                                    document.getElementById("tinggino2").style="border:3px solid green;height:1.8rem; width:3rem; text-align:center";
+                                                } else{
+                                                    document.getElementById("tinggino2").style="border:3px solid red;height:1.8rem; width:3rem; text-align:center";
+                                                }
+
+                                            }
+
+                                            function hasilsatu(){
+                                                var hasilsatu = document.getElementById("hasilsatu");
+    
+                                                if(hasilsatu.value == "60.000"||hasilsatu.value == "60000"){
+                                                    document.getElementById("hasilsatu").style="border:3px solid green;height:1.8rem; width:5rem; text-align:center";
+                                                } else{
+                                                    document.getElementById("hasilsatu").style="border:3px solid red;height:1.8rem; width:5rem; text-align:center";
+                                                }
+    
+                                            }
+    
+                                            function hasildua(){
+                                                var hasildua = document.getElementById("hasildua");
+    
+                                                if(hasildua.value == "2.400"||hasildua.value == "2400"){
+                                                    document.getElementById("hasildua").style="border:3px solid green;height:1.8rem; width:4rem; text-align:center";
+                                                } else{
+                                                    document.getElementById("hasildua").style="border:3px solid red;height:1.8rem; width:4rem; text-align:center";
+                                                }
+    
+                                            }
+    
+                                            function hasilakhir(){
+                                                var hasilakhir = document.getElementById("hasilakhir");
+    
+                                                if(hasilakhir.value == "25"){
+                                                    document.getElementById("hasilakhir").style="border:3px solid green;height:1.8rem; width:3rem; text-align:center";
+                                                    var tampilhasil2 = document.getElementById("tampilhasil2");
+                                                    tampilhasil2.innerHTML =  hasilakhir.value;
+                                                } else{
+                                                    document.getElementById("hasilakhir").style="border:3px solid red;height:1.8rem; width:3rem; text-align:center";
+                                                }
+    
+                                            }
+    
+                                        </script>
+                                </div>
+                                
+                                <hr style="height: 5px; color:#7c0394">
+
+                                <div id="soal3mm1">
+                                    <h6 class="soalmm">
+                                        <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                        Soal 3:
+                                    </h6>
+                                    <p style="color:black">
+                                        Ana mempunyai kotak pensil yang memiliki lebar panjang 25 cm. lebar 4 cm dan tinggi 4 cm. Berapakah volume kotak pensil Ana tersebut?<br>
+                                        <!-- <img src="assets/img/akuarium.png" style="width: 30%;"> -->
+                                    <h6 class="soalmm">Jawab:</h6>
+                                        Diketahui:<br>
+                                        Panjang = <input type="text" class="form-control mt-2 mb-2" id="soal3amm5" placeholder="..." onkeyup="soal3amm5()" style="width: 7%;"> cm<br>
+                                        Lebar &nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" class="form-control mb-2"placeholder="..." id="soal3bmm5" onkeyup="soal3bmm5()" style="width: 7%; text-align:center"> cm<br>
+                                        Tinggi &nbsp;&nbsp;&nbsp;= <input type="text" class="form-control mb-2" placeholder="..."id="soal3cmm5" onkeyup="soal3cmm5()" style="width: 7%; text-align:center"> cm<br>
+                                        <br>
+                                        Volume Kotak Pensil = $p\;\times\;l\;\times\;t$
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        = &nbsp;<input type="text" id="soal3dmm5" onkeyup="soal3dmm5()" placeholder="..."class="form-control mb-1" style="width:20%; text-align:center">
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        = &nbsp;<input type="text" id="soal3emm5" onkeyup="soal3emm5()"placeholder="..." class="form-control" style="width:9%; text-align:center"> cm<sup>3</sup>
+                                        <br>
+                                    </p>
+                                    <p>Jadi, volume kotak pensil tersebut adalah <span id="tampilhasil3">...</span> cm<sup>3</sup>.</p>
+
+                                    <script>
+
+                                        function soal3amm5(){
+                                            var soal3amm5 = document.getElementById("soal3amm5");
+
+                                            if(soal3amm5.value == "25"){
+                                                document.getElementById("soal3amm5").style = "width:7%; border:3px solid green;text-align:center";
+                                            } else{
+                                                document.getElementById("soal3amm5").style = "width:7%; border:3px solid red;text-align:center";
+                                            }
+                                        }
+
+                                        function soal3bmm5(){
+                                            var soal3bmm5 = document.getElementById("soal3bmm5");
+
+                                            if(soal3bmm5.value == "4"){
+                                                document.getElementById("soal3bmm5").style = "width:7%; border:3px solid green;text-align:center";
+                                            } else{
+                                                document.getElementById("soal3bmm5").style = "width:7%; border:3px solid red;text-align:center";
+                                            }
+                                        }
+
+                                        function soal3cmm5(){
+                                            var soal3cmm5 = document.getElementById("soal3cmm5");
+
+                                            if(soal3cmm5.value == "4"){
+                                                document.getElementById("soal3cmm5").style = "width:7%; border:3px solid green;text-align:center";
+                                            } else{
+                                                document.getElementById("soal3cmm5").style = "width:7%; border:3px solid red;text-align:center";
+                                            }
+                                        }
+
+                                        function soal3dmm5(){
+                                            var soal3dmm5 = document.getElementById("soal3dmm5");
+
+                                            if(soal3dmm5.value == "25x4x4" || soal3dmm5.value == "25 x 4 x 4"){
+                                                document.getElementById("soal3dmm5").style = "width:20%; border:3px solid green;text-align:center";
+                                            } else{
+                                                document.getElementById("soal3dmm5").style = "width:20%; border:3px solid red;text-align:center";
+                                            }
+                                        }
+
+                                        function soal3emm5(){
+                                            var soal3emm5 = document.getElementById("soal3emm5");
+
+                                            if(soal3emm5.value == "400"){
+                                                document.getElementById("soal3emm5").style = "width:9%; border:3px solid green;text-align:center";
+                                                document.getElementById("tampilhasil3").innerHTML = soal3emm5.value;
+                                            } else{
+                                                document.getElementById("soal3emm5").style = "width:9%; border:3px solid red;text-align:center";
+                                            }
+                                        }
+                                    </script>
+
+                                </div>
+
+                                <hr style="height: 5px; color:#7c0394">
+
+                                <div id="soal4mm1">
+                                        <h6 class="soalmm">
+                                            <span style="margin-right:5px;border-left: 10px solid grey; width: 0;text-align:center"></span>
+                                            Soal 4:
+                                        </h6>
+                                        <p style="color:black">
+                                            Novia mempunyai kolam renang anak berbentuk kubus, jika diisi penuh air volumenya 27 liter. Berapa panjang rusuk kolam renang anak novia tersebut? <br>
+                                            <!-- <img src="assets/img/akuarium.png" style="width: 30%;"> -->
+                                        <h6 class="soalmm">Jawab:</h6>
+                                        <p>
+                                            Volume Kolam Renang Anak = <input type="text" class="form-control mb-1" placeholder="..."onkeyup="soal4amm5()" id="soal4amm5" style="width:6%;text-align:center"> liter<br>
+                                            Liter adalah dm<sup>3</sup>.<br>
+                                            Panjang Rusuk Kolam Renang Anak = $\sqrt[3]{}$<input type="text" placeholder="..."class="form-control" onkeyup="soal4bmm5()" id="soal4bmm5" style="width:6%;text-align:center">
+                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;
+                                            = &nbsp;<input type="text" class="form-control mt-1" onkeyup="soal4cmm5()" placeholder="..." id="soal4cmm5" style="width:6%;text-align:center"> dm.
+                                        </p>
+                                        <p>Jadi, panjang rusuk kolam renang anak tersebut adalah <span id="tampilhasil4">...</span> dm.</p>
+                                    <script>
+
+                                        function soal4amm5(){
+                                            var soal4amm5 = document.getElementById("soal4amm5");
+
+                                            if(soal4amm5.value == "27"){
+                                                document.getElementById("soal4amm5").style = "width:6%; border:3px solid green;text-align:center";
+                                            } else{
+                                                document.getElementById("soal4amm5").style = "width:6%; border:3px solid red;text-align:center";
+                                            }
+                                        }
+
+                                        function soal4bmm5(){
+                                            var soal4bmm5 = document.getElementById("soal4bmm5");
+
+                                            if(soal4bmm5.value == "27"){
+                                                document.getElementById("soal4bmm5").style = "width:6%; border:3px solid green;text-align:center";
+                                            } else{
+                                                document.getElementById("soal4bmm5").style = "width:6%; border:3px solid red;text-align:center";
+                                            }
+                                        }
+
+                                        function soal4cmm5(){
+                                            var soal4cmm5 = document.getElementById("soal4cmm5");
+
+                                            if(soal4cmm5.value == "3"){
+                                                document.getElementById("soal4cmm5").style = "width:6%; border:3px solid green;text-align:center";
+                                                document.getElementById("tampilhasil4").innerHTML = soal4cmm5.value;
+                                            } else{
+                                                document.getElementById("soal4cmm5").style = "width:6%; border:3px solid red;text-align:center";
+                                            }
+                                        }
+
+                                    </script>
+                                </div>
+                                
+                                <hr style="height: 5px; color:#7c0394">
+
+                                <div id="soal5mm1">
+                                        <h6 class="soalmm">
+                                            <span style="margin-right:5px;border-left: 10px solid grey; width: 0; text-align:center"></span>
+                                            Soal 5:
+                                        </h6>
+                                        <p style="color:black">
+                                            Fauzan membuat bak mandi berbentuk kubus. Bak mandi Fauzan dapat menampung air 512 liter. Berapa kedalaman bak mandi Fauzan tersebut?<br>
+                                            <!-- <img src="assets/img/akuarium.png" style="width: 30%;"> -->
+                                        <h6 class="soalmm">Jawab:</h6>
+                                        <p>
+                                            Volume Bak Mandi = <input type="text" class="form-control mb-2" placeholder="..."id="soal5amm5" onkeyup="soal5amm5()" style="width:8%;text-align:center">
+                                            <br>
+                                            Kedalaman sama dengan panjang rusuk bak mandi.<br>
+                                            Kedalaman bak mandi = $\sqrt[3]{}$<input type="text" placeholder="..."class="form-control mt-2 mb-2" id="soal5bmm5" onkeyup="soal5bmm5()" style="width:8%;text-align:center">
+                                            <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;
+                                            = &nbsp;<input type="text" class="form-control mb-2" id="soal5cmm5" placeholder="..." onkeyup="soal5cmm5()" style="width:6%;text-align:center"> dm
+                                        </p>
+                                        <p>Jadi, kedalaman bak mandi tersebut adalah <span id="tampilhasil5">...</span> dm.</p>
+
+                                        <script>
+
+                                        function soal5amm5(){
+                                            var soal5amm5 = document.getElementById("soal5amm5");
+
+                                            if(soal5amm5.value == "512"){
+                                                document.getElementById("soal5amm5").style = "width:8%; border:3px solid green;text-align:center";
+                                            } else{
+                                                document.getElementById("soal5amm5").style = "width:8%; border:3px solid red;text-align:center";
+                                            }
+                                        }
+
+                                        function soal5bmm5(){
+                                            var soal5bmm5 = document.getElementById("soal5bmm5");
+
+                                            if(soal5bmm5.value == "512"){
+                                                document.getElementById("soal5bmm5").style = "width:8%; border:3px solid green;text-align:center";
+                                            } else{
+                                                document.getElementById("soal5bmm5").style = "width:8%; border:3px solid red;text-align:center";
+                                            }
+                                        }
+
+                                        function soal5cmm5(){
+                                            var soal5cmm5 = document.getElementById("soal5cmm5");
+
+                                            if(soal5cmm5.value == "8"){
+                                                document.getElementById("soal5cmm5").style = "width:6%; border:3px solid green;text-align:center";
+                                                document.getElementById("tampilhasil5").innerHTML = soal4cmm5.value;
+                                            } else{
+                                                document.getElementById("soal5cmm5").style = "width:6%; border:3px solid red;text-align:center";
+                                            }
+                                        }
+
+
+                                        </script>
+                        
+                                </div>
+                    
+                    </div>
+                    
+                    </div>
+                    </div>
+                    <div class="container-fluid px-4 mb-4 text-center">
+                        <a href="volumebalok2.html" type="button" class="btn btn-primary" id="btnnextprev"><img src="assets/img/prev.png" class="logonextprev"> Sebelumnya</a>
+                        <a href="evaluasi.html" type="button" class="btn btn-secondary"id="btnnextprev">Evaluasi <img src="assets/img/next.png" class="logonextprev"></a>                          
+                    </div>
+                </main>
+            </div>
+        </div>
+        
+        <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+        </script>
+        <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
+
+        <script id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/png" href="assets/img/logo.png">
+        <title>Bangun Ruang | Pangkat Tiga</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">
+                <img src="assets/img/bangunruang.png" class="logobangunruang">
+                <label class="tulisannya">Bangun Ruang</label>
+            </a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-sm-0 me-3 ms-5-5 me-sm-0" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="color:white;"></i></button>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">
+                                <h5>Daftar Materi</h5>
+                            </div>
+                                <a class="nav-link" href="pengantar.html">
+                                <div class="sb-nav-link-icon" aria-expanded="true"><i class="fas fa-book"></i></div>
+                                Pengantar Bangun Ruang
+                            </a>
+                            
+                            <a class="nav-link collapsed active" href="pangkattiga.html" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Pangkat Tiga & Akar Pangkat Tiga
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="show collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link active" href="pangkattiga.html">Pangkat Tiga</a>
+                                    <a class="nav-link" href="akarpangkattiga.html">Akar Pangkat Tiga</a>
+                                    <a class="nav-link" href="kuis1.html">Kuis 1</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="jaringkubus.html" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-cube"></i></div>
+                                Jaring-Jaring
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>                            
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="jaringkubus.html">Jaring-Jaring Kubus</a>
+                                    <a class="nav-link" href="jaringbalok.html">Jaring-Jaring Balok</a>
+                                    <a class="nav-link" href="kuis2.html">Kuis 2</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="volumekubus.html" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
+                                Volume
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="pagesCollapseError" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="volumekubus.html">Volume Kubus</a>
+                                    <a class="nav-link" href="volumebalok.html">Volume Balok</a>
+                                    <a class="nav-link" href="kuis3.html">Kuis 3</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link" href="masalah.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
+                                Menyelesaikan masalah tentang Volume Kubus dan Balok
+                            </a>
+                            <a class="nav-link" href="evaluasi.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-pencil-square"></i></div>
+                                Evaluasi
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-5 py-4">
+                        <h2 style="color: black;">
+                            <div class="judulgarisbesar">
+                                &nbsp;A. Pangkat Tiga dan Akar Pangkat Tiga
+                            </div>
+                        </h2>
+                        <div class="card card-body-tujuan mt-4">
+                            <p><b>Tujuan Pembelajaran:</b></p>
+                            <ol>
+                                <li>
+                                    Setelah belajar mengenai pangkat tiga siswa dapat menentukan pangkat tiga dengan benar.
+                                </li>
+                            </ol>
+                            
+                        </div>
+                        <hr>
+                        <h4 class="mt-4" style="color: black;">
+                            <div class="judulgariskecil">
+                                &nbsp;1. Pangkat Tiga
+                            </div>
+                            
+                        </h4>
+                        <div class="card mb-2 p-4 justify-content-center">  
+                            <p><b style="color: blue;">Pangkat tiga</b> suatu bilangan merupakan perkalian berulang pada bilangan 
+                            tersebut sebanyak 3 (tiga) kali. 
+                            Jika $p$ adalah sebuah bilangan, $p$ pangkat tiga dituliskan sebagai berikut:</p>
+                            <div class="card mb-4 col-sm-2 text-sm-center mx-auto d-block">
+                                <div class="card-body">
+                                    <span style="color:blue">$p^3 = p \times p \times p$</span>
+                                </div>
+                            </div>
+                            <p>Di mana $p^3$ dibaca $p$ pangkat tiga, yang berarti $p$ pangkat tiga adalah $p$ 
+                            kali $p$ kali $p$. Contoh saja $p$ yang diketahui ialah 2 berarti </p>
+                            <img src="assets/img/pangkattiga.png" style="width:25rem;">
+                            Angka yang dikalikan sebanyak tiga kali harus sama semua. 
+                            <br><br>                                               
+                            
+                            <div class="card card-body-simak">
+                                <img src="assets/img/simak.png" class="simak">
+                                <hr style="height: 0.5rem;">
+                                <h6 class="soalmm">Perhatikan soal berikut:</h6>
+                                <span style="color:black">Berapakah hasil dari 5<sup>3</sup>?</span>
+                                <br><h6 class="soalmm">Penyelesaian:</h6>
+                                <p>Pada soal di ketahui bilangan yang akan kita 
+                                kalikan sebanyak 3 kali yaitu 5. </p>
+                                <p>Jadi, <b>5<sup>3</sup> = 5 &#215; 5 &#215; 5 = 125</b></p>
+                                <p>Dan hasil perkaliannya adalah <b>125</b>.</p>
+                                <p>Begitulah cara menghitung pangkat tiga.
+                                </p>
+                            </div><br>
+                            Setelah contoh soal di atas, mari coba menjawab soal di bawah ini!<br>
+                            <br>
+                            
+                                <div class="card card-body-simak">
+                                    <div class="card-a card-body p-3" style="height: 70px;">
+                                        <h4 style="font-weight: 700; color: black;">
+                                            <center>
+                                                <img src="assets/img/panahkanan.png" class="marimencoba">
+                                                Mari Mencoba 1
+                                                <img src="assets/img/panahkiri.png" class="marimencoba">
+                                            </center>
+                                        </h4>
+                                    </div>
+
+                                        <div class="card card-body-petunjuk mt-3 mb-3">
+                                            <h6 style="color:black"><img src="assets/img/contohsoal.png" style="width: 1.5rem;"><b>&nbsp;Petunjuk pengerjaan:</b></h6>
+                                            <ul class="ms-3">
+                                                <li> Isikan jawaban kamu pada kolom yang kosong secara berurutan dari kiri ke kanan. </li>
+                                                <li> Ketik (x) untuk menunjukkan simbol perkalian &#215; pada kolom yang kosong.<br>
+                                                Misalnya 2 x 2 x 2</li>
+                                                <li> Jika jawaban kamu benar maka kolom tersebut akan berubah menjadi warna hijau. </li>
+                                                <li> Jika jawaban kamu salah maka kolom tersebut akan berubah menjadi warna merah. </li>
+                                                <li> Setelah kolom berwarna hijau, jika kolom berikutnya tidak bisa kamu isi jawaban maka klik 2 kali pada kolom tersebut. </li>
+                                            </ul>
+                                        </div>
+                                        <div id="soal1mm1">
+                                            <h6 class="soalmm">
+                                                <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                                Soal 1:
+                                            </h6>
+                                            <p style="color:black">Berapakah hasil pangkat tiga dari bilangan $7$?</p>
+                                            <h6 class="soalmm">Jawab:</h6>
+                                    <script>
+                                        var p1 = document.getElementById("s1");
+                                        var p2 = document.getElementById("d2");
+                                        var p3 = document.getElementById("t3");
+                                        var benar  = 0;
+                                        function ceksmm1(){
+                                            var soal = document.getElementById("smm1");
+    
+                                            if(soal.value == "7"){
+                                                document.getElementById("smm1").style="border:3px solid green; width:3rem;height: 2rem; text-align:center";
+                                                benar = 3;
+                                            }   
+                                            else{
+                                                document.getElementById("smm1").style="border:3px solid red; width:3rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+                                        function hapusdisabled3(){
+                                            if( benar == 3){
+                                                document.getElementById("t3").classList.remove('inputdisabled');
+                                            } else {
+    
+                                            }
+                                        }
+                                        
+                                        function cekt3(){
+                                            var tiga = document.getElementById("t3");
+                                        
+                                            if(tiga.value == "7x7x7"|| tiga.value == "7 x 7 x 7"){
+                                                document.getElementById("t3").style="border:3px solid green; width:7rem;height: 2rem; text-align:center";
+                                                benar = 4;
+                                            }
+                                            else{
+                                                document.getElementById("t3").style="border:3px solid red; width:7rem;height: 2rem; text-align:center";
+                                            }                                                        
+                                        }
+    
+                                        function hapusdisabled4(){
+                                            if( benar == 4){
+                                                document.getElementById("hasil1").classList.remove('inputdisabled');
+                                            } else {
+    
+                                            }
+                                        }
+    
+    
+                                        function cekhasil1(){
+                                            var hasil = document.getElementById("hasil1");
+    
+                                            if(hasil.value == "343"){
+                                                document.getElementById("hasil1").style="border:3px solid green; width:3.5rem;height: 2rem; text-align:center";
+                                                var hasil1= document.getElementById("hasil1").value ;
+                                                document.getElementById("fixhasil").innerHTML = "<b>" + hasil1 +"</b>";
+                                                document.getElementById("selamat").innerHTML = "Bagus! Selamat ya kamu berhasil menjawab soal ini, silahkan ke soal berikutnya!";
+                                            }
+                                            else{
+                                                document.getElementById("hasil1").style="border:3px solid red; width:3.5rem;height: 2rem; text-align:center";
+                                            }
+    
+                                            
+                                        }
+                                    </script>
+                                    <!-- <form class="d-sm-inline-flex">
+                                        <input type="text" class="form-control-sm" name="soal_mm1" id="smm1" onkeyup="ceksmm1()" onchange="hapusdisabled1()" placeholder="..." style="border:1px solid black; width:3rem; height: 2rem; text-align: center;"> 
+                                        &nbsp;$^3$
+                                        <label for="satu1"> &nbsp;=&nbsp; </label> 
+                                        <input type="text"class="form-control-sm inputdisabled" name="satu1" id="s1" onkeyup="ceks1()" onchange="hapusdisabled2()" placeholder="..." style=" width:3rem; height: 2rem;text-align: center;" >
+                                        <label for="dua2"> &nbsp; &#215;  &nbsp; </label> 
+                                        <input type="text" class="form-control-sm inputdisabled" name="dua2" id="d2" onkeyup="cekd2()" onchange="hapusdisabled3()" placeholder="..."style=" width:3rem; height: 2rem;text-align: center;" >
+                                        <label for="tiga3">  &nbsp; &#215;  &nbsp; </label> 
+                                        <input type="text" class="form-control-sm inputdisabled" name="tiga3" id="t3" onkeyup="cekt3()" onchange="hapusdisabled4()" placeholder="..."style=" width:3rem; height: 2rem;text-align: center;" >
+                                        <label for="hasil1">  &nbsp;=&nbsp; </label>  
+                                        <input type="text" class="form-control-sm inputdisabled" name="hasil" id="hasil1" onkeyup="cekhasil1()" placeholder="..." style=" width:3.5rem; height: 2rem;text-align: center;" >
+                                        <br>
+                                        <br>
+                                    </form>  -->
+                                    <form class="d-sm-inline-flex">
+                                        <input type="text" class="form-control-sm" name="soal_mm1" id="smm1" onkeyup="ceksmm1()" onchange="hapusdisabled3()" placeholder="..." style="border:1px solid black; width:3rem; height: 2rem; text-align: center;"> 
+                                        &nbsp;$^3$
+                                        <label for="satu1"> &nbsp;=&nbsp; </label> 
+                                        <input type="text" class="form-control-sm inputdisabled" name="tiga3" id="t3" onkeyup="cekt3()" onchange="hapusdisabled4()" placeholder="..."style=" width:7rem; height: 2rem;text-align: center;" >
+                                        <label for="hasil1">  &nbsp;=&nbsp; </label>  
+                                        <input type="text" class="form-control-sm inputdisabled" name="hasil" id="hasil1" onkeyup="cekhasil1()" placeholder="..." style=" width:3.5rem; height: 2rem;text-align: center;" >
+                                        <br>
+                                    </form> 
+                                    <br>
+                                    <br>
+                                        <p class="d-sm-inline-flex ">Jadi, hasil dari 
+                                            <b>&nbsp;7<sup>3</sup></b>
+                                            &nbsp;=&nbsp;
+                                            <span id="fixhasil" class="form-control text-sm-center" style=" width:3.5rem; height: 2rem;text-align: center; padding: 0.1rem;" readonly></span>
+                                            <p id="selamat"></p>
+                                        </p>
+
+                                        <div class="button-group text-center">
+                                            <button type="button" class="btn btn-outline-primary active">1</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal2mm1()">2</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal3mm1()">3</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal4mm1()">4</button>
+                                        </div>
+    
+                                        </div>
+
+                                        <div id="soal2mm1" hidden>
+                                            <h6 class="soalmm">
+                                                <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                                Soal 2:
+                                            </h6>
+                                            <p style="color:black">Berapakah hasil pangkat tiga dari bilangan $8$?</p>
+                                            <h6 class="soalmm">Jawab:</h6>
+                                    <script>
+                                        var p1s2 = document.getElementById("s1s2");
+                                        var p2s2 = document.getElementById("d2s2");
+                                        var p3s2 = document.getElementById("t3s2");
+                                        var benars2  = 0;
+                                        function ceks2mm1(){
+                                            var soals2 = document.getElementById("s2mm1");
+    
+                                            if(soals2.value == "8"){
+                                                document.getElementById("s2mm1").style="border:3px solid green; width:3rem;height: 2rem; text-align:center";
+                                                benars2 = 3;
+                                            }   
+                                            else{
+                                                document.getElementById("s2mm1").style="border:3px solid red; width:3rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+    
+                                        function hapusdisabled3s2(){
+                                            if( benars2 == 3){
+                                                document.getElementById("t3s2").classList.remove('inputdisabled');
+                                            } else {
+    
+                                            }
+                                        }
+                                        
+                                        function cekt3s2(){
+                                            var tigas2 = document.getElementById("t3s2");
+                                        
+                                            if(tigas2.value == "8x8x8"|| tiga.value == "8 x 8 x 8"){
+                                                document.getElementById("t3s2").style="border:3px solid green; width:7rem;height: 2rem; text-align:center";
+                                                benars2 = 4;
+                                            }
+                                            else{
+                                                document.getElementById("t3s2").style="border:3px solid red; width:7rem;height: 2rem; text-align:center";
+                                            }                                                        
+                                        }
+    
+                                        function hapusdisabled4s2(){
+                                            if( benars2 == 4){
+                                                document.getElementById("hasil1s2").classList.remove('inputdisabled');
+                                            } else {
+    
+                                            }
+                                        }
+    
+    
+                                        function cekhasil1s2(){
+                                            var hasils2 = document.getElementById("hasil1s2");
+    
+                                            if(hasils2.value == "512"){
+                                                document.getElementById("hasil1s2").style="border:3px solid green; width:3.5rem;height: 2rem; text-align:center";
+                                                var hasil1= document.getElementById("hasil1s2").value ;
+                                                document.getElementById("fixhasils2").innerHTML = "<b>" + hasil1 +"</b>";
+                                                document.getElementById("selamat1").innerHTML = "Bagus! Selamat ya kamu berhasil menjawab soal ini, silahkan ke soal berikutnya!";
+                                            }
+                                            else{
+                                                document.getElementById("hasil1s2").style="border:3px solid red; width:3.5rem;height: 2rem; text-align:center";
+                                            }
+    
+                                            
+                                        }
+                                    </script>
+                                    <form class="d-sm-inline-flex">
+                                        <input type="text" class="form-control-sm" name="soal2_mm1" id="s2mm1" onkeyup="ceks2mm1()" onchange="hapusdisabled3s2()" placeholder="..." style="border:1px solid black; width:3rem; height: 2rem; text-align: center;"> 
+                                        &nbsp;$^3$
+                                        <label for="tiga3s2"> &nbsp;=&nbsp; </label> 
+                                        <input type="text" class="form-control-sm inputdisabled" name="tiga3s2" id="t3s2" onkeyup="cekt3s2()" onchange="hapusdisabled4s2()" placeholder="..."style=" width:7rem; height: 2rem;text-align: center;" >
+                                        <label for="hasil1s2">  &nbsp;=&nbsp; </label>  
+                                        <input type="text" class="form-control-sm inputdisabled" name="hasils2" id="hasil1s2" onkeyup="cekhasil1s2()" placeholder="..." style=" width:3.5rem; height: 2rem;text-align: center;" >
+                                        <br>
+                                    </form> 
+                                    <br>
+                                    <br>
+                                        <p class="d-sm-inline-flex ">Jadi, hasil dari 
+                                            <b>&nbsp;8<sup>3</sup></b>
+                                            &nbsp;=&nbsp;
+                                            <span id="fixhasils2" class="form-control text-sm-center" style=" width:3.5rem; height: 2rem;text-align: center; padding: 0.1rem;" readonly></span>
+                                            <p id="selamat2"></p>
+                                        </p>
+                                        
+                                        <div class="button-group text-center">
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal1mm1()">1</button>
+                                            <button type="button" class="btn btn-outline-primary active" >2</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal3mm1()">3</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal4mm1()">4</button>
+                                        </div>
+
+                                        </div>
+
+                                        <div id="soal3mm1" hidden>
+                                            <h6 class="soalmm">
+                                                <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                                Soal 3:
+                                            </h6>
+                                            <p style="color:black">Berapakah hasil dari $11^3$?</p>
+                                            <h6 class="soalmm">Jawab:</h6>
+                                    <script>
+                                        var p1s3 = document.getElementById("s1s3");
+                                        var p2s3 = document.getElementById("d2s3");
+                                        var p3s3 = document.getElementById("t3s3");
+                                        var benars2  = 0;
+                                        function ceks3mm1(){
+                                            var soals3 = document.getElementById("s3mm1");
+    
+                                            if(soals3.value == "11"){
+                                                document.getElementById("s3mm1").style="border:3px solid green; width:3rem;height: 2rem; text-align:center";
+                                                benars3 = 3;
+                                            }   
+                                            else{
+                                                document.getElementById("s3mm1").style="border:3px solid red; width:3rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+    
+                                        function hapusdisabled3s3(){
+                                            if( benars3 == 3){
+                                                document.getElementById("t3s3").classList.remove('inputdisabled');
+                                            } else {
+    
+                                            }
+                                        }
+                                        
+                                        function cekt3s3(){
+                                            var tigas3 = document.getElementById("t3s3");
+                                        
+                                            if(tigas3.value == "11x11x11"|| tigas3.value == "11 x 11 x 11"){
+                                                document.getElementById("t3s3").style="border:3px solid green; width:7rem;height: 2rem; text-align:center";
+                                                benars3 = 4;
+                                            }
+                                            else{
+                                                document.getElementById("t3s3").style="border:3px solid red; width:7rem;height: 2rem; text-align:center";
+                                            }                                                        
+                                        }
+    
+                                        function hapusdisabled4s3(){
+                                            if( benars3 == 4){
+                                                document.getElementById("hasil1s3").classList.remove('inputdisabled');
+                                            } else {
+    
+                                            }
+                                        }
+    
+    
+                                        function cekhasil1s3(){
+                                            var hasils3 = document.getElementById("hasil1s3");
+    
+                                            if(hasils3.value == "1331" || hasils3.value == "1.331"){
+                                                document.getElementById("hasil1s3").style="border:3px solid green; width:3.5rem;height: 2rem; text-align:center";
+                                                var hasil1= document.getElementById("hasil1s3").value ;
+                                                document.getElementById("fixhasils3").innerHTML = "<b>" + hasil1 +"</b>";
+                                                document.getElementById("selamat3").innerHTML = "Bagus! Selamat ya kamu berhasil menjawab soal ini, silahkan ke soal berikutnya!";
+                                            }
+                                            else{
+                                                document.getElementById("hasil1s3").style="border:3px solid red; width:3.5rem;height: 2rem; text-align:center";
+                                            }
+    
+                                            
+                                        }
+                                    </script>
+                                    <form class="d-sm-inline-flex">
+                                        <input type="text" class="form-control-sm" name="soal3_mm1" id="s3mm1" onkeyup="ceks3mm1()" onchange="hapusdisabled3s3()" placeholder="..." style="border:1px solid black; width:3rem; height: 2rem; text-align: center;"> 
+                                        &nbsp;$^3$
+                                        <label for="tiga3s3"> &nbsp;=&nbsp; </label> 
+                                        <input type="text" class="form-control-sm inputdisabled" name="tiga3s3" id="t3s3" onkeyup="cekt3s3()" onchange="hapusdisabled4s3()" placeholder="..."style=" width:7rem; height: 2rem;text-align: center;" >
+                                        <label for="hasil1s3">  &nbsp;=&nbsp; </label>  
+                                        <input type="text" class="form-control-sm inputdisabled" name="hasils3" id="hasil1s3" onkeyup="cekhasil1s3()" placeholder="..." style=" width:3.5rem; height: 2rem;text-align: center;" >
+                                        <br>
+                                    </form> 
+                                    <br><br>
+                                        <p class="d-sm-inline-flex ">Jadi, hasil dari 
+                                            <b>&nbsp;11<sup>3</sup></b>
+                                            &nbsp;=&nbsp;
+                                            <span id="fixhasils3" class="form-control text-sm-center" style=" width:3.5rem; height: 2rem;text-align: center; padding: 0.1rem;" readonly></span>
+                                            <p id="selamat3"></p>
+                                        </p>
+                                        
+                                        <div class="button-group text-center">
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal1mm1()">1</button>
+                                            <button type="button" class="btn btn-outline-primary " onclick="soal2mm1()">2</button>
+                                            <button type="button" class="btn btn-outline-primary active" >3</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal4mm1()">4</button>
+                                        </div>
+
+                                        </div>
+
+                                        <div id="soal4mm1" hidden>
+                                            <h6 class="soalmm">
+                                                <span style="margin-right:5px;border-left: 10px solid grey; width: 0;"></span>
+                                                Soal 4:
+                                            </h6>
+                                            <p style="color:black">Berapakah hasil dari $15^3$?</p>
+                                            <h6 class="soalmm">Jawab:</h6>
+                                    <script>
+                                        var p1s4 = document.getElementById("s1s4");
+                                        var p2s4 = document.getElementById("d2s4");
+                                        var p3s4 = document.getElementById("t3s4");
+                                        var benars4  = 0;
+                                        function ceks4mm1(){
+                                            var soals4 = document.getElementById("s4mm1");
+    
+                                            if(soals4.value == "15"){
+                                                document.getElementById("s4mm1").style="border:3px solid green; width:3rem;height: 2rem; text-align:center";
+                                                benars4 = 3;
+                                            }   
+                                            else{
+                                                document.getElementById("s4mm1").style="border:3px solid red; width:3rem;height: 2rem; text-align:center";
+                                            }
+                                        }
+    
+                                        function hapusdisabled3s4(){
+                                            if( benars4 == 3){
+                                                document.getElementById("t3s4").classList.remove('inputdisabled');
+                                            } else {
+    
+                                            }
+                                        }
+                                        
+                                        function cekt3s4(){
+                                            var tigas4 = document.getElementById("t3s4");
+                                        
+                                            if(tigas4.value == "15x15x15"|| tigas4.value == "15 x 15 x 15"){
+                                                document.getElementById("t3s4").style="border:3px solid green; width:7rem;height: 2rem; text-align:center";
+                                                benars4 = 4;
+                                            }
+                                            else{
+                                                document.getElementById("t3s4").style="border:3px solid red; width:7rem;height: 2rem; text-align:center";
+                                            }                                                        
+                                        }
+    
+                                        function hapusdisabled4s4(){
+                                            if( benars4 == 4){
+                                                document.getElementById("hasil1s4").classList.remove('inputdisabled');
+                                            } else {
+    
+                                            }
+                                        }
+    
+                                        function cekhasil1s4(){
+                                            var hasils4 = document.getElementById("hasil1s4");
+    
+                                            if(hasils4.value == "3375" || hasils4.value == "3.375"){
+                                                document.getElementById("hasil1s4").style="border:3px solid green; width:3.5rem;height: 2rem; text-align:center";
+                                                var hasil1s4= document.getElementById("hasil1s4").value ;
+                                                document.getElementById("fixhasils4").innerHTML = "<b>" + hasil1s4 +"</b>";
+                                                document.getElementById("selamat4").innerHTML = "Bagus! Selamat ya kamu berhasil menjawab soal ini, silahkan ke halaman berikutnya!";
+                                            }
+                                            else{
+                                                document.getElementById("hasil1s4").style="border:3px solid red; width:3.5rem;height: 2rem; text-align:center";
+                                            }
+    
+                                            
+                                        }
+                                    </script>
+                                    <form class="d-sm-inline-flex">
+                                        <input type="text" class="form-control-sm" name="soal4_mm1" id="s4mm1" onkeyup="ceks4mm1()" onchange="hapusdisabled3s4()" placeholder="..." style="border:1px solid black; width:3rem; height: 2rem; text-align: center;"> 
+                                        &nbsp;$^3$
+                                        <label for="tiga3s4"> &nbsp;=&nbsp; </label> 
+                                        <input type="text" class="form-control-sm inputdisabled" name="tiga3s4" id="t3s4" onkeyup="cekt3s4()" onchange="hapusdisabled4s4()" placeholder="..."style=" width:7rem; height: 2rem;text-align: center;" >
+                                        <label for="hasil1s4">  &nbsp;=&nbsp; </label>  
+                                        <input type="text" class="form-control-sm inputdisabled" name="hasil1s4" id="hasil1s4" onkeyup="cekhasil1s4()" placeholder="..." style=" width:3.5rem; height: 2rem;text-align: center;" >
+                                        <br>
+                                    </form> 
+                                    <br><br>
+                                        <p class="d-sm-inline-flex ">Jadi, hasil dari 
+                                            <b>&nbsp;15<sup>3</sup></b>
+                                            &nbsp;=&nbsp;
+                                            <span id="fixhasils4" class="form-control text-sm-center" style=" width:3.5rem; height: 2rem;text-align: center; padding: 0.1rem;" readonly></span>
+                                            <p id="selamat4"></p>
+                                        </p>
+                                        
+                                        <div class="button-group text-center">
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal1mm1()">1</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal2mm1()">2</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="soal3mm1()">3</button>
+                                            <button type="button" class="btn btn-outline-primary active" >4</button>
+                                        </div>
+
+                                        </div>
+                                        <script>
+                                            function soal1mm1(){
+                                                document.getElementById("soal1mm1").hidden = false;
+                                                document.getElementById("soal2mm1").hidden = true;
+                                                document.getElementById("soal3mm1").hidden = true;
+                                                document.getElementById("soal4mm1").hidden = true;
+                                            }
+                                            function soal2mm1(){
+                                                document.getElementById("soal1mm1").hidden = true;
+                                                document.getElementById("soal2mm1").hidden = false;
+                                                document.getElementById("soal3mm1").hidden = true;
+                                                document.getElementById("soal4mm1").hidden = true;
+                                            }
+                                            function soal3mm1(){
+                                                document.getElementById("soal1mm1").hidden = true;
+                                                document.getElementById("soal2mm1").hidden = true;
+                                                document.getElementById("soal3mm1").hidden = false;
+                                                document.getElementById("soal4mm1").hidden = true;
+                                            }
+                                            function soal4mm1(){
+                                                document.getElementById("soal1mm1").hidden = true;
+                                                document.getElementById("soal2mm1").hidden = true;
+                                                document.getElementById("soal3mm1").hidden = true;
+                                                document.getElementById("soal4mm1").hidden = false;
+                                            }
+                                        </script>
+                                    <!-- <div class="button-group text-center">
+                                        <button type="button" class="btn btn-outline-primary" onclick="soal2mm1()">1</button>
+                                        <button type="button" class="btn btn-outline-primary" onclick="soal2mm1()">2</button>
+                                        <button type="button" class="btn btn-outline-primary" onclick="soal3mm1()">3</button>
+                                        <button type="button" class="btn btn-outline-primary" onclick="soal4mm1()">4</button>
+                                    </div> -->
+
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="container-fluid px-2 p-2 mb-4 text-center">
+                        <a href="pengantar.html" type="button" class="btn btn-danger"id="btnnextprev">
+                            <img src="assets/img/prev.png" class="logonextprev"> Sebelumnya</a>
+                        <a href="pangkattiga2.html" type="button" class="btn btn-success" id="btnnextprev">Selanjutnya 
+                            <img src="assets/img/next.png" class="logonextprev"></a>                          
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+        </script>
+        <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
+
+        <script id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
